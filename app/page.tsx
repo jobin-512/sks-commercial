@@ -11,17 +11,19 @@ import Contact from "./components/contact";
 
 export default function Home() {
   return (
-    <div className="bg-[#08060F]">
+    <div className="bg-[#08060F] overflow-hidden">
       <HeroSection/>
-      <AboutUs/>
-      <Services/>
-      <CaseDetails/>
-      <Solutions/>
-      <Portfolio/>
-      <Tesitmonials/>
-      <Technology/>
-      <Faq/>
-      <Contact/>
+      <div className="space-y-8 md:space-y-16 lg:space-y-24">
+        <AboutUs/>
+        <Services/>
+        <CaseDetails/>
+        <Solutions/>
+        <Portfolio/>
+        <Tesitmonials/>
+        <Technology/>
+        <Faq/>
+        <Contact/>
+      </div>
     </div>
   );
 }

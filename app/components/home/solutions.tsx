@@ -110,23 +110,23 @@ export default function Solutions(){
     }
 
     return(
-        <section className="flex items-center flex-col justify-center gap-12">
-            <section className="w-[90vw] lg:w-[80vw] xl:w-[60vw] flex flex-col items-center pt-8">
+        <section className="flex items-center flex-col justify-center gap-8 md:gap-12">
+            <section className="w-full lg:w-[80vw] xl:w-[60vw] flex flex-col items-center pt-8 px-4 md:px-8">
                 <div className="flex flex-col justify-center items-center gap-4">
-                    <span className={`flex items-center bg-[#171629] w-fit px-2 border h-[2rem] border-gray-700 rounded-full ${roboto.className} `}><p className='text-5xl text-[#3D43D4]'>•</p>Crafting Solutions</span>
-                    <h2 className="text-xl w-[28rem] text-center">Crafting Solutions With Technology that Works For You</h2>
+                    <span className={`flex items-center bg-[#171629] w-fit px-2 border h-[2rem] border-gray-700 rounded-full ${roboto.className}`}><p className='text-5xl text-[#3D43D4]'>•</p>Crafting Solutions</span>
+                    <h2 className="text-lg md:text-xl text-center max-w-[28rem]">Crafting Solutions With Technology that Works For You</h2>
                 </div>
                 <div className="w-full mt-8">
                     {/* Mobile Layout (3x2 grid) */}
-                    <div className="lg:hidden grid md:grid-cols-3 gap-4">
+                    <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                         {solutions.map((solution, index) => (
                             <div 
                                 key={index}
                                 className="relative overflow-hidden rounded-lg cursor-pointer h-[12rem]"
                             >
                                 <div className="absolute inset-0 bg-black/60">
-                                    <div className="absolute inset-0 flex flex-col justify-center items-center p-2 text-white">
-                                        <h3 className="text-sm font-semibold mb-1 text-center">{solution.title}</h3>
+                                    <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-white">
+                                        <h3 className="text-sm font-semibold mb-2 text-center">{solution.title}</h3>
                                         <p className="text-xs text-center line-clamp-3">{solution.description}</p>
                                     </div>
                                 </div>
@@ -154,7 +154,7 @@ export default function Solutions(){
                                 onMouseEnter={() => setHoveredIndex(index)}
                                 onMouseLeave={() => setHoveredIndex(null)}
                             >
-                                <div className={`absolute inset-0 transition-all duration-[1000ms] ${
+                                <div className={`absolute inset-0 ${
                                     hoveredIndex === index ? 'bg-black/70' : 'bg-black/60'
                                 }`}>
                                     <div className={`absolute inset-0 flex flex-col justify-center items-center p-4 text-white transition-all duration-[1000ms] ${
@@ -179,44 +179,44 @@ export default function Solutions(){
                 </div>
             </section>
 
-            <section className="lg:w-[80vw] xl:w-[60vw] flex rounded-3xl bg-[url(/home/Untitled-1.png)] bg-no-repeat bg-cover">
-                    <div className="h-[15rem]  w-full rounded-3xl p-4 flex flex-col justify-center  bg-linear-to-r from-[#3D43D4]  to-transparent">
-                        <h2 className="text-3xl">Not Just Expertise</h2>
-                        <p className="text-2xl">A partnership for your growth</p>
-                    </div>
+            <section className="w-full lg:w-[80vw] xl:w-[60vw] flex rounded-3xl bg-[url(/home/Untitled-1.png)] bg-no-repeat bg-cover ">
+                <div className="h-[12rem] md:h-[15rem] w-full rounded-3xl p-4 md:p-8 flex flex-col justify-center bg-gradient-to-r from-[#3D43D4] to-transparent ">
+                    <h2 className="text-2xl md:text-3xl">We Don’t Just Code, We Connect</h2>
+                    <p className="text-xl md:text-2xl">A True Tech Partner Invested in Your Growth</p>
+                </div>
             </section>
 
-            <section className="lg:w-[80vw] xl:w-[60vw] flex flex-col items-center w-full gap-8">
-                <h2 className="w-[35rem] text-xl text-center">Empower Your Journey In the Digital World With Service You Can Trust</h2>
-                <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4" ref={serviceCardsRef}>
-                    <div className={`service-card rounded-xl border p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 hover: ${roboto.className}`} style={{ visibility: 'hidden' }}>
-                        <span className="flex gap-2"><FolderCode className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-xl font-semibold">Software Development</h3></span>
-                        <p className="">Building robust and scalable custom software solutions that drive sustainable growth for your business.</p>
+            <section className="w-full lg:w-[80vw] xl:w-[60vw] flex flex-col items-center gap-8 px-4 md:px-8">
+                <h2 className="text-lg md:text-xl text-center max-w-[35rem]">Grow your business online with strategy-first digital solutions and support.</h2>
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" ref={serviceCardsRef}>
+                    <div className={`service-card rounded-xl border p-6 md:p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 ${roboto.className}`} style={{ visibility: 'hidden' }}>
+                        <span className="flex gap-2 items-center"><FolderCode className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-lg md:text-xl font-semibold">Software Development</h3></span>
+                        <p className="text-sm md:text-base">We create strong, scalable software solutions that meet your company&#39;s requirements. Our emphasis is on intelligent design and seamless performance to allow you to expand with no constraints.</p>
                     </div>
                     
-                    <div className={`service-card rounded-xl border p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 hover: ${roboto.className}`} style={{ visibility: 'hidden' }}>
-                        <span className="flex gap-2"><PackageSearch className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-xl font-semibold">Product Engineering</h3></span>
-                        <p className="">We provide end-to-end product engineering to build high-performance solutions tailored for your business.</p>
+                    <div className={`service-card rounded-xl border p-6 md:p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 ${roboto.className}`} style={{ visibility: 'hidden' }}>
+                        <span className="flex gap-2 items-center"><PackageSearch className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-lg md:text-xl font-semibold">Product Engineering</h3></span>
+                        <p className="text-sm md:text-base">We offer complete product engineering services—from concept to deployment. We design high-performance, future-ready solutions built to scale, evolve, and align with your business goals.</p>
                     </div>
 
-                    <div className={`service-card rounded-xl border p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 hover: ${roboto.className}`} style={{ visibility: 'hidden' }}>
-                        <span className="flex gap-2"><RectangleGoggles className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-xl font-semibold">Digital Experience</h3></span>
-                        <p className="">Creating engaging UX through thoughtful design, strategic planning, and a deep understanding of user behavior.</p>
+                    <div className={`service-card rounded-xl border p-6 md:p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 ${roboto.className}`} style={{ visibility: 'hidden' }}>
+                        <span className="flex gap-2 items-center"><RectangleGoggles className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-lg md:text-xl font-semibold">Digital Experience</h3></span>
+                        <p className="text-sm md:text-base">We create user-centric digital experiences through strategic design and deep user behavior insights, ensuring intuitive interfaces and high engagement across all platforms.</p>
                     </div>
 
-                    <div className={`service-card rounded-xl border p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 hover: ${roboto.className}`} style={{ visibility: 'hidden' }}>
-                        <span className="flex gap-2"><TabletSmartphone className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-xl font-semibold">Mobile App Development</h3></span>
-                        <p className="">We specialize in creating flawless, user-centric mobile apps that deliver exceptional experiences on iOS and Android.</p>
+                    <div className={`service-card rounded-xl border p-6 md:p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 ${roboto.className}`} style={{ visibility: 'hidden' }}>
+                        <span className="flex gap-2 items-center"><TabletSmartphone className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-lg md:text-xl font-semibold">Mobile App Development</h3></span>
+                        <p className="text-sm md:text-base">Our team builds flawless, responsive mobile apps for iOS and Android. Our user-first approach ensures high performance, intuitive UI/UX, and exceptional functionality that users love.</p>
                     </div>
 
-                    <div className={`service-card rounded-xl border p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 hover: ${roboto.className}`} style={{ visibility: 'hidden' }}>
-                        <span className="flex gap-2"><CloudCog className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-xl font-semibold">Cloud Engineering</h3></span>
-                        <p className="">Providing secure and scalable cloud solutions designed to meet your business needs and drive seamless growth.</p>
+                    <div className={`service-card rounded-xl border p-6 md:p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 ${roboto.className}`} style={{ visibility: 'hidden' }}>
+                        <span className="flex gap-2 items-center"><CloudCog className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-lg md:text-xl font-semibold">Cloud Engineering</h3></span>
+                        <p className="text-sm md:text-base">We establish safe and scalable cloud infrastructures that enable you to work more efficiently. Our cloud solutions are designed to expand with your company and protect your data.</p>
                     </div>
 
-                    <div className={`service-card rounded-xl border p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 hover: ${roboto.className}`} style={{ visibility: 'hidden' }}>
-                        <span className="flex gap-2"><MonitorSmartphone className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-xl font-semibold">MVP Development</h3></span>
-                        <p className="">Fast-tracking your ideas into market-ready MVPs with a focus on functionality and user feedback for a smooth launch.</p>
+                    <div className={`service-card rounded-xl border p-6 md:p-8 space-y-4 hover:bg-white hover:text-black duration-200 hover:duration-200 ${roboto.className}`} style={{ visibility: 'hidden' }}>
+                        <span className="flex gap-2 items-center"><MonitorSmartphone className="text-white rounded-full bg-[#3D43D4] p-2" size={40} /><h3 className="text-lg md:text-xl font-semibold">MVP Development</h3></span>
+                        <p className="text-sm md:text-base">We rapidly develop MVPs that focus on usability, core features, and user feedback, helping you validate your idea and reach the market quicker.</p>
                     </div>
                 </div>
             </section>

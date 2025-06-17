@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Unbounded} from "next/font/google";
 import "./globals.css";
 import  Header  from "@/app/components/header";
-import "@radix-ui/themes/styles.css";
 import Footer from "./components/footer";
 
 const unbounded = Unbounded({
@@ -18,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={unbounded.className}> 
-      <body className="grid-[1fr,auto]" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <Header/>
-        <main>{children}</main>
+        <main >{children}</main>
         <Footer/>
       </body>
     </html>

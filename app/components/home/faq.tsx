@@ -72,11 +72,30 @@ export default function Faq(){
             if (tabContainerRef.current && sliderRef.current) {
                 const activeTabButton = tabContainerRef.current.querySelector(`[data-tab="${activeTab}"]`) as HTMLElement;
                 if (activeTabButton) {
+                    const buttonRect = activeTabButton.getBoundingClientRect();
+                    const containerRect = tabContainerRef.current.getBoundingClientRect();
+                    
+                    // Calculate the correct position considering scroll position
+                    const scrollLeft = tabContainerRef.current.scrollLeft;
+                    const left = buttonRect.left - containerRect.left + scrollLeft;
+                    
                     gsap.to(sliderRef.current, {
-                        left: activeTabButton.offsetLeft,
-                        width: activeTabButton.offsetWidth,
+                        left: left,
+                        width: buttonRect.width,
                         duration: 0.3,
                         ease: "power2.out",
+                        overwrite: true
+                    });
+
+                    // Center the active tab
+                    const containerWidth = containerRect.width;
+                    const buttonCenter = left + (buttonRect.width / 2);
+                    const scrollTo = buttonCenter - (containerWidth / 2);
+                    
+                    gsap.to(tabContainerRef.current, {
+                        scrollLeft: scrollTo,
+                        duration: 0.3,
+                        ease: "power2.out"
                     });
                 }
             }
@@ -125,67 +144,168 @@ export default function Faq(){
     const faqData: FAQData = {
         'General Questions': [
             {
-                question: "Where are you based? Do you work with clients overseas?",
-                answer: "Yes, we do! We work remotely with clients from all over the world. Whether you're in Bali or Berlin, we've got you covered."
+                question: "Why should I work with SKS Tech Solution?",
+                answer: "Because we provide more than services, we craft solutions that develop your business and build your trust."
             },
             {
-                question: "Can I see more of your work before starting?",
-                answer: "Of course! Just let us know what you're interested in, and we'll share relevant case studies and examples."
+                question: "Do you have international clients?",
+                answer: "Yes, we are honored to serve international clients in more than 15 nations in various time zones with remote support and complete collaboration on projects."
             },
             {
-                question: "Do you work with startups or only big brands?",
-                answer: "We work with businesses of all sizes, from ambitious startups to established enterprises. Our solutions are tailored to your specific needs and goals."
+                question: "What if I need changes after launch?",
+                answer: "We offer post-launch support and flexible maintenance plans so your digital solution stays updated and optimized."
             },
             {
-                question: "How experienced is your team?",
-                answer: "Our team comprises highly skilled professionals with years of experience in their respective fields, ensuring top-notch quality and innovative solutions."
+                question: "Can I view samples of your previous work?",
+                answer: "Yes, contact us to ask for our portfolio or read client success stories on our website."
             },
             {
-                question: "How do I know if we're a good fit?",
-                answer: "We offer a free consultation to discuss your project and see how our expertise aligns with your vision. This helps ensure a mutually beneficial partnership."
+                question: "How will I know which service I require?",
+                answer: "Our specialists will assist you throughout the consultation, selecting services according to your business objectives and digital presence requirements."
             },
             {
-                question: "Do I need to have everything ready before I contact you?",
-                answer: "No, you don't. We can help you define your needs and prepare all necessary materials. Just come with your ideas, and we'll guide you through the process."
+                question: "How do you guarantee project deadlines?",
+                answer: "We adhere to a precise project schedule, provide frequent updates, and utilize milestone tracking to guarantee each stage is delivered within the timeframe."
+            },
+            {
+                question: "Can I request demo versions before final delivery?",
+                answer: "Yes. We share staged previews so you can see progress and suggest changes before final deployment."
+            },
+            {
+                question: "Do you help businesses get online for the first time?",
+                answer: "Absolutely. From domain to deployment, we help businesses launch their first digital presence from scratch."
+            },
+            {
+                question: "May I order several services simultaneously?",
+                answer: "Yes, we will package services into one tailored package that meets your project objectives and timeline."
             }
         ],
         'Pricing & Payments': [
             {
-                question: "How do you charge for your services?",
-                answer: "Our pricing models vary depending on the project scope and complexity. We offer hourly rates, fixed-price contracts, and retainer agreements. We'll discuss the best option for your project during the consultation."
+                question: "How do I pay for services?",
+                answer: "We accept payments through bank transfer or UPI. We also allow milestone-based payments for long-term projects."
             },
             {
-                question: "Do you require an upfront payment?",
-                answer: "Yes, a deposit is typically required to begin a project, with subsequent payments linked to project milestones. This ensures commitment from both sides."
+                question: "Do you accept international payments for global clients?",
+                answer: "Yes, we accept international payments through secure channels. We work with clients in 15+ countries and provide convenient payment options globally."
             },
             {
-                question: "What payment methods do you accept?",
-                answer: "We accept various payment methods, including bank transfers, credit cards, and online payment platforms for your convenience."
+                question: "Are there any hidden charges in your service pricing?",
+                answer: "No hidden charges. All fees are discussed upfront during consultation. We value transparency and client trust in every project."
+            },
+            {
+                question: "Do you charge separately for hosting and domain setup?",
+                answer: "Yes, hosting and domain services are billed separately unless included in your package. Contact us for bundled options."
+            },
+            {
+                question: "Do I get an invoice or a receipt after making payment?",
+                answer: "Yes, we provide a professional invoice with all payment details and GST breakdown (if applicable)."
+            },
+            {
+                question: "Do I need to pay extra for revisions or changes?",
+                answer: "Minor revisions are usually included. Significant changes outside the agreed scope may attract additional costs. We’ll inform you before applying charges."
+            },
+            {
+                question: "Can I pause the project after making part payment?",
+                answer: "Yes, but terms apply. We’ll hold your project for a specific period. Reach out to discuss timelines and reactivation charges."
+            },
+            {
+                question: "Are prices the same for SEO, SMO, and ORM services?",
+                answer: "No, each service has its own pricing based on complexity and duration. Contact us for detailed service-specific quotes."
+            },
+            {
+                question: "What's your refund policy?",
+                answer: "Our cancellation and refund policies are clearly stipulated in our terms and conditions and are project stage-specific."
+            },
+            {
+                question: "Can I pay after the project is completed?",
+                answer: "We follow milestone-based payments. Full post-delivery payment is generally not accepted unless agreed in writing beforehand."
             }
+
         ],
         'Working Process': [
             {
-                question: "What is your typical project timeline?",
-                answer: "Project timelines depend on complexity and scope. We'll provide a detailed timeline after assessing your needs and agreeing on the project plan."
+                question: "How do you manage rush or fast-track projects?",
+                answer: "We evaluate feasibility, assign extra resources if necessary, and focus on delivery without any compromise on quality or communication."
             },
             {
-                question: "How do you communicate with clients during a project?",
-                answer: "We maintain transparent communication through regular updates, meetings (virtual or in-person), and dedicated project management tools. We believe in keeping you informed every step of the way."
+                question: "What if I'm not happy with the work?",
+                answer: "We want you to be happy and provide revision rounds depending on the scope of work agreed to in our proposal."
             },
             {
-                question: "Can I request revisions during the project?",
-                answer: "Yes, we include revision rounds in our project agreements to ensure your satisfaction. Additional revisions beyond the agreed scope may incur extra charges."
-            }
+                question: "What is part of your software product development?",
+                answer: "Everything from concept and design through deployment and scaling is taken care of by us to deliver the final software that suits your precise requirements."
+            },
+            {
+                question: "What if I want to add new features mid-project?",
+                answer: "We’re flexible! New features can be added with updated pricing and timelines. We’ll confirm everything before moving ahead."
+            },
+            {
+                question: "Can I review the design before development?",
+                answer: "Yes, we offer wireframes or mockups for feedback and review before proceeding with the development process."
+            },
+            {
+                question: "Do you test the software before delivering it?",
+                answer: "Yes. We conduct comprehensive testing—functionality, security, and performance testing—before delivering the end product."
+            },
+            {
+                question: "Can you register a domain for me or host my website?",
+                answer: "Can you register a domain for me or host my website?"
+            },
+            {
+                question: "Do you execute NDAs for confidential projects?",
+                answer: "Yes, we would be pleased to execute non-disclosure agreements to maintain your business details and project secrecy."
+            },
+            {
+                question: "What is the procedure for updates post-delivery?",
+                answer: "We provide support packages on an ongoing basis and can carry out updates as per your feedback or changing business requirements."
+            },
+            {
+                question: "How frequently do we interact during a project?",
+                answer: "Meetings are set according to project complexity—weekly or biweekly is usually the case—but we're always within reach when you need to touch base."
+            },
         ],
         'Support & Communication': [
             {
-                question: "What kind of support do you offer after project completion?",
-                answer: "We offer post-launch support and maintenance packages to ensure your solution continues to run smoothly and stays updated with the latest technologies."
+                question: "Is technical support available after hours?",
+                answer: "We offer support during business hours and emergency support options based on your package."
             },
             {
-                question: "How quickly do you respond to inquiries?",
-                answer: "We strive to respond to all client inquiries within 24-48 hours during business days, ensuring timely communication and support."
-            }
+                question: "Will you teach my staff to work with new tools?",
+                answer: "Yes, we provide initial training and documentation to enable your staff to manage your website, application, or software comfortably."
+            },
+            {
+                question: "Will I get a dedicated project manager for communication?",
+                answer: "Yes, every project includes a dedicated manager to ensure clear, ongoing communication."
+            },
+            {
+                question: "How long is support available after project handover?",
+                answer: "Free support is offered for 30 days post-launch. Extended support plans are available."
+            },
+            {
+                question: "Do you help migrate websites or data from previous developers?",
+                answer: "Yes, we assist with smooth migration and ensure no data loss during the transition."
+            },
+            {
+                question: "Can I renew my support plan after expiration?",
+                answer: "Yes, you can renew monthly or annually, depending on your service plan needs."
+            },
+            {
+                question: "Is support available for older software you built years ago?",
+                answer: "If it's our codebase, yes. We evaluate and offer continued support or upgrade suggestions."
+            },
+            {
+                question: "Do you offer technical training after project delivery?",
+                answer: "Yes, we offer introductory training sessions to help your team manage the solution confidently."
+            },
+            {
+                question: "How do I request additional features mid-project?",
+                answer: "Just email your project manager. We'll evaluate the request and provide a timeline adjustment if needed."
+            },
+            {
+                question: "Do you offer support in multiple languages?",
+                answer: "Our support is currently offered in English and Hindi for client convenience."
+            },
         ]
     };
 
@@ -218,43 +338,66 @@ export default function Faq(){
     };
 
     return(
-        <section ref={sectionRef} className="flex justify-center">
-            <section className="lg:w-[80vw] xl:w-[60vw] flex flex-col items-center gap-4">
+        <section ref={sectionRef} className="flex justify-center px-4 md:px-8 py-20">
+            <section className="w-full lg:w-[80vw] xl:w-[60vw] flex flex-col items-center gap-4">
                 <span className={`flex items-center bg-[#171629] w-fit px-2 border h-[2rem] border-gray-700 rounded-full ${roboto.className}`}><p className='text-5xl text-[#3D43D4]'>•</p>FAQ</span>
-                <h2 className="text-xl">Find Your Answers Here</h2>
-                <p className={`${roboto.className} text-xs text-gray-300`}>Everything you need to know, In one place</p>
+                <h2 className="text-lg md:text-xl text-center">Find Your Answers Here</h2>
+                <p className={`${roboto.className} text-xs text-gray-300 text-center`}>Everything you need to know, In one place</p>
                 
-                <div className={`${roboto.className} flex flex-col w-full items-center gap-8`}>
-                    <div ref={tabContainerRef} className="relative flex flex-wrap justify-center gap-4 border border-gray-600 rounded-full p-2">
+                <div className={`${roboto.className} flex flex-col w-full items-center gap-4 md:gap-8`}>
+                    <div 
+                        ref={tabContainerRef} 
+                        className="relative flex flex-nowrap justify-center gap-2 md:gap-4 border border-gray-600 rounded-full p-2 w-full max-w-3xl mx-auto overflow-x-auto scrollbar-hide bg-[#171629]/50 backdrop-blur-sm"
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    >
                         {/* Sliding indicator */}
-                        <div ref={sliderRef} className="absolute top-0 bottom-0 h-[3rem] mt-0.5 bg-[#3D43D4] rounded-full transition-colors duration-300"></div>
+                        <div 
+                            ref={sliderRef} 
+                            className="absolute top-0 bottom-0 h-[calc(100%-4px)] mt-0.5 rounded-full transition-all duration-300"
+                            style={{ 
+                                width: '0px', 
+                                left: '0px',
+                                background: 'linear-gradient(90deg, rgba(61, 67, 212, 0.2) 0%, rgba(91, 97, 246, 0.2) 100%)',
+                                boxShadow: 'inset 0 0 0 1px rgba(61, 67, 212, 0.3), 0 0 20px rgba(61, 67, 212, 0.2)'
+                            }}
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] opacity-20 rounded-full"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] opacity-10 blur-sm rounded-full"></div>
+                        </div>
 
-                        {Object.keys(faqData).map((tab) => (
-                            <button 
-                                key={tab} 
-                                data-tab={tab} // Add data-tab attribute to identify the button
-                                className={`relative px-4 py-2 rounded-full text-sm font-medium z-10 ${activeTab === tab ? 'text-white' : 'text-gray-300'}`}
-                                onClick={() => setActiveTab(tab)}
-                            >
-                                {tab}
-                            </button>
-                        ))}
-                    </div>
-                    <div ref={faqGridRef} className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full items-start">
-                        {faqData[activeTab].map((item: FAQItem, index: number) => (
-                            <div key={index} className="border border-gray-600 rounded-xl p-6 bg-[#26242C80]">
+                        <div className="flex flex-nowrap justify-center items-center gap-2 md:gap-4">
+                            {Object.keys(faqData).map((tab) => (
                                 <button 
-                                    className="flex justify-between items-center w-full text-left focus:outline-none"
+                                    key={tab} 
+                                    data-tab={tab}
+                                    className={`relative flex-shrink-0 px-4 md:px-6 py-2.5 rounded-full text-xs md:text-sm font-medium z-10 whitespace-nowrap transition-all duration-300 ${
+                                        activeTab === tab 
+                                            ? 'text-white font-semibold' 
+                                            : 'text-gray-400 hover:text-white hover:bg-white/5'
+                                    }`}
+                                    onClick={() => setActiveTab(tab)}
+                                >
+                                    {tab}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div className="w-full space-y-4">
+                        {faqData[activeTab].map((item: FAQItem, index: number) => (
+                            <div key={index} className="border border-gray-600 rounded-xl p-4 md:p-6 bg-[#26242C80] backdrop-blur-sm">
+                                <button 
+                                    className="flex justify-between items-center w-full text-left focus:outline-none group"
                                     onClick={() => toggleFAQ(index)}
                                 >
-                                    <h3 className="text-lg font-medium text-white">{item.question}</h3>
-                                    <span className="ml-6 text-xl text-[#3D43D4]">
+                                    <h3 className="text-base md:text-lg font-medium text-white pr-4 group-hover:text-[#3D43D4] transition-colors duration-300">{item.question}</h3>
+                                    <span className="flex-shrink-0 text-xl text-[#3D43D4] transform transition-transform duration-300 group-hover:scale-110">
                                         {openIndex === index ? <ChevronsUp/> : <ChevronsDown/>}
                                     </span>
                                 </button>
-                                <p className={`mt-4 text-sm text-gray-300 faq-answer-${index}`}>
+                                <div className={`mt-4 text-sm text-gray-300 faq-answer-${index} overflow-hidden`} style={{ height: openIndex === index ? 'auto' : '0' }}>
                                     {item.answer}
-                                </p>
+                                </div>
                             </div>
                         ))}
                     </div>

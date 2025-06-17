@@ -128,41 +128,51 @@ export default function Technology(){
     }
 
     return(
-        <section ref={comp} className="flex justify-center w-full">
+        <section ref={comp} className="flex justify-center w-full px-4 md:px-8">
             {/* Desktop and larger screens view */}
             <section className="hidden lg:flex flex-col items-center py-12 z-20 gap-8 lg:w-[80vw] xl:w-[60vw]">
                 <span className={`flex items-center bg-[#171629] w-fit px-2 border h-[2rem] border-gray-700 rounded-full ${roboto.className}`}><p className='text-5xl text-[#3D43D4]'>•</p>Technologies</span>
-                <h2 className="text-xl">Mastering Every Technology To Build Your Perfection Solution</h2>
-                <div className={`${roboto.className} flex w-full h-full gap-8`}>
-                    <div className=" h-full flex flex-col gap-8 p-8 items-start border border-gray-600 rounded-3xl ">
-                        <button className={`${activeCategory === 'Frontend' ? 'text-white' : 'text-[#3061BB]'} text-3xl flex items-center gap-2 cursor-pointer hover:text-white`} onClick={() => setActiveCategory('Frontend')}>Frontend <span className={`${activeCategory === 'Frontend' ? 'opacity-100' : 'opacity-0'} ml-auto transition-opacity duration-300`}>&#8594;</span></button>
-                        <button className={`${activeCategory === 'Backend' ? 'text-white' : 'text-[#3061BB]'} text-3xl flex items-center gap-2 cursor-pointer hover:text-white`} onClick={() => setActiveCategory('Backend')}>Backend <span className={`${activeCategory === 'Backend' ? 'opacity-100' : 'opacity-0'} ml-auto transition-opacity duration-300`}>&#8594;</span></button>
-                        <button className={`${activeCategory === 'Microsoft' ? 'text-white' : 'text-[#3061BB]'} text-3xl flex items-center gap-2 cursor-pointer hover:text-white`} onClick={() => setActiveCategory('Microsoft')}>Microsoft <span className={`${activeCategory === 'Microsoft' ? 'opacity-100' : 'opacity-0'} ml-auto transition-opacity duration-300`}>&#8594;</span></button>
-                        <button className={`${activeCategory === 'Mobile' ? 'text-white' : 'text-[#3061BB]'} text-3xl flex items-center gap-2 cursor-pointer hover:text-white`} onClick={() => setActiveCategory('Mobile')}>Mobile <span className={`${activeCategory === 'Mobile' ? 'opacity-100' : 'opacity-0'} ml-auto transition-opacity duration-300`}>&#8594;</span></button>
-                        <button className={`${activeCategory === 'AI & ML' ? 'text-white' : 'text-[#3061BB]'} text-3xl flex items-center gap-2 cursor-pointer hover:text-white`} onClick={() => setActiveCategory('AI & ML')}>AI & ML <span className={`${activeCategory === 'AI & ML' ? 'opacity-100' : 'opacity-0'} ml-auto transition-opacity duration-300`}>&#8594;</span></button>
-                        <button className={`${activeCategory === 'Devops' ? 'text-white' : 'text-[#3061BB]'} text-3xl flex items-center gap-2 cursor-pointer hover:text-white`} onClick={() => setActiveCategory('Devops')}>Devops <span className={`${activeCategory === 'Devops' ? 'opacity-100' : 'opacity-0'} ml-auto transition-opacity duration-300`}>&#8594;</span></button>
+                <h2 className="text-xl text-center">Mastering Every Technology To Build Your Perfection Solution</h2>
+                <div className="w-full">
+                    <div className="flex flex-wrap justify-center gap-4">
+                        {Object.keys(technologies).map((category) => (
+                            <button
+                                key={category}
+                                onClick={() => setActiveCategory(category)}
+                                className={`px-4 py-2 rounded-full text-sm font-medium ${
+                                    activeCategory === category
+                                        ? 'bg-[#3D43D4] text-white'
+                                        : 'bg-[#171629] text-gray-300'
+                                }`}
+                            >
+                                {category}
+                            </button>
+                        ))}
                     </div>
-                    <div className="w-full bg-linear-to-br from-[#2769AA] to-[#2D349B] p-8 border border-gray-600 rounded-3xl grid lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-center">
+                    <div className={`${roboto.className} grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-8 justify-items-center`}>
                         {technologies[activeCategory].map((tech, index) => (
-                            <div key={index} className="h-[8rem] bg-white rounded-xl flex flex-col items-center justify-center gap-2 p-2">
-                                <Image alt={tech.name} src={tech.image} width={64} height={64}></Image>
-                                <p className="text-black text-sm text-center">{tech.name}</p>
+                            <div key={index} className="bg-[#171629] rounded-xl p-4 flex flex-col items-center gap-2 w-full max-w-[200px]">
+                                <Image alt={tech.name} src={tech.image} width={50} height={50} className="w-12 h-12 object-contain"></Image>
+                                <p className="text-white text-sm text-center">{tech.name}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Mobile and tablet screens view */}
-            <section className="lg:hidden flex flex-col items-center py-12 z-20 gap-8 w-[90vw] bg-linear-to-br from-[#2769AA] to-[#2D349B] px-8  rounded-3xl">
+            {/* Mobile view */}
+            <section className="lg:hidden flex flex-col items-center py-8 md:py-12 z-20 gap-6 w-full bg-gradient-to-br from-[#2769AA] to-[#2D349B] px-4 md:px-8 rounded-3xl">
+                <span className={`flex items-center bg-[#171629] w-fit px-2 border h-[2rem] border-gray-700 rounded-full ${roboto.className}`}><p className='text-5xl text-[#3D43D4]'>•</p>Technologies</span>
+                <h2 className="text-lg md:text-xl text-center text-white">Mastering Every Technology To Build Your Perfection Solution</h2>
+                
                 {Object.entries(technologies).map(([categoryName, categoryItems], categoryIndex) => (
                     <div key={categoryIndex} className="w-full">
-                        <h2 className="text-4xl text-white mr-auto mt-8 first:mt-0">{categoryName}</h2>
-                        <div className={`${roboto.className} grid grid-cols-2 sm:grid-cols-5 md:grid-cols-5 gap-4 w-full`}>
+                        <h2 className="text-2xl md:text-4xl text-white mr-auto mt-8 first:mt-0">{categoryName}</h2>
+                        <div className={`${roboto.className} grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 w-full justify-items-center`}>
                             {categoryItems.map((tech, index) => (
-                                <div key={index} className="h-[fit] bg-white rounded-xl flex flex-col items-center justify-center gap-2 p-2 w-full">
-                                    <Image alt={tech.name} src={tech.image} width={50} height={50}></Image>
-                                    <p className="text-black text-sm text-center">{tech.name}</p>
+                                <div key={index} className="h-fit bg-white rounded-xl flex flex-col items-center justify-center gap-2 p-2 w-full max-w-[150px]">
+                                    <Image alt={tech.name} src={tech.image} width={40} height={40} className="w-10 h-10 md:w-12 md:h-12 object-contain"></Image>
+                                    <p className="text-black text-xs md:text-sm text-center">{tech.name}</p>
                                 </div>
                             ))}
                         </div>

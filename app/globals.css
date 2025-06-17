@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #08060F;
+  --background: #101030;
   --text:white;
 }
 
@@ -24,3 +24,4 @@ body {
 .no-spinners[type="number"] {
   -moz-appearance: textfield;
 }
+
