@@ -127,18 +127,18 @@ export default function AboutUs(){
                                     <p>Our Vision</p>
                                     <span className="w-fit"><MoveRight/></span>
                                 </div>
-                                <p className="text-xs text-gray-300 mt-2">We strive to elevate businesses through Digital Marketing Services, crafting SEO-driven strategies that connect, convert, and inspire.</p>
+                                <p className="text-xs text-gray-300 mt-2">We strive to elevate businesses by offering cutting-edge digital service delivery, where strategy is specific, execution is efficient, and growth is backed by more than just vanity metrics.</p>
                             </Link>
                             <Link href="/" className="border-b border-t border-gray-600 p-4 hover:bg-[#171629]/50 transition-colors">
                                 <div className="flex w-full gap-4">
                                     <p>Our Mission</p>
                                     <span className="w-fit"><MoveRight/></span>
                                 </div>
-                                <p className="text-xs text-gray-300 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam deserunt unde reprehenderit eligendi iste quibusdam aliquid </p>
+                                <p className="text-xs text-gray-300 mt-2">To build strong digital foundations using innovative and meaningful digital solutions that create measurable business impact. </p>
                             </Link>
                         </div>
                         <div ref={bottomContentRef} className="text-xs font-thin py-4 lg:py-8 space-y-4">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam repellendus, sequi veniam dolorem aspernatur harum labore quasi est commodi alias eius voluptate minima incidunt quaerat enim deleniti, distinctio cupiditate optio?</p>
+                            <p>At SksTech Solution, we deliver smart, scalable IT solutions including web development, SAS-based projects, UI/UX Designing, Social Media Optimization (SMO), mobile apps, and AI-based custom software. Backed by experience and innovation, we help brands grow, streamline, and succeed digitally. We turn ideas into impact with personalized strategies and expert execution. Let's build your future.</p>
                             <Link href="/" className="text-[.9rem] flex w-fit items-center bg-[#3D43D4] rounded-full px-8 py-2 hover:bg-[#3D43D4]/90 transition-colors">Read More <ChevronRight/></Link>
                         </div>
                     </div>

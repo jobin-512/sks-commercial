@@ -39,44 +39,44 @@ export default function Tesitmonials(){
                 <div className={`${roboto.className} grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 w-full`}>
                     <div className="flex flex-col items-center gap-4 border border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">"Working with Sks Tech Solution was a game-changer. Their team is dedicated and results-driven"</p>
-                        <p className="font-semibold">Jane Doe</p>
-                        <p className="text-sm text-gray-400">CEO Company</p>
+                        <p className="text-sm md:text-base">“SKS Tech Solution’s Web Development team created a fast, responsive, and beautifully designed site for our e-commerce business. We saw a 35% boost in traffic almost immediately. Their commitment to quality and design is unmatched!”</p>
+                        <p className="font-semibold">— Emily Carter</p>
+                        <p className="text-sm text-gray-400">Digital Marketing Manager</p>
                     </div>
 
                     <div className="flex flex-col items-center gap-4 border border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile2} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">"We saw remarkable growth after partnering with SKS Tech Solution. Their expertise in digital marketing is second to none!"</p>
-                        <p className="font-semibold">Jane Doe</p>
-                        <p className="text-sm text-gray-400">CEO Company</p>
+                        <p className="text-sm md:text-base">“We requested a custom Mobile App, and SKS Tech Solution didn’t disappoint. The app runs smoothly and includes every requested feature. Clients are thrilled with the interface.”</p>
+                        <p className="font-semibold">— Linda Wu</p>
+                        <p className="text-sm text-gray-400">CTO</p>
                     </div>
 
                     <div className="flex flex-col items-center gap-4 border border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile3} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">"SKS Tech Solution transformed our online presence. Their strategies are unparalleled!"</p>
-                        <p className="font-semibold">Jane Doe</p>
-                        <p className="text-sm text-gray-400">CEO Company</p>
+                        <p className="text-sm md:text-base">“The UI/UX Design by SKS Tech Solution completely redefined our user journey. Our app is now intuitive, elegant, and much more enjoyable to use. Client satisfaction has gone through the roof!”</p>
+                        <p className="font-semibold">— Anna Müller</p>
+                        <p className="text-sm text-gray-400">Brand Strategist</p>
                     </div>
 
                     <div className="flex flex-col gap-4 border items-center border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile4} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">"Gachor SKS Tech exceeded our expectations. Their tailored strategies delivered tangible results, and we've seen a substantial increase in customer engagement"</p>
-                        <p className="font-semibold">Jane Doe</p>
-                        <p className="text-sm text-gray-400">CEO Company</p>
+                        <p className="text-sm md:text-base">“Thanks to SKS Tech Solution’s Social Media Optimization (SMO) strategy, our online visibility and brand engagement skyrocketed. They know how to turn impressions into results with focused and consistent execution.”</p>
+                        <p className="font-semibold">— Carlos Ramirez</p>
+                        <p className="text-sm text-gray-400"> VP of Growth</p>
                     </div>
 
                     <div className="flex flex-col gap-4 items-center border border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile5} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">"Choosing SKS Tech Solutions was a strategic move for our brand. Their holistic approach to digital marketing has positioned us as industry leaders"</p>
-                        <p className="font-semibold">Jane Doe</p>
-                        <p className="text-sm text-gray-400">CEO Company</p>
+                        <p className="text-sm md:text-base">“SKS built an AI-based custom software solution to automate our logistics. It not only improved efficiency but also saved significant manpower. Truly futuristic work by a capable team.”</p>
+                        <p className="font-semibold">— James Walker</p>
+                        <p className="text-sm text-gray-400"> Founder</p>
                     </div>
 
                     <div className="flex flex-col gap-4 items-center border border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile6} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">"The impact of SKS Tech Solutions on our business was immediate. Their commitment to understanding our industry and target audience set them apart"</p>
-                        <p className="font-semibold">Jane Doe</p>
-                        <p className="text-sm text-gray-400">CEO Company</p>
+                        <p className="text-sm md:text-base">“SKS transformed our online presence through excellent Web Development. The design is sharp, mobile-optimized, and the loading speed has improved dramatically. Leads are coming in faster than ever.”</p>
+                        <p className="font-semibold">— Lucas Moreau</p>
+                        <p className="text-sm text-gray-400">Marketing Director</p>
                     </div>
                 </div>
             </section>
