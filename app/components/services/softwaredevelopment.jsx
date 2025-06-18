@@ -1,11 +1,11 @@
 'use client'
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Roboto } from "next/font/google";
 import Image from 'next/image';
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { useInView } from "framer-motion"
 import sd from "@/public/services/sd.png"
 import sd2 from "@/public/services/sd2.png"
@@ -89,6 +89,82 @@ const AnimatedItem = ({ children, className = "" }) => {
             {children}
         </motion.div>
     )
+}
+
+// Accordion for Customized Software Development Process
+function ProcessAccordion() {
+    const steps = [
+        {
+            title: 'Design',
+            description: 'The design phase involves creating the visual and interactive aspects of the software development. Our custom software development services are critical in ensuring that the software solution is user-friendly and aesthetically pleasing.',
+            checklist: [
+                'Interaction Flows',
+                'Wireframing',
+                'Visual Design',
+                'Brand Alignment',
+            ],
+        },
+        {
+            title: 'Development',
+            description: 'The development phase is where the actual coding and implementation take place. Our experienced developers use best practices and the latest technologies to build robust, scalable, and secure software solutions.',
+            checklist: [
+                'Agile Development',
+                'Code Reviews',
+                'Quality Assurance',
+                'Continuous Integration',
+            ],
+        },
+        {
+            title: 'Deployment',
+            description: 'The deployment phase ensures your software is launched smoothly and efficiently. We provide ongoing support and maintenance to guarantee optimal performance and user satisfaction.',
+            checklist: [
+                'Cloud Deployment',
+                'Monitoring & Support',
+                'User Training',
+                'Performance Optimization',
+            ],
+        },
+    ];
+    const [openIndex, setOpenIndex] = useState(0);
+    return (
+        <div className="space-y-4">
+            {steps.map((step, idx) => (
+                <div key={idx} className="">
+                    <button
+                        className={`w-full flex justify-between items-center px-6 py-4 bg-[#181828] text-white rounded-t-2xl focus:outline-none font-semibold text-lg border-b border-[#23234a] ${openIndex === idx ? 'rounded-b-none' : 'rounded-b-2xl'}`}
+                        onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                    >
+                        <span>{step.title}</span>
+                        <span className={`transition-transform duration-300 ${openIndex === idx ? 'rotate-180' : ''}`}>▼</span>
+                    </button>
+                    <AnimatePresence initial={false}>
+                        {openIndex === idx && (
+                            <motion.div
+                                key="content"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                                className="overflow-hidden"
+                            >
+                                <div className="bg-[#ededf7] text-[#181828] rounded-b-2xl px-6 py-6 flex flex-col md:flex-row justify-between items-center border border-t-0 border-[#23234a]">
+                                    <div className="flex-1 mb-4 md:mb-0">
+                                        <h4 className="text-xl font-bold mb-2">{step.title}</h4>
+                                        <p className="mb-4 text-base">{step.description}</p>
+                                    </div>
+                                    <ul className="min-w-[220px] space-y-2 text-base">
+                                        {step.checklist.map((item, i) => (
+                                            <li key={i} className="flex items-center gap-2 text-[#3D43D4] font-medium"><span>✔</span> <span className="text-[#181828]">{item}</span></li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            ))}
+        </div>
+    );
 }
 
 export default function SoftwareDevelopmentPage() {
@@ -291,6 +367,19 @@ export default function SoftwareDevelopmentPage() {
                 </div>
             </AnimatedSection>
 
+            {/* Latest Works Section  */}
+            <section className="relative min-h-[340px] flex items-center justify-center px-4 md:px-8 lg:px-16 py-20 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-[url('/services/Untitled-4.png')] bg-cover bg-center" ></div>
+                    <div className="absolute inset-0 bg-black/60"></div>
+                </div>
+                <div className="relative z-10 w-full max-w-3xl text-center flex flex-col items-center justify-center">
+                    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-white tracking-wide">WANNA SEE OUR LATEST WORKS?</h2>
+                    <p className="text-lg md:text-xl text-white/80 mb-4">Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>Ut enim ad minim veniam quis nostrud exercitation</p>
+                    <button className="mt-6 px-8 py-3 bg-white text-[#171629] rounded-full font-semibold shadow hover:bg-[#5B61F6] hover:text-white transition-colors duration-300">ALL PROJECTS</button>
+                </div>
+            </section>
+
             {/* Services Section with Enhanced Cards */}
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
                 <div className="max-w-6xl mx-auto">
@@ -360,6 +449,31 @@ export default function SoftwareDevelopmentPage() {
                 </div>
             </AnimatedSection>
 
+            {/* Customized Software Development Process Section */}
+            <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
+                <div className="max-w-4xl mx-auto text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Customized Software Development Process</h2>
+                    <p className="text-white/80 text-lg md:text-xl">As one of the best custom software development companies, our well-designed development process allows organizations to tailor solutions that meet specific business needs, enhance user experience, and drive innovation.</p>
+                </div>
+                <div className="max-w-4xl mx-auto space-y-8">
+                    {/* Discovery Card */}
+                    <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-3xl p-8 flex flex-col md:flex-row justify-between items-center shadow-xl mb-4">
+                        <div className="text-left flex-1 mb-6 md:mb-0">
+                            <h3 className="text-2xl font-bold text-white mb-2">Discovery</h3>
+                            <p className="text-white/80">The discovery phase is the initial stage of the customized software development process. Our custom software development company tries to understand your project's goals, objectives, and requirements.</p>
+                        </div>
+                        <ul className="text-left space-y-2 min-w-[220px]">
+                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Requirements Gathering</li>
+                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Research & Analysis</li>
+                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Solution Mapping</li>
+                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Technology Evaluation</li>
+                        </ul>
+                    </div>
+                    {/* Accordion for other steps */}
+                    <ProcessAccordion />
+                </div>
+            </section>
+
             {/* Technology Stack Section */}
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16">
                 <div className="max-w-6xl mx-auto">
@@ -403,39 +517,62 @@ export default function SoftwareDevelopmentPage() {
             </AnimatedSection>
 
             {/* Industries Section */}
-            <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
-                <div className="max-w-6xl mx-auto">
-                    <motion.h2 
-                        variants={fadeInUp}
-                        className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
-                    >
-                        Industries We Serve
-                    </motion.h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                        {[
-                            { name: "Finance", icon: "💰", description: "Banking and fintech solutions" },
-                            { name: "Healthcare", icon: "🏥", description: "Medical software systems" },
-                            { name: "Manufacturing", icon: "🏭", description: "Production management" },
-                            { name: "Retail", icon: "🛍️", description: "E-commerce platforms" },
-                            { name: "Education", icon: "📚", description: "Learning management systems" },
-                            { name: "Logistics", icon: "🚚", description: "Supply chain solutions" },
-                            { name: "Real Estate", icon: "🏠", description: "Property management" },
-                            { name: "Energy", icon: "⚡", description: "Utility management systems" }
-                        ].map((industry, index) => (
-                            <AnimatedItem 
-                                key={index}
-                                className="p-6 bg-[#171629]/70 rounded-xl border border-[#3D43D4]/30 shadow-xl text-center group hover:border-[#5B61F6]/50 transition-all duration-300"
-                            >
-                                <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                                    {industry.icon}
-                                </div>
-                                <h3 className="text-lg font-semibold text-[#5B61F6] mb-2">{industry.name}</h3>
-                                <p className="text-sm text-gray-400">{industry.description}</p>
-                            </AnimatedItem>
-                        ))}
+            <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Enterprise Software Solutions We Deliver to Help Businesses Stay Modern</h2>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Sks Tech Solution  we specialize in delivering a wide range of enterprise software development services to help businesses stay future-ready. Here's what we offer:</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {/* Card 1 */}
+                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
+                            <div className="mb-4 text-[#2563eb]">{/* Megaphone icon */}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182A4.5 4.5 0 016.75 12.75m0 0A4.5 4.5 0 0115.182 8.818m-8.432 3.932a4.5 4.5 0 018.432-3.932m0 0V3.75m0 5.068a4.5 4.5 0 01-8.432 3.932m8.432-3.932l3.75 3.75m-3.75-3.75l-3.75 3.75" />
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 text-black">Marketing & advertising</h3>
+                            <p className="text-black/80">Plan and execute marketing campaigns with tools that offer automation, analytics, and personalization</p>
+                        </div>
+                        {/* Card 2 */}
+                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
+                            <div className="mb-4 text-[#2563eb]">{/* Web portal icon */}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+                                    <rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                                    <path d="M7 9h2m2 0h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                                    <path d="M7 13h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                                    <path d="M7 17h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 text-black">Web portals</h3>
+                            <p className="text-black/80">Create secure and user-friendly web portals for customers, employees, or partners to improve communication and collaboration.</p>
+                        </div>
+                        {/* Card 3 */}
+                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
+                            <div className="mb-4 text-[#2563eb]">{/* App window icon */}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+                                    <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                                    <rect x="7" y="9" width="10" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 text-black">Enterprise Applications</h3>
+                            <p className="text-black/80">Streamline your business operations with customized enterprise applications designed to meet your unique needs and scale with your growth.</p>
+                        </div>
+                        {/* Card 4 */}
+                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
+                            <div className="mb-4 text-[#2563eb]">{/* Asset management icon */}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                                    <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 text-black">Asset management</h3>
+                            <p className="text-black/80">Integrate core business processes like finance, HR, and operations into a single system to improve efficiency and decision-making.</p>
+                        </div>
                     </div>
                 </div>
-            </AnimatedSection>
+            </section>
+
+            {/* Flexible Models for Custom Software Development Section */}
+            <FlexibleModelsSection />
 
             {/* Case Studies Section */}
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16">
@@ -626,5 +763,92 @@ export default function SoftwareDevelopmentPage() {
                 </div>
             </AnimatedSection>
         </div>
+    );
+}
+
+// Flexible Models Section Component
+function FlexibleModelsSection() {
+    const models = [
+        {
+            label: 'Fixed Price Model',
+            image: '/services/Layer-17.png', // Replace with your image
+            title: 'Fixed Price Model',
+            description: 'Our fixed price model is ideal for projects with well-defined requirements and scope. It offers cost predictability and is best suited for short-term projects or MVPs.',
+            checklist: [
+                'Clear Scope & Timeline',
+                'Budget Certainty',
+                'Low Risk for Clients',
+            ],
+        },
+        {
+            label: 'Time and Material Model',
+            image: '/services/Layer-17.png', // Replace with your image
+            title: 'Time and Material Model',
+            description: 'This model is perfect for projects where requirements may evolve. It provides flexibility and transparency, allowing you to pay for actual work done.',
+            checklist: [
+                'Flexible Requirements',
+                'Transparent Billing',
+                'Ongoing Collaboration',
+            ],
+        },
+        {
+            label: 'Build Operate Transfer Model',
+            image: '/services/Layer-17.png', // Replace with your image
+            title: 'Build Operate Transfer Model',
+            description: 'Our custom software development company offers a model that is tailored for companies looking to establish in-house capabilities. It is advantageous for organizations aiming to build a sustainable team while benefiting from expert guidance during the initial stages.',
+            checklist: [
+                'Faster Time to Market',
+                'Reduced Costs',
+                'Long-Term Commitment',
+            ],
+        },
+    ];
+    const [active, setActive] = useState(0);
+    return (
+        <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
+            <div className="max-w-6xl mx-auto text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose From Our Flexible Models for Custom Software Development</h2>
+                <p className="text-white/80 text-lg md:text-xl">Being a top custom software development services provider, we offer various hiring models.</p>
+            </div>
+            <div className="flex flex-col items-center">
+                {/* Tabs */}
+                <div className="flex flex-wrap gap-4 mb-8">
+                    {models.map((model, idx) => (
+                        <button
+                            key={model.label}
+                            onClick={() => setActive(idx)}
+                            className={`px-8 py-3 rounded-lg font-semibold text-lg border transition-all duration-200 focus:outline-none ${active === idx ? 'bg-white text-black border-white' : 'bg-transparent text-white border-white/60 hover:bg-white/10'}`}
+                            style={{ position: 'relative' }}
+                        >
+                            {model.label}
+                            {active === idx && (
+                                <span className="absolute left-1/2 -bottom-3 transform -translate-x-1/2">
+                                    <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 12L0 0H24L12 12Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            )}
+                        </button>
+                    ))}
+                </div>
+                {/* Card */}
+                <div className="w-full max-w-4xl bg-[#10101A] border border-white rounded-3xl flex flex-col md:flex-row items-center p-8 gap-8 relative">
+                    <div className="w-full md:w-1/2 flex-shrink-0 flex items-center justify-center">
+                        <img src={models[active].image} alt={models[active].label} className="rounded-2xl object-cover w-full h-64 md:h-72" />
+                    </div>
+                    <div className="w-full md:w-1/2 text-left flex flex-col justify-center">
+                        <h3 className="text-2xl font-bold text-white mb-4">{models[active].title}</h3>
+                        <p className="text-white/80 mb-6">{models[active].description}</p>
+                        <ul className="space-y-3">
+                            {models[active].checklist.map((item, idx) => (
+                                <li key={idx} className="flex items-center gap-2 text-lg text-white font-semibold">
+                                    <span className="text-[#2563eb]">✔</span> {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 } 

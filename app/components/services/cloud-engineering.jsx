@@ -54,7 +54,7 @@ const fadeInUp = {
 const staggerContainer = {
     hidden: { opacity: 0 },
     visible: {
-        opacity: 1,
+                    opacity: 1, 
         transition: {
             staggerChildren: 0.1
         }
@@ -167,7 +167,7 @@ function ProcessAccordion() {
     );
 }
 
-export default function SoftwareDevelopmentPage() {
+export default function CloudEngineeringPage() {
     return (
         <div className="bg-[#08060F] text-white overflow-hidden">
             {/* Hero Section with Parallax */}
@@ -187,14 +187,14 @@ export default function SoftwareDevelopmentPage() {
                         className="inline-block"
                     >
                         <span className={`${roboto.className} px-4 py-2 rounded-full bg-[#171629] border border-[#3D43D4]/30 text-[#5B61F6] text-sm font-medium`}>
-                            UI/UX Design Excellence
+                            Cloud Engineering Services
                         </span>
                     </motion.div>
-                    <h1 className={`${roboto.className} text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] leading-tight`}>
-                    Transform Your Ideas Into Beautiful User Experiences
+                    <h1 className={`${roboto.className} text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] leading-tight`}>
+                    We deliver secure, scalable, and cost-effective cloud solutions using AWS, Azure, GCP, and DevOps best practices.
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        We create stunning, user-centered designs that enhance user engagement, improve usability, and drive business growth through intuitive and beautiful interfaces.
+                        We help startups and businesses validate their ideas quickly with cost-effective, feature-rich Minimum Viable Products that drive user engagement and business growth.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -203,10 +203,10 @@ export default function SoftwareDevelopmentPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Code className="w-5 h-5" />, text: "User Research" },
-                            { icon: <Zap className="w-5 h-5" />, text: "Wireframing" },
-                            { icon: <Shield className="w-5 h-5" />, text: "Visual Design" },
-                            { icon: <Cloud className="w-5 h-5" />, text: "Prototyping" }
+                            { icon: <Code className="w-5 h-5" />, text: "Cloud Migration" },
+                            { icon: <Zap className="w-5 h-5" />, text: "DevOps" },
+                            { icon: <Shield className="w-5 h-5" />, text: "CI/CD" },
+                            { icon: <Cloud className="w-5 h-5" />, text: "Security" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -236,10 +236,10 @@ export default function SoftwareDevelopmentPage() {
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
                 <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {[
-                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "200+", label: "Designs Created" },
-                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "98%", label: "Client Satisfaction" },
-                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "10+", label: "Years Experience" },
-                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "150+", label: "Happy Clients" }
+                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "200+", label: "Cloud Projects" },
+                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "99.99%", label: "Uptime" },
+                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "12+", label: "Years Cloud Experience" },
+                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "Happy Clients" }
                     ].map((stat, index) => (
                         <AnimatedItem key={index} className="space-y-4">
                             <div className="flex justify-center">{stat.icon}</div>
@@ -254,7 +254,7 @@ export default function SoftwareDevelopmentPage() {
                             <p className="text-gray-300">{stat.label}</p>
                         </AnimatedItem>
                     ))}
-                </div>
+                    </div>
             </AnimatedSection>
 
             {/* Software Developer Sections */}
@@ -269,10 +269,10 @@ export default function SoftwareDevelopmentPage() {
                             <Image src={sd} alt="Software Development on Laptop" layout="fill" objectFit="cover" />
                         </motion.div>
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>UI/UX Designer</h3>
-                            <p className="text-gray-300">From concept to pixel-perfect designs, we create user experiences that delight and convert.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Cloud Migration</h3>
+                            <p className="text-gray-300">From concept to launch, we turn your ideas into real products fast.</p>
                             <ul className="space-y-3">
-                                {["User Research", "Wireframing", "Visual Design"].map((feature, idx) => (
+                                {["Market Research", "Prototyping", "Core Features"].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -288,10 +288,10 @@ export default function SoftwareDevelopmentPage() {
                     {/* Section 2: Left Text, Right Image */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>UI/UX Designer</h3>
-                            <p className="text-gray-300">Ongoing design support, user testing, and iterative improvements.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>DevOps</h3>
+                            <p className="text-gray-300">Ongoing support, analytics, and updates.</p>
                             <ul className="space-y-3">
-                                {["User Testing", "Design Systems", "Iterative Updates"].map((feature, idx) => (
+                                {["Analytics", "User Testing", "Iterative Updates"].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -319,32 +319,32 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Our Design Methodology
+                        Our Development Methodology
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
                                 step: "01",
-                                title: "Research",
-                                description: "Understanding user needs, business goals, and market research to inform design decisions.",
+                                title: "Discovery",
+                                description: "Understanding business requirements, market validation, and MVP scope definition.",
                                 icon: <BarChart className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "02",
-                                title: "Wireframing",
-                                description: "Creating low-fidelity wireframes and user flows to establish information architecture.",
+                                title: "Prototyping",
+                                description: "Creating rapid prototypes and wireframes to validate user experience and core features.",
                                 icon: <Layers className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "03",
-                                title: "Design",
-                                description: "High-fidelity visual design with attention to typography, color, and visual hierarchy.",
+                                title: "Development",
+                                description: "Agile development focusing on core features and essential functionality for MVP launch.",
                                 icon: <Code className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "04",
-                                title: "Prototype",
-                                description: "Interactive prototypes for user testing and stakeholder feedback collection.",
+                                title: "Launch",
+                                description: "Quick deployment with analytics integration and user feedback collection.",
                                 icon: <Cloud className="w-8 h-8 text-[#5B61F6]" />
                             }
                         ].map((process, index) => (
@@ -386,45 +386,45 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Our UI/UX Design Services
+                        Our MVP Development Services
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "User Research",
-                                description: "Comprehensive user research including interviews, surveys, and usability testing to understand user needs.",
+                                title: "Cloud Strategy",
+                                description: "Market research and user interviews to validate your business idea before development.",
                                 icon: <Code className="w-8 h-8" />,
-                                features: ["User Interviews", "Surveys", "Usability Testing", "Persona Creation"]
+                                features: ["Market Research", "User Interviews", "Competitor Analysis", "Feasibility Study"]
                             },
                             {
-                                title: "Wireframing",
-                                description: "Low and high-fidelity wireframes to establish information architecture and user flows.",
+                                title: "Migration",
+                                description: "Quick wireframes and interactive prototypes to visualize your MVP concept.",
                                 icon: <Server className="w-8 h-8" />,
-                                features: ["Information Architecture", "User Flows", "Wireframes", "Sitemaps"]
+                                features: ["Wireframing", "Interactive Prototypes", "User Flow Design", "UI/UX Mockups"]
                             },
                             {
-                                title: "Visual Design",
-                                description: "Beautiful, pixel-perfect designs that align with brand guidelines and user expectations.",
+                                title: "DevOps",
+                                description: "Essential functionality development focusing on the most critical features for MVP launch.",
                                 icon: <Cloud className="w-8 h-8" />,
-                                features: ["UI Design", "Brand Guidelines", "Typography", "Color Theory"]
+                                features: ["Essential Features", "Scalable Architecture", "Performance Optimization", "Security"]
                             },
                             {
-                                title: "Prototyping",
-                                description: "Interactive prototypes for user testing and stakeholder presentations.",
+                                title: "CI/CD",
+                                description: "Comprehensive testing with real users to gather feedback and iterate quickly.",
                                 icon: <Workflow className="w-8 h-8" />,
-                                features: ["Interactive Prototypes", "User Testing", "Stakeholder Feedback", "Iteration"]
+                                features: ["Beta Testing", "User Feedback", "Analytics Integration", "Iteration Planning"]
                             },
                             {
-                                title: "Design Systems",
-                                description: "Comprehensive design systems for consistent and scalable design across platforms.",
+                                title: "Security",
+                                description: "Built-in analytics and tracking to measure user behavior and MVP performance.",
                                 icon: <Network className="w-8 h-8" />,
-                                features: ["Component Libraries", "Style Guides", "Design Tokens", "Documentation"]
+                                features: ["Google Analytics", "User Tracking", "Performance Metrics", "A/B Testing"]
                             },
                             {
-                                title: "User Testing",
-                                description: "Usability testing and user feedback collection to validate design decisions.",
+                                title: "Cost Optimization",
+                                description: "Future-proof architecture that can grow with your business and user base.",
                                 icon: <Database className="w-8 h-8" />,
-                                features: ["Usability Testing", "A/B Testing", "User Feedback", "Analytics"]
+                                features: ["Cloud Infrastructure", "Database Design", "API Development", "Scalability Planning"]
                             }
                         ].map((service, index) => (
                             <AnimatedItem 
@@ -484,14 +484,14 @@ export default function SoftwareDevelopmentPage() {
                     </motion.h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                         {[
-                            { name: "Design Tools", icon: "🎨", tech: ["Figma", "Sketch", "Adobe XD", "InVision"] },
-                            { name: "Prototyping", icon: "⚙️", tech: ["Framer", "Principle", "Protopie", "Axure"] },
-                            { name: "Research", icon: "🔍", tech: ["UserTesting", "Hotjar", "Maze", "Optimal Workshop"] },
-                            { name: "Analytics", icon: "📊", tech: ["Google Analytics", "Mixpanel", "Hotjar", "FullStory"] },
-                            { name: "Collaboration", icon: "🤝", tech: ["Figma", "Miro", "Notion", "Slack"] },
-                            { name: "Testing", icon: "🧪", tech: ["Usability Testing", "A/B Testing", "User Interviews", "Surveys"] },
-                            { name: "Design Systems", icon: "🎯", tech: ["Storybook", "Figma", "Zeroheight", "Design Tokens"] },
-                            { name: "Accessibility", icon: "♿", tech: ["WCAG Guidelines", "Screen Readers", "Color Contrast", "Keyboard Navigation"] }
+                            { name: "Frontend", icon: "🎨", tech: ["React", "Next.js", "Vue.js", "TypeScript"] },
+                            { name: "Backend", icon: "⚙️", tech: ["Node.js", "Python", "Firebase", "Express"] },
+                            { name: "Database", icon: "🗄️", tech: ["MongoDB", "PostgreSQL", "Firebase", "Redis"] },
+                            { name: "Design", icon: "🎨", tech: ["Figma", "Sketch", "Adobe XD", "InVision"] },
+                            { name: "Analytics", icon: "📊", tech: ["Google Analytics", "Mixpanel", "Hotjar", "Amplitude"] },
+                            { name: "Testing", icon: "🧪", tech: ["Jest", "Cypress", "User Testing", "A/B Testing"] },
+                            { name: "Deployment", icon: "🚀", tech: ["Vercel", "Netlify", "AWS", "Heroku"] },
+                            { name: "Monitoring", icon: "📊", tech: ["Sentry", "LogRocket", "New Relic", "DataDog"] }
                         ].map((stack, index) => (
                             <AnimatedItem 
                                 key={index}
@@ -518,8 +518,8 @@ export default function SoftwareDevelopmentPage() {
             {/* Industries Section */}
             <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">UI/UX Design Solutions We Deliver to Help Businesses Create Better User Experiences</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Sks Tech Solution we specialize in delivering comprehensive UI/UX design services to help businesses create user-centered digital experiences. Here's what we offer:</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">MVP Solutions We Deliver to Help Startups Validate Ideas</h2>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Sks Tech Solution we specialize in delivering rapid MVP development services to help startups and businesses validate their ideas quickly and cost-effectively. Here's what we offer:</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Card 1 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
@@ -528,8 +528,8 @@ export default function SoftwareDevelopmentPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182A4.5 4.5 0 016.75 12.75m0 0A4.5 4.5 0 0115.182 8.818m-8.432 3.932a4.5 4.5 0 018.432-3.932m0 0V3.75m0 5.068a4.5 4.5 0 01-8.432 3.932m8.432-3.932l3.75 3.75m-3.75-3.75l-3.75 3.75" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Web Design</h3>
-                            <p className="text-black/80">Create stunning, responsive web designs that provide seamless user experiences across all devices and platforms.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">SaaS Platforms</h3>
+                            <p className="text-black/80">Build and launch SaaS MVPs quickly to validate market demand and gather early user feedback for product-market fit.</p>
                         </div>
                         {/* Card 2 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
@@ -541,8 +541,8 @@ export default function SoftwareDevelopmentPage() {
                                     <path d="M7 17h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Mobile App Design</h3>
-                            <p className="text-black/80">Design intuitive mobile app interfaces that enhance user engagement and drive app store success.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">E-commerce Solutions</h3>
+                            <p className="text-black/80">Create e-commerce MVPs to test product demand, pricing strategies, and customer acquisition channels.</p>
                         </div>
                         {/* Card 3 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
@@ -552,8 +552,8 @@ export default function SoftwareDevelopmentPage() {
                                     <rect x="7" y="9" width="10" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">E-commerce Design</h3>
-                            <p className="text-black/80">Optimize e-commerce user experiences to increase conversions, reduce cart abandonment, and boost sales.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Healthcare Apps</h3>
+                            <p className="text-black/80">Develop healthcare MVPs to validate patient needs, regulatory compliance, and market opportunities in the health tech space.</p>
                         </div>
                         {/* Card 4 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
@@ -563,8 +563,8 @@ export default function SoftwareDevelopmentPage() {
                                     <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">SaaS Platform Design</h3>
-                            <p className="text-black/80">Design scalable SaaS interfaces that improve user onboarding, feature adoption, and customer retention.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">EdTech Platforms</h3>
+                            <p className="text-black/80">Build educational technology MVPs to test learning methodologies, user engagement, and market demand for innovative education solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -585,64 +585,64 @@ export default function SoftwareDevelopmentPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
                             {
-                                title: "E-commerce Redesign",
-                                client: "Fashion Retailer",
-                                description: "Redesigned an e-commerce platform that increased conversion rates and improved user experience significantly.",
-                                results: ["45% Increase in Conversions", "60% Faster Checkout", "User Satisfaction"],
+                                title: "Cloud Migration for Retailer",
+                                client: "Tech Startup",
+                                description: "Developed a SaaS MVP that helped validate market demand and secure seed funding within 3 months.",
+                                results: ["500+ Beta Users", "95% User Satisfaction", "Seed Funding Secured"],
                                 icon: <Boxes className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Figma", "UserTesting", "Hotjar", "Analytics"],
+                                tech: ["React", "Node.js", "MongoDB", "Stripe"],
                                 duration: "8 weeks",
-                                team: "4 members"
-                            },
-                            {
-                                title: "SaaS Dashboard Design",
-                                client: "Tech Company",
-                                description: "Created a comprehensive SaaS dashboard that improved user onboarding and feature adoption.",
-                                results: ["80% User Adoption", "50% Faster Onboarding", "Reduced Support Tickets"],
-                                icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Figma", "Principle", "Maze", "Analytics"],
-                                duration: "10 weeks",
-                                team: "5 members"
-                            },
-                            {
-                                title: "Mobile App Design",
-                                client: "HealthTech Startup",
-                                description: "Designed a healthcare mobile app that improved patient engagement and appointment booking.",
-                                results: ["90% User Satisfaction", "70% Faster Booking", "HIPAA Compliant"],
-                                icon: <Heart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Figma", "Framer", "UserTesting", "Accessibility"],
-                                duration: "12 weeks",
                                 team: "6 members"
                             },
                             {
-                                title: "Banking App Redesign",
-                                client: "Financial Institution",
-                                description: "Redesigned a banking app to improve security perception and user trust while maintaining functionality.",
-                                results: ["95% Security Rating", "40% Faster Transactions", "User Trust"],
-                                icon: <LineChart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Sketch", "Principle", "UserTesting", "Security Testing"],
-                                duration: "14 weeks",
+                                title: "SaaS Scaling for Startup",
+                                client: "Retail Startup",
+                                description: "Built an e-commerce MVP that tested product demand and pricing strategies successfully.",
+                                results: ["200+ Products Listed", "50% Conversion Rate", "Market Validation"],
+                                icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Next.js", "Firebase", "Stripe", "Analytics"],
+                                duration: "6 weeks",
+                                team: "4 members"
+                            },
+                            {
+                                title: "Healthcare Booking MVP",
+                                client: "HealthTech Startup",
+                                description: "Created a healthcare appointment booking MVP that validated patient needs and regulatory requirements.",
+                                results: ["HIPAA Compliant", "100+ Doctors", "Patient Satisfaction"],
+                                icon: <Heart className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["React Native", "Node.js", "PostgreSQL", "Twilio"],
+                                duration: "10 weeks",
                                 team: "7 members"
                             },
                             {
-                                title: "Educational Platform Design",
-                                client: "EdTech Company",
-                                description: "Designed an educational platform that improved learning outcomes and student engagement.",
-                                results: ["85% Completion Rate", "60% Better Engagement", "Learning Outcomes"],
-                                icon: <Network className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Figma", "Framer", "UserTesting", "Analytics"],
-                                duration: "16 weeks",
+                                title: "EdTech Learning Platform",
+                                client: "Education Startup",
+                                description: "Developed an educational technology MVP that tested learning methodologies and user engagement.",
+                                results: ["1000+ Students", "85% Completion Rate", "Investor Interest"],
+                                icon: <LineChart className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Vue.js", "Python", "MongoDB", "AWS"],
+                                duration: "12 weeks",
                                 team: "8 members"
                             },
                             {
-                                title: "Restaurant App Design",
-                                client: "Food Chain",
-                                description: "Created a restaurant app design that streamlined ordering and improved customer satisfaction.",
-                                results: ["75% Order Increase", "90% Customer Satisfaction", "Faster Service"],
+                                title: "FinTech Payment MVP",
+                                client: "FinTech Startup",
+                                description: "Built a financial technology MVP that validated payment processing and security requirements.",
+                                results: ["PCI Compliant", "10K+ Transactions", "Regulatory Approval"],
+                                icon: <Network className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+                                duration: "14 weeks",
+                                team: "10 members"
+                            },
+                            {
+                                title: "Social Networking MVP",
+                                client: "Social Startup",
+                                description: "Created a social networking MVP that tested user engagement and community building features.",
+                                results: ["5000+ Users", "High Engagement", "Viral Growth"],
                                 icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Adobe XD", "Protopie", "UserTesting", "Analytics"],
+                                tech: ["React Native", "Firebase", "Socket.io", "AWS"],
                                 duration: "9 weeks",
-                                team: "5 members"
+                                team: "6 members"
                             }
                         ].map((caseStudy, index) => (
                             <AnimatedItem 
@@ -709,13 +709,13 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold mb-8`}
                     >
-                        Ready to Create Beautiful User Experiences?
+                        Ready to Modernize with Cloud?
                     </motion.h2>
                     <motion.p 
                         variants={fadeInUp}
                         className="text-gray-300 mb-12 text-lg"
                     >
-                        Let's transform your digital products with our expert UI/UX design services.
+                        Let's power your business with secure, scalable cloud solutions.
                     </motion.p>
                     <motion.div
                         variants={fadeInUp}
@@ -726,7 +726,7 @@ export default function SoftwareDevelopmentPage() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Start Your Design Project <ArrowRight className="w-5 h-5" />
+                            Start Your MVP <ArrowRight className="w-5 h-5" />
                         </motion.button>
                         <motion.button 
                             className="border border-[#3D43D4] hover:bg-[#3D43D4]/10 text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
@@ -772,21 +772,21 @@ function FlexibleModelsSection() {
             label: 'Fixed Price Model',
             image: '/services/Layer-17.png', // Replace with your image
             title: 'Fixed Price Model',
-            description: 'Our fixed price model is ideal for design projects with well-defined requirements and scope. It offers cost predictability and is best suited for projects with clear design briefs and limited budget.',
+            description: 'Our fixed price model is ideal for MVPs with well-defined requirements and scope. It offers cost predictability and is best suited for startups with clear vision and limited budget.',
             checklist: [
-                'Clear Design Brief',
+                'Clear Scope & Timeline',
                 'Budget Certainty',
-                'Timeline Guarantee',
+                'Fast Time to Market',
             ],
         },
         {
             label: 'Time and Material Model',
             image: '/services/Layer-17.png', // Replace with your image
             title: 'Time and Material Model',
-            description: 'This model is perfect for design projects where requirements may evolve based on user feedback and testing. It provides flexibility and transparency for iterative design processes.',
+            description: 'This model is perfect for MVPs where requirements may evolve based on user feedback. It provides flexibility and transparency, allowing you to iterate quickly based on market response.',
             checklist: [
                 'Flexible Requirements',
-                'Iterative Design',
+                'Quick Iterations',
                 'User Feedback Integration',
             ],
         },
@@ -794,9 +794,9 @@ function FlexibleModelsSection() {
             label: 'Dedicated Team',
             image: '/services/Layer-17.png', // Replace with your image
             title: 'Dedicated Team',
-            description: 'Our UI/UX design company offers a dedicated team model that is tailored for businesses looking to build long-term design partnerships. It provides consistent design quality and expertise for growing businesses.',
+            description: 'Our MVP development company offers a dedicated team model that is tailored for startups looking to build and scale their product. It provides long-term commitment and expertise for growing businesses.',
             checklist: [
-                'Consistent Quality',
+                'Faster Development',
                 'Reduced Costs',
                 'Long-Term Partnership',
             ],
@@ -806,8 +806,8 @@ function FlexibleModelsSection() {
     return (
         <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
             <div className="max-w-6xl mx-auto text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose From Our Flexible Models for UI/UX Design</h2>
-                <p className="text-white/80 text-lg md:text-xl">Being a top UI/UX design services provider, we offer various hiring models to suit your design needs.</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose From Our Flexible Models for MVP Development</h2>
+                <p className="text-white/80 text-lg md:text-xl">Being a top MVP development services provider, we offer various hiring models to suit your startup needs.</p>
             </div>
             <div className="flex flex-col items-center">
                 {/* Tabs */}

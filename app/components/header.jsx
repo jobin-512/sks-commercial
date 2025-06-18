@@ -80,6 +80,8 @@ export default function Header() {
                                 <Link href="/services/mobile-app-development" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">Mobile App Development</Link>
                                 <Link href="/services/ui-design" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">UI design</Link>
                                 <Link href="/services/mvp-development" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">MVP Development</Link>
+                                <Link href="/services/ai-development" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">AI Development</Link>
+                                <Link href="/services/cloud-engineering" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">Cloud Engineering</Link>
                             </div>
                         </div>
 
@@ -218,6 +220,20 @@ export default function Header() {
                             onClick={toggleSidebar}
                         >
                             - MVP Development
+                        </Link>
+                        <Link 
+                            href="/services/ai-development" 
+                            className="text-md text-gray-300 hover:text-[#3D43D4] transition-colors ml-4"
+                            onClick={toggleSidebar}
+                        >
+                            - AI Development
+                        </Link>
+                        <Link 
+                            href="/services/cloud-engineering" 
+                            className="text-md text-gray-300 hover:text-[#3D43D4] transition-colors ml-4"
+                            onClick={toggleSidebar}
+                        >
+                            - Cloud Engineering
                         </Link>
                         <Link 
                             href="/industries" 
