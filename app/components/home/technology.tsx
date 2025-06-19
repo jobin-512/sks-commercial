@@ -11,16 +11,52 @@ import css from "@/public/technologies/css.png"
 import html from "@/public/technologies/html.png"
 import ember from "@/public/technologies/ember.png"
 import meteor from "@/public/technologies/meteor.png"
-// import java from "@/public/technologies/java.png"
-// import nodeJs from "@/public/technologies/nodejs.png"
-// import php from "@/public/technologies/php.png"
-// import python from "@/public/technologies/python.png"
-// import go from "@/public/technologies/go.png"
-// import net from "@/public/technologies/net.png"
-// import microsoft from "@/public/technologies/microsoft.png"
-// import mobile from "@/public/technologies/mobile.png"
-// import aiMl from "@/public/technologies/aiml.png"
-// import devops from "@/public/technologies/devops.png"
+import java from "@/public/technologies/java.png"
+import node from "@/public/technologies/node.png"
+import php from "@/public/technologies/php.png"
+import python from "@/public/technologies/python.png"
+import go from "@/public/technologies/go.png"
+import net from "@/public/technologies/net.png"
+import salesforce from "@/public/technologies/salseforce.png"
+import sharepoint from "@/public/technologies/sharepoint.png"
+import dynamics from "@/public/technologies/dynamics.png"
+import sql from "@/public/technologies/sqlserver.png"
+import mysql from "@/public/technologies/mysql.png"
+import postgress from "@/public/technologies/postgress.png"
+import oracle from "@/public/technologies/oracle.png"
+import apache from "@/public/technologies/apache.png"
+import nifi from "@/public/technologies/nifi.png"
+import cassandra from "@/public/technologies/cassandra.png"
+import hive from "@/public/technologies/hive.png"
+import mongodb from "@/public/technologies/mongodb.png"
+import android from "@/public/technologies/android.png"
+import flutter from "@/public/technologies/flutter.png"
+import cordova from "@/public/technologies/cordova.png"
+import ios from "@/public/technologies/ios.png"
+import xamarin from "@/public/technologies/xamarin.png"
+import pwa from "@/public/technologies/pwa.png"
+import ionic from "@/public/technologies/ionic.png"
+import open from "@/public/technologies/open.png"
+import meta from "@/public/technologies/meta.png"
+import mistral from "@/public/technologies/mistral.png"
+import google from "@/public/technologies/google.png"
+import hugging from "@/public/technologies/hugginh.png"
+import grok from "@/public/technologies/grok.png"
+import milvus from "@/public/technologies/milvus.png"
+import pinecone from "@/public/technologies/pinecone.png"
+import langchain from "@/public/technologies/langchain.png"
+import drant from "@/public/technologies/drant.png"
+import mesos from "@/public/technologies/mesos.png"
+import docker from "@/public/technologies/docker.png"
+import kubernetes from "@/public/technologies/kuberneters.png"
+import terraform from "@/public/technologies/terraform.png"
+import openshift from "@/public/technologies/openshift.png"
+import packer from "@/public/technologies/packer.png"
+import ansible from "@/public/technologies/ansible.png"
+import puppet from "@/public/technologies/puppet.png"
+import saltstack from "@/public/technologies/stacksalt.png"
+import azure from "@/public/technologies/azure.png"
+
 import { useState } from "react"
 import { useRef, useLayoutEffect } from "react"
 import gsap from "gsap"
@@ -66,63 +102,63 @@ export default function Technology(){
             { name: "Meteor", image: meteor },
         ],
         Backend: [
-            { name: "JAVA", image: javascript },
-            { name: "Node.js", image: javascript },
-            { name: "PHP", image: javascript },
-            { name: "Python", image: javascript },
-            { name: "Go", image: javascript },
-            { name: ".NET", image: javascript },
+            { name: "JAVA", image: java},
+            { name: "Node.js", image: node },
+            { name: "PHP", image: php },
+            { name: "Python", image: python },
+            { name: "Go", image: go },
+            { name: ".NET", image: net },
         ],
         Microsoft: [
-            { name: "SalesForce", image: javascript },
-            { name: "Sharepoint", image: javascript },
-            { name: "Microsoft Dynamics", image: javascript },
-            { name: "Microoft SQL", image: javascript },
-            { name: "My SQL", image: javascript },
-            { name: "Postgress SQL", image: javascript },
-            { name: "Oracle", image: javascript },
-            { name: "APACHE HBASE", image: javascript },
-            { name: "APACHE nifi", image: javascript },
-            { name: "Cassandra", image: javascript },
-            { name: "HIVE", image: javascript },
-            { name: "Mongo DB", image: javascript },
+            { name: "SalesForce", image: salesforce },
+            { name: "Sharepoint", image: sharepoint },
+            { name: "Microsoft Dynamics", image: dynamics },
+            { name: "Microoft SQL", image: sql },
+            { name: "My SQL", image: mysql },
+            { name: "Postgress SQL", image: postgress },
+            { name: "Oracle", image: oracle },
+            { name: "APACHE HBASE", image: apache },
+            { name: "APACHE nifi", image: nifi },
+            { name: "Cassandra", image: cassandra },
+            { name: "HIVE", image: hive },
+            { name: "Mongo DB", image: mongodb },
 
         ],
         Mobile: [
-            { name: "React Native", image: javascript },
-            { name: "Flutter", image: javascript },
-            { name: "Android", image: javascript },
-            { name: "Cordova", image: javascript },
-            { name: "iOS", image: javascript },
-            { name: "Xamarin", image: javascript },
-            { name: "PWA", image: javascript },
-            { name: "Ionic", image: javascript },
+            { name: "React Native", image: reactJs },
+            { name: "Flutter", image: flutter },
+            { name: "Android", image: android },
+            { name: "Cordova", image: cordova },
+            { name: "iOS", image: ios },
+            { name: "Xamarin", image: xamarin },
+            { name: "PWA", image: pwa },
+            { name: "Ionic", image: ionic },
 
         ],
         'AI & ML': [
-            { name: "Open AI", image: javascript },
-            { name: "Meta", image: javascript },
-            { name: "Mistral AI", image: javascript },
-            { name: "Google", image: javascript },
-            { name: "Huggung Face", image: javascript },
-            { name: "Grok", image: javascript },
-            { name: "Drant", image: javascript },
-            { name: "Milvus", image: javascript },
-            { name: "Pinecone", image: javascript },
-            { name: "LangChain", image: javascript },
+            { name: "Open AI", image: open },
+            { name: "Meta", image: meta },
+            { name: "Mistral AI", image: mistral },
+            { name: "Google", image: google },
+            { name: "Huggung Face", image: hugging },
+            { name: "Grok", image: grok },
+            { name: "Drant", image: drant },
+            { name: "Milvus", image: milvus },
+            { name: "Pinecone", image: pinecone },
+            { name: "LangChain", image: langchain },
 
         ],
         Devops: [
-            { name: "Docker", image: javascript },
-            { name: "Kubernetes", image: javascript },
-            { name: "Apache Mesos", image: javascript },
-            { name: "Teraaform", image: javascript },
-            { name: "Openshift", image: javascript },
-            { name: "Packer", image: javascript },
-            { name: "Ansible", image: javascript },
-            { name: "Puppet", image: javascript },
-            { name: "SaltStack", image: javascript },
-            { name: "Azure Devops", image: javascript },
+            { name: "Docker", image: docker },
+            { name: "Kubernetes", image: kubernetes },
+            { name: "Apache Mesos", image: mesos },
+            { name: "Teraaform", image: terraform },
+            { name: "Openshift", image: openshift },
+            { name: "Packer", image: packer },
+            { name: "Ansible", image: ansible },
+            { name: "Puppet", image: puppet },
+            { name: "SaltStack", image: saltstack },
+            { name: "Azure Devops", image: azure },
 
         ],
     }
@@ -152,7 +188,9 @@ export default function Technology(){
                     <div className={`${roboto.className} grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-8 justify-items-center`}>
                         {technologies[activeCategory].map((tech, index) => (
                             <div key={index} className="bg-[#171629] rounded-xl p-4 flex flex-col items-center gap-2 w-full max-w-[200px]">
-                                <Image alt={tech.name} src={tech.image} width={50} height={50} className="w-12 h-12 object-contain"></Image>
+                                <div className="h-16 flex items-center justify-center  rounded-lg">
+                                    <Image alt={tech.name} src={tech.image}  className="object-contain w-auto max-h-full" />
+                                </div>
                                 <p className="text-white text-sm text-center">{tech.name}</p>
                             </div>
                         ))}
@@ -171,7 +209,9 @@ export default function Technology(){
                         <div className={`${roboto.className} grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 w-full justify-items-center`}>
                             {categoryItems.map((tech, index) => (
                                 <div key={index} className="h-fit bg-white rounded-xl flex flex-col items-center justify-center gap-2 p-2 w-full max-w-[150px]">
-                                    <Image alt={tech.name} src={tech.image} width={40} height={40} className="w-10 h-10 md:w-12 md:h-12 object-contain"></Image>
+                                    <div className="w-12 h-12 flex items-center justify-center bg-gray-200 rounded-lg">
+                                        <Image alt={tech.name} src={tech.image} width={40} height={40} className="object-contain max-w-full max-h-full" />
+                                    </div>
                                     <p className="text-black text-xs md:text-sm text-center">{tech.name}</p>
                                 </div>
                             ))}
