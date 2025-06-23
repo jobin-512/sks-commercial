@@ -95,33 +95,47 @@ const AnimatedItem = ({ children, className = "" }) => {
 function ProcessAccordion() {
     const steps = [
         {
-            title: 'Design',
-            description: 'The design phase involves creating the visual and interactive aspects of the software development. Our custom software development services are critical in ensuring that the software solution is user-friendly and aesthetically pleasing.',
+            title: '1. Business & Cloud Readiness Analysis',
+            description: 'We evaluate your business goals, current systems, and technical shortcomings to create a cloud strategy that meets your specific operating and growth requirements.',
             checklist: [
-                'Interaction Flows',
-                'Wireframing',
-                'Visual Design',
-                'Brand Alignment',
+                'Infrastructure assessment',
+                'Business requirement analysis',
+                'Security and compliance check',
+                'Risk identification',
+                'Cloud adoption roadmap',
             ],
         },
         {
-            title: 'Development',
-            description: 'The development phase is where the actual coding and implementation take place. Our experienced developers use best practices and the latest technologies to build robust, scalable, and secure software solutions.',
+            title: '2. Custom Architecture & Solution Design',
+            description: 'Our specialists create secure, scalable, and performance-oriented cloud architectures, with easy integration to your business processes and future expansion.',
             checklist: [
-                'Agile Development',
-                'Code Reviews',
-                'Quality Assurance',
-                'Continuous Integration',
+                'Scalable architecture',
+                'Security-focused design',
+                'Cost-efficient solutions',
+                'Performance optimization',
+                'Integration planning',
             ],
         },
         {
-            title: 'Deployment',
-            description: 'The deployment phase ensures your software is launched smoothly and efficiently. We provide ongoing support and maintenance to guarantee optimal performance and user satisfaction.',
+            title: '3. Smooth Development & Deployment',
+            description: 'We build and deploy cloud solutions with best practices, advanced tools, and automation for smooth delivery with low risk and disruption.',
             checklist: [
-                'Cloud Deployment',
-                'Monitoring & Support',
-                'User Training',
-                'Performance Optimization',
+                'Agile development',
+                'Automated deployment',
+                'Risk mitigation',
+                'Minimal downtime',
+                'Quality assurance',
+            ],
+        },
+        {
+            title: '4. Continuous Support & Optimization',
+            description: 'We monitor, maintain, and maximize performance proactively so your cloud environment will be secured, optimized, and aligned with business needs that keep changing over time.',
+            checklist: [
+                '24/7 monitoring',
+                'Security updates',
+                'Performance tuning',
+                'Cost optimization',
+                'Scalability improvements',
             ],
         },
     ];
@@ -187,14 +201,14 @@ export default function CloudEngineeringPage() {
                         className="inline-block"
                     >
                         <span className={`${roboto.className} px-4 py-2 rounded-full bg-[#171629] border border-[#3D43D4]/30 text-[#5B61F6] text-sm font-medium`}>
-                            Cloud Engineering Services
+                            Cloud Engineering Excellence
                         </span>
                     </motion.div>
                     <h1 className={`${roboto.className} text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] leading-tight`}>
-                    We deliver secure, scalable, and cost-effective cloud solutions using AWS, Azure, GCP, and DevOps best practices.
+                        Cloud Engineering Services to Power Your Digital Future
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        We help startups and businesses validate their ideas quickly with cost-effective, feature-rich Minimum Viable Products that drive user engagement and business growth.
+                        At SKS Tech Solution, we enable businesses to unlock the real power of the cloud. As your reliable technology partner, we architect, build, and operate scalable cloud environments that fuel growth, security, and operational efficiency.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -203,10 +217,10 @@ export default function CloudEngineeringPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Code className="w-5 h-5" />, text: "Cloud Migration" },
-                            { icon: <Zap className="w-5 h-5" />, text: "DevOps" },
-                            { icon: <Shield className="w-5 h-5" />, text: "CI/CD" },
-                            { icon: <Cloud className="w-5 h-5" />, text: "Security" }
+                            { icon: <Code className="w-5 h-5" />, text: "Cloud Architecture & Migration" },
+                            { icon: <Zap className="w-5 h-5" />, text: "Infrastructure Modernization" },
+                            { icon: <Shield className="w-5 h-5" />, text: "DevOps & Automation" },
+                            { icon: <Cloud className="w-5 h-5" />, text: "Secure, reliable, and Scalable Systems" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -226,7 +240,7 @@ export default function CloudEngineeringPage() {
                         className="mt-12"
                     >
                         <button className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2 mx-auto">
-                            Start Your Project <ArrowRight className="w-5 h-5" />
+                            Start Your Cloud Journey <ArrowRight className="w-5 h-5" />
                         </button>
                     </motion.div>
                 </motion.div>
@@ -236,10 +250,10 @@ export default function CloudEngineeringPage() {
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
                 <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {[
-                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "200+", label: "Cloud Projects" },
-                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "99.99%", label: "Uptime" },
-                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "12+", label: "Years Cloud Experience" },
-                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "Happy Clients" }
+                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "200+", label: "Cloud Projects Delivered" },
+                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "99%", label: "Client Satisfaction" },
+                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "12+", label: "Years of Expertise" },
+                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "Global Enterprise Clients" }
                     ].map((stat, index) => (
                         <AnimatedItem key={index} className="space-y-4">
                             <div className="flex justify-center">{stat.icon}</div>
@@ -254,7 +268,7 @@ export default function CloudEngineeringPage() {
                             <p className="text-gray-300">{stat.label}</p>
                         </AnimatedItem>
                     ))}
-                    </div>
+                </div>
             </AnimatedSection>
 
             {/* Software Developer Sections */}
@@ -266,13 +280,18 @@ export default function CloudEngineeringPage() {
                             variants={fadeInUp} 
                             className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-[50%_40%_30%_60%/60%_30%_50%_40%] shadow-lg"
                         >
-                            <Image src={sd} alt="Software Development on Laptop" layout="fill" objectFit="cover" />
+                            <Image src={sd} alt="Cloud Architecture & Migration" layout="fill" objectFit="cover" />
                         </motion.div>
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Cloud Migration</h3>
-                            <p className="text-gray-300">From concept to launch, we turn your ideas into real products fast.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>End-to-End Cloud Services for Modern Businesses</h3>
+                            <p className="text-gray-300">We help businesses design, build, and manage secure, scalable cloud solutions that boost growth, improve performance, and support daily operations.</p>
                             <ul className="space-y-3">
-                                {["Market Research", "Prototyping", "Core Features"].map((feature, idx) => (
+                                {[
+                                    "Cloud Strategy & Consulting",
+                                    "Performance Optimization",
+                                    "Multi-Cloud & Hybrid Solutions",
+                                    "Security-First Architecture"
+                                ].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -280,7 +299,7 @@ export default function CloudEngineeringPage() {
                                 ))}
                             </ul>
                             <button className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2">
-                                Explore more <ArrowRight className="w-5 h-5" />
+                                Explore More <ArrowRight className="w-5 h-5" />
                             </button>
                         </motion.div>
                     </div>
@@ -288,10 +307,15 @@ export default function CloudEngineeringPage() {
                     {/* Section 2: Left Text, Right Image */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>DevOps</h3>
-                            <p className="text-gray-300">Ongoing support, analytics, and updates.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Proactive Cloud Management & Support</h3>
+                            <p className="text-gray-300">We keep your cloud safe and running smoothly with 24/7 monitoring, regular updates, and quick issue resolution.</p>
                             <ul className="space-y-3">
-                                {["Analytics", "User Testing", "Iterative Updates"].map((feature, idx) => (
+                                {[
+                                    "24/7 Monitoring",
+                                    "Cost Optimization",
+                                    "Compliance & Data Protection",
+                                    "Disaster Recovery Solutions"
+                                ].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -299,14 +323,14 @@ export default function CloudEngineeringPage() {
                                 ))}
                             </ul>
                             <button className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2">
-                                Explore more <ArrowRight className="w-5 h-5" />
+                                Explore More <ArrowRight className="w-5 h-5" />
                             </button>
                         </motion.div>
                         <motion.div 
                             variants={fadeInUp} 
                             className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-[50%_40%_30%_60%/60%_30%_50%_40%] shadow-lg"
                         >
-                            <Image src={sd2} alt="Software Development with Developer" layout="fill" objectFit="cover" />
+                            <Image src={sd2} alt="Cloud Management & Support" layout="fill" objectFit="cover" />
                         </motion.div>
                     </div>
                 </div>
@@ -319,32 +343,32 @@ export default function CloudEngineeringPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Our Development Methodology
+                        Our Proven Cloud Engineering Approach
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
                                 step: "01",
-                                title: "Discovery",
-                                description: "Understanding business requirements, market validation, and MVP scope definition.",
+                                title: "Cloud Readiness Assessment",
+                                description: "We assess your current systems to create a secure, scalable, and tailored cloud strategy.",
                                 icon: <BarChart className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "02",
-                                title: "Prototyping",
-                                description: "Creating rapid prototypes and wireframes to validate user experience and core features.",
+                                title: "Architecture & Design",
+                                description: "Our experts design secure, high-performing, and cost-efficient cloud infrastructure for your business success.",
                                 icon: <Layers className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "03",
-                                title: "Development",
-                                description: "Agile development focusing on core features and essential functionality for MVP launch.",
+                                title: "Seamless Cloud Migration",
+                                description: "We make cloud migration quick, reliable, and with the least downtime, and no business disruption.",
                                 icon: <Code className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "04",
-                                title: "Launch",
-                                description: "Quick deployment with analytics integration and user feedback collection.",
+                                title: "Optimization",
+                                description: "Ongoing monitoring, security patching, and performance optimization to maintain cloud performance at its peak.",
                                 icon: <Cloud className="w-8 h-8 text-[#5B61F6]" />
                             }
                         ].map((process, index) => (
@@ -386,45 +410,76 @@ export default function CloudEngineeringPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Our MVP Development Services
+                        Our Cloud Engineering Services
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "Cloud Strategy",
-                                description: "Market research and user interviews to validate your business idea before development.",
+                                title: "Cloud Consulting & Strategy",
+                                description: "Seamless cloud migrations are facilitated, employing well-tested methods to transfer data, applications, and systems into the cloud at minimal risk and zero disruption to existing businesses.",
                                 icon: <Code className="w-8 h-8" />,
-                                features: ["Market Research", "User Interviews", "Competitor Analysis", "Feasibility Study"]
+                                features: [
+                                    "Cloud readiness assessment",
+                                    "Customized cloud strategy",
+                                    "Cost optimization planning",
+                                    "Risk identification",
+                                    "Growth-focused recommendations"
+                                ]
                             },
                             {
-                                title: "Migration",
-                                description: "Quick wireframes and interactive prototypes to visualize your MVP concept.",
+                                title: "Cloud Architecture & Migration",
+                                description: "We design and implement scalable cloud systems tailored to your growth plans.",
                                 icon: <Server className="w-8 h-8" />,
-                                features: ["Wireframing", "Interactive Prototypes", "User Flow Design", "UI/UX Mockups"]
+                                features: [
+                                    "AWS, Azure, Google Cloud",
+                                    "Infrastructure Assessment",
+                                    "Secure Data Migration",
+                                    "Application Re-Architecture"
+                                ]
                             },
                             {
-                                title: "DevOps",
-                                description: "Essential functionality development focusing on the most critical features for MVP launch.",
+                                title: "Cloud Migration & Deployment",
+                                description: "We manage seamless cloud migrations, using proven methodologies to move your data, apps, and systems to the cloud with minimal risk and zero business disruption.",
                                 icon: <Cloud className="w-8 h-8" />,
-                                features: ["Essential Features", "Scalable Architecture", "Performance Optimization", "Security"]
+                                features: [
+                                    "Minimal downtime",
+                                    "Data integrity assurance",
+                                    "Application rehosting",
+                                    "Automated deployment tools"
+                                ]
                             },
                             {
-                                title: "CI/CD",
-                                description: "Comprehensive testing with real users to gather feedback and iterate quickly.",
+                                title: "Cloud Security Engineer Services",
+                                description: "Our dedicated cloud security engineer team ensures your systems are protected against evolving cyber threats.",
                                 icon: <Workflow className="w-8 h-8" />,
-                                features: ["Beta Testing", "User Feedback", "Analytics Integration", "Iteration Planning"]
+                                features: [
+                                    "Cloud Security Audits",
+                                    "Threat Detection & Prevention",
+                                    "Compliance Management",
+                                    "Identity & Access Controls"
+                                ]
                             },
                             {
-                                title: "Security",
-                                description: "Built-in analytics and tracking to measure user behavior and MVP performance.",
+                                title: "Google Cloud Expertise",
+                                description: "Leverage our certified specialists for superior Google cloud solutions.",
                                 icon: <Network className="w-8 h-8" />,
-                                features: ["Google Analytics", "User Tracking", "Performance Metrics", "A/B Testing"]
+                                features: [
+                                    "Google Cloud Professional Data Engineer",
+                                    "Data-driven Cloud Solutions",
+                                    "AI & Machine Learning Integration",
+                                    "Seamless Application Modernization"
+                                ]
                             },
                             {
-                                title: "Cost Optimization",
-                                description: "Future-proof architecture that can grow with your business and user base.",
+                                title: "Cloud DevOps & Automation",
+                                description: "Our DevOps engineers ensure the development process, deployment, and operations are set up with automation tools for rapid release, better collaboration, and sturdier infrastructure services.",
                                 icon: <Database className="w-8 h-8" />,
-                                features: ["Cloud Infrastructure", "Database Design", "API Development", "Scalability Planning"]
+                                features: [
+                                    "CI/CD pipeline setup",
+                                    "Automated deployments",
+                                    "Infrastructure as Code (IaC)",
+                                    "Faster release cycles"
+                                ]
                             }
                         ].map((service, index) => (
                             <AnimatedItem 
@@ -451,24 +506,10 @@ export default function CloudEngineeringPage() {
             {/* Customized Software Development Process Section */}
             <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
                 <div className="max-w-4xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Customized Software Development Process</h2>
-                    <p className="text-white/80 text-lg md:text-xl">As one of the best custom software development companies, our well-designed development process allows organizations to tailor solutions that meet specific business needs, enhance user experience, and drive innovation.</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Tailored Cloud Development Process</h2>
+                    <p className="text-white/80 text-lg md:text-xl">We adopt a customized cloud development process specific to your business objectives, providing secure, scalable, and efficient cloud solutions by way of strategic planning, smooth integration, and continuous optimization.</p>
                 </div>
                 <div className="max-w-4xl mx-auto space-y-8">
-                    {/* Discovery Card */}
-                    <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-3xl p-8 flex flex-col md:flex-row justify-between items-center shadow-xl mb-4">
-                        <div className="text-left flex-1 mb-6 md:mb-0">
-                            <h3 className="text-2xl font-bold text-white mb-2">Discovery</h3>
-                            <p className="text-white/80">The discovery phase is the initial stage of the customized software development process. Our custom software development company tries to understand your project's goals, objectives, and requirements.</p>
-                        </div>
-                        <ul className="text-left space-y-2 min-w-[220px]">
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Requirements Gathering</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Research & Analysis</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Solution Mapping</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Technology Evaluation</li>
-                        </ul>
-                    </div>
-                    {/* Accordion for other steps */}
                     <ProcessAccordion />
                 </div>
             </section>
@@ -484,14 +525,12 @@ export default function CloudEngineeringPage() {
                     </motion.h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                         {[
-                            { name: "Frontend", icon: "🎨", tech: ["React", "Next.js", "Vue.js", "TypeScript"] },
-                            { name: "Backend", icon: "⚙️", tech: ["Node.js", "Python", "Firebase", "Express"] },
-                            { name: "Database", icon: "🗄️", tech: ["MongoDB", "PostgreSQL", "Firebase", "Redis"] },
-                            { name: "Design", icon: "🎨", tech: ["Figma", "Sketch", "Adobe XD", "InVision"] },
-                            { name: "Analytics", icon: "📊", tech: ["Google Analytics", "Mixpanel", "Hotjar", "Amplitude"] },
-                            { name: "Testing", icon: "🧪", tech: ["Jest", "Cypress", "User Testing", "A/B Testing"] },
-                            { name: "Deployment", icon: "🚀", tech: ["Vercel", "Netlify", "AWS", "Heroku"] },
-                            { name: "Monitoring", icon: "📊", tech: ["Sentry", "LogRocket", "New Relic", "DataDog"] }
+                            { name: "Cloud Providers", icon: "☁️", tech: ["AWS", "Azure", "Google Cloud"] },
+                            { name: "Monitoring", icon: "📈", tech: ["Prometheus", "Grafana", "CloudWatch"] },
+                            { name: "Automation", icon: "🤖", tech: ["Terraform", "Kubernetes", "Ansible"] },
+                            { name: "Data & Analytics", icon: "📊", tech: ["BigQuery", "Dataflow", "Google professional data engineer Tools"] },
+                            { name: "Security", icon: "🔒", tech: ["Access Control", "Data Encryption", "Threat Monitoring & Detection"] },
+                            { name: "DevOps", icon: "⚙️", tech: ["Jenkins", "Docker", "CI/CD Pipelines"] }
                         ].map((stack, index) => (
                             <AnimatedItem 
                                 key={index}
@@ -499,7 +538,7 @@ export default function CloudEngineeringPage() {
                             >
                                 <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                                     {stack.icon}
-                            </div>
+                                </div>
                                 <h3 className="text-lg font-semibold text-[#5B61F6] mb-4">{stack.name}</h3>
                                 <ul className="space-y-2">
                                     {stack.tech.map((item, idx) => (
@@ -518,53 +557,49 @@ export default function CloudEngineeringPage() {
             {/* Industries Section */}
             <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">MVP Solutions We Deliver to Help Startups Validate Ideas</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Sks Tech Solution we specialize in delivering rapid MVP development services to help startups and businesses validate their ideas quickly and cost-effectively. Here's what we offer:</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Cloud Engineering Solutions We Deliver for Modern Businesses</h2>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">SKS Tech Solution empowers organizations across industries with robust, scalable, and secure cloud engineering solutions. Here's how we help you transform and future-proof your business:</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Card 1 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Megaphone icon */}
+                            <div className="mb-4 text-[#2563eb]">{/* Cloud migration icon */}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182A4.5 4.5 0 016.75 12.75m0 0A4.5 4.5 0 0115.182 8.818m-8.432 3.932a4.5 4.5 0 018.432-3.932m0 0V3.75m0 5.068a4.5 4.5 0 01-8.432 3.932m8.432-3.932l3.75 3.75m-3.75-3.75l-3.75 3.75" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">SaaS Platforms</h3>
-                            <p className="text-black/80">Build and launch SaaS MVPs quickly to validate market demand and gather early user feedback for product-market fit.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Cloud Migration & Modernization</h3>
+                            <p className="text-black/80">Seamlessly move your applications, data, and workloads to the cloud with minimal risk and zero business disruption.</p>
                         </div>
                         {/* Card 2 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Web portal icon */}
+                            <div className="mb-4 text-[#2563eb]">{/* Security icon */}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M7 9h2m2 0h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 13h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 17h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">E-commerce Solutions</h3>
-                            <p className="text-black/80">Create e-commerce MVPs to test product demand, pricing strategies, and customer acquisition channels.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Cloud Security & Compliance</h3>
+                            <p className="text-black/80">Protect your cloud environment with advanced security frameworks, real-time monitoring, and regulatory compliance.</p>
                         </div>
                         {/* Card 3 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* App window icon */}
+                            <div className="mb-4 text-[#2563eb]">{/* DevOps icon */}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <rect x="7" y="9" width="10" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 12h16m-8-8v16" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Healthcare Apps</h3>
-                            <p className="text-black/80">Develop healthcare MVPs to validate patient needs, regulatory compliance, and market opportunities in the health tech space.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">DevOps & Automation</h3>
+                            <p className="text-black/80">Accelerate your cloud operations with CI/CD pipelines, infrastructure as code, and automated deployments for faster innovation.</p>
                         </div>
                         {/* Card 4 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Asset management icon */}
+                            <div className="mb-4 text-[#2563eb]">{/* Multi-cloud icon */}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
                                     <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M8 12h8M12 8v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">EdTech Platforms</h3>
-                            <p className="text-black/80">Build educational technology MVPs to test learning methodologies, user engagement, and market demand for innovative education solutions.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Multi-Cloud & Hybrid Solutions</h3>
+                            <p className="text-black/80">Leverage the best of multiple cloud providers and on-premise systems for resilience, flexibility, and business continuity.</p>
                         </div>
                     </div>
                 </div>
@@ -585,64 +620,64 @@ export default function CloudEngineeringPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
                             {
-                                title: "Cloud Migration for Retailer",
-                                client: "Tech Startup",
-                                description: "Developed a SaaS MVP that helped validate market demand and secure seed funding within 3 months.",
-                                results: ["500+ Beta Users", "95% User Satisfaction", "Seed Funding Secured"],
+                                title: "Smart Retail Platform",
+                                client: "Multi-Cloud Architecture for Global Expansion",
+                                description: "A hybrid cloud solution designed and implemented using AWS & Google Cloud that would allow seamless operations and improve data redundancy across regions.",
+                                results: ["60% Faster Global Rollout", "Zero Data Loss Across Regions", "2x System Resilience"],
                                 icon: <Boxes className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["React", "Node.js", "MongoDB", "Stripe"],
-                                duration: "8 weeks",
-                                team: "6 members"
-                            },
-                            {
-                                title: "SaaS Scaling for Startup",
-                                client: "Retail Startup",
-                                description: "Built an e-commerce MVP that tested product demand and pricing strategies successfully.",
-                                results: ["200+ Products Listed", "50% Conversion Rate", "Market Validation"],
-                                icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Next.js", "Firebase", "Stripe", "Analytics"],
-                                duration: "6 weeks",
-                                team: "4 members"
-                            },
-                            {
-                                title: "Healthcare Booking MVP",
-                                client: "HealthTech Startup",
-                                description: "Created a healthcare appointment booking MVP that validated patient needs and regulatory requirements.",
-                                results: ["HIPAA Compliant", "100+ Doctors", "Patient Satisfaction"],
-                                icon: <Heart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["React Native", "Node.js", "PostgreSQL", "Twilio"],
-                                duration: "10 weeks",
+                                tech: ["AWS", "Google Cloud", "Terraform"],
+                                duration: "14 weeks",
                                 team: "7 members"
                             },
                             {
-                                title: "EdTech Learning Platform",
-                                client: "Education Startup",
-                                description: "Developed an educational technology MVP that tested learning methodologies and user engagement.",
-                                results: ["1000+ Students", "85% Completion Rate", "Investor Interest"],
-                                icon: <LineChart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Vue.js", "Python", "MongoDB", "AWS"],
-                                duration: "12 weeks",
+                                title: "MedSync Healthcare",
+                                client: "Cloud Security Fortification for Patient Data",
+                                description: "Our cloud security engineer specialists designed a zero-trust security framework for a healthcare cloud environment, ensuring strict regulatory compliance.",
+                                results: ["100% HIPAA & GDPR Compliant", "Real-Time Threat Monitoring Enabled", "Zero Security Breaches Post-Migration"],
+                                icon: <Heart className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Azure", "Kubernetes", "Sentinel"],
+                                duration: "10 weeks",
+                                team: "5 members"
+                            },
+                            {
+                                title: "LogiChain Transport",
+                                client: "Fleet Management with Real-Time Cloud Infrastructure",
+                                description: "Implemented a cloud platform for real-time tracking of vehicles, predictive maintenance notifications, and fuel optimization.",
+                                results: ["35% Fuel Cost Reduction", "30% Fewer Downtime Incidents", "Full Global GPS Coverage"],
+                                icon: <Network className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["AWS", "IoT Core", "Node.js"],
+                                duration: "16 weeks",
                                 team: "8 members"
                             },
                             {
-                                title: "FinTech Payment MVP",
-                                client: "FinTech Startup",
-                                description: "Built a financial technology MVP that validated payment processing and security requirements.",
-                                results: ["PCI Compliant", "10K+ Transactions", "Regulatory Approval"],
-                                icon: <Network className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-                                duration: "14 weeks",
+                                title: "SkillUp EdTech",
+                                client: "Cloud-Native Learning Platform with Auto-Scaling",
+                                description: "Built a fully cloud-native e-learning platform capable of handling unpredictable traffic spikes during virtual events and exams.",
+                                results: ["500% Traffic Surge Handling", "0 System Outages During Events", "AI-Powered Content Recommendations"],
+                                icon: <LineChart className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Google Cloud", "Firebase", "React"],
+                                duration: "15 weeks",
+                                team: "9 members"
+                            },
+                            {
+                                title: "EcoPower Energy",
+                                client: "Smart Grid Monitoring with Cloud & IoT",
+                                description: "Engineered a scalable cloud solution for real-time energy grid monitoring, improving efficiency and minimizing outages in rural regions.",
+                                results: ["20% Energy Loss Reduction", "Real-Time Fault Detection", "3x Faster Outage Response"],
+                                icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Azure", "IoT Hub", "GraphQL"],
+                                duration: "18 weeks",
                                 team: "10 members"
                             },
                             {
-                                title: "Social Networking MVP",
-                                client: "Social Startup",
-                                description: "Created a social networking MVP that tested user engagement and community building features.",
-                                results: ["5000+ Users", "High Engagement", "Viral Growth"],
-                                icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["React Native", "Firebase", "Socket.io", "AWS"],
-                                duration: "9 weeks",
-                                team: "6 members"
+                                title: "VaultFin Banking",
+                                client: "High-Security Cloud Infrastructure for Digital Banking",
+                                description: "Deployed a secure, compliant cloud environment to support a growing digital bank with real-time fraud detection and uninterrupted operations.",
+                                results: ["99.999% Platform Uptime", "AI-Powered Fraud Prevention", "Scaled to 1 Million Users Securely"],
+                                icon: <Lock className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Google Cloud", "Kubernetes", "Firebase"],
+                                duration: "20 weeks",
+                                team: "12 members"
                             }
                         ].map((caseStudy, index) => (
                             <AnimatedItem 
@@ -709,13 +744,13 @@ export default function CloudEngineeringPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold mb-8`}
                     >
-                        Ready to Modernize with Cloud?
+                        Ready to Future-Proof Your Business with the Cloud?
                     </motion.h2>
                     <motion.p 
                         variants={fadeInUp}
                         className="text-gray-300 mb-12 text-lg"
                     >
-                        Let's power your business with secure, scalable cloud solutions.
+                        Partner with SKS Tech Solution to build secure and innovative cloud solutions backed by certified expertise.
                     </motion.p>
                     <motion.div
                         variants={fadeInUp}
@@ -726,14 +761,14 @@ export default function CloudEngineeringPage() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Start Your MVP <ArrowRight className="w-5 h-5" />
+                            Start Your Project <ArrowRight className="w-5 h-5" />
                         </motion.button>
                         <motion.button 
                             className="border border-[#3D43D4] hover:bg-[#3D43D4]/10 text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Schedule a Call
+                            Schedule a Consultation
                         </motion.button>
                     </motion.div>
                     <motion.div 
@@ -743,10 +778,10 @@ export default function CloudEngineeringPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Star className="w-6 h-6" />, text: "Expert Team" },
-                            { icon: <Shield className="w-6 h-6" />, text: "Secure Development" },
-                            { icon: <Zap className="w-6 h-6" />, text: "Fast Delivery" },
-                            { icon: <Heart className="w-6 h-6" />, text: "Client Satisfaction" }
+                            { icon: <Star className="w-6 h-6" />, text: "Expert Engineers" },
+                            { icon: <Shield className="w-6 h-6" />, text: "Certified Google Cloud Professionals" },
+                            { icon: <Lock className="w-6 h-6" />, text: "Secure & Compliant Development" },
+                            { icon: <Heart className="w-6 h-6" />, text: "24/7 Support" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -769,36 +804,36 @@ export default function CloudEngineeringPage() {
 function FlexibleModelsSection() {
     const models = [
         {
-            label: 'Fixed Price Model',
-            image: '/services/Layer-17.png', // Replace with your image
-            title: 'Fixed Price Model',
-            description: 'Our fixed price model is ideal for MVPs with well-defined requirements and scope. It offers cost predictability and is best suited for startups with clear vision and limited budget.',
+            label: 'Custom Engagements to Fit Your Business',
+            image: '/services/Layer-17.png',
+            title: 'Custom Engagements to Fit Your Business',
+            description: 'We also offer custom engagement models designed to meet unique business needs. You define the terms, and we deliver solutions that align perfectly with your goals.',
             checklist: [
-                'Clear Scope & Timeline',
-                'Budget Certainty',
-                'Fast Time to Market',
+                'Tailored to your needs',
+                'Flexible contracts',
+                'Full control over deliverables',
             ],
         },
         {
-            label: 'Time and Material Model',
-            image: '/services/Layer-17.png', // Replace with your image
-            title: 'Time and Material Model',
-            description: 'This model is perfect for MVPs where requirements may evolve based on user feedback. It provides flexibility and transparency, allowing you to iterate quickly based on market response.',
+            label: 'Time & Material Model for Flexibility',
+            image: '/services/Layer-17.png',
+            title: 'Time & Material Model for Flexibility',
+            description: 'Perfect for evolving projects where requirements may change. Pay only for the actual time and resources used, offering flexibility and control throughout the development process.',
             checklist: [
-                'Flexible Requirements',
-                'Quick Iterations',
-                'User Feedback Integration',
+                'Flexible project scope',
+                'Transparent billing',
+                'Ideal for long-term enhancements',
             ],
         },
         {
-            label: 'Dedicated Team',
-            image: '/services/Layer-17.png', // Replace with your image
-            title: 'Dedicated Team',
-            description: 'Our MVP development company offers a dedicated team model that is tailored for startups looking to build and scale their product. It provides long-term commitment and expertise for growing businesses.',
+            label: 'Dedicated Cloud Team for Long-Term Needs',
+            image: '/services/Layer-17.png',
+            title: 'Dedicated Cloud Team for Long-Term Needs',
+            description: 'A full-time, skilled team working exclusively on your project. Ideal for businesses needing continuous development, cloud maintenance, or long-term technical support.',
             checklist: [
-                'Faster Development',
-                'Reduced Costs',
-                'Long-Term Partnership',
+                'Full project ownership',
+                'Quick scalability',
+                'Continuous development support',
             ],
         },
     ];
@@ -806,8 +841,8 @@ function FlexibleModelsSection() {
     return (
         <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
             <div className="max-w-6xl mx-auto text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose From Our Flexible Models for MVP Development</h2>
-                <p className="text-white/80 text-lg md:text-xl">Being a top MVP development services provider, we offer various hiring models to suit your startup needs.</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Flexible Engagement Models That Fit Your Cloud Journey</h2>
+                <p className="text-white/80 text-lg md:text-xl">We offer flexible engagement models to suit your project needs and budget. Whether it's a short-term project or ongoing support, we have the right solution for your business.</p>
             </div>
             <div className="flex flex-col items-center">
                 {/* Tabs */}

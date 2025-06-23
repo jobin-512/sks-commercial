@@ -95,33 +95,43 @@ const AnimatedItem = ({ children, className = "" }) => {
 function ProcessAccordion() {
     const steps = [
         {
-            title: 'Design',
-            description: 'The design phase involves creating the visual and interactive aspects of the software development. Our custom software development services are critical in ensuring that the software solution is user-friendly and aesthetically pleasing.',
+            title: 'Requirements Analysis',
+            description: 'We carefully analyze your product vision to identify technical requirements and essential features for a high-performing, scalable MVP solution.',
             checklist: [
-                'Interaction Flows',
-                'Wireframing',
-                'Visual Design',
-                'Brand Alignment',
+                'In-depth discussion of product idea',
+                'Validation of concept feasibility',
+                'Identification of key features',
+                'Agile-focused delivery planning',
             ],
         },
         {
-            title: 'Development',
-            description: 'The development phase is where the actual coding and implementation take place. Our experienced developers use best practices and the latest technologies to build robust, scalable, and secure software solutions.',
+            title: 'Architecture Design & Estimation',
+            description: 'Our software architects choose the optimal technologies and infrastructure so that your MVP is efficient, scalable, and robust.',
             checklist: [
-                'Agile Development',
-                'Code Reviews',
-                'Quality Assurance',
-                'Continuous Integration',
+                'Tech stack and tool selection',
+                'Scalable architecture design',
+                'Integration component identification',
+                'Detailed project cost estimation',
             ],
         },
         {
-            title: 'Deployment',
-            description: 'The deployment phase ensures your software is launched smoothly and efficiently. We provide ongoing support and maintenance to guarantee optimal performance and user satisfaction.',
+            title: 'MVP Implementation',
+            description: 'Our development team constructs the MVP in phased development, prioritized by core features, with ongoing testing to maintain quality.',
             checklist: [
-                'Cloud Deployment',
-                'Monitoring & Support',
-                'User Training',
-                'Performance Optimization',
+                'Core functionality development',
+                'Agile, iterative development cycles',
+                'Comprehensive feature testing',
+                'Bug detection and resolution',
+            ],
+        },
+        {
+            title: 'Product Launch',
+            description: 'We set up secure, reliable infrastructure and deploy your MVP to production environments for public access and user testing.',
+            checklist: [
+                'Cloud infrastructure configuration',
+                'Security and performance setup',
+                'Final product deployment',
+                'App Store and Play Store publishing',
             ],
         },
     ];
@@ -187,14 +197,14 @@ export default function SoftwareDevelopmentPage() {
                         className="inline-block"
                     >
                         <span className={`${roboto.className} px-4 py-2 rounded-full bg-[#171629] border border-[#3D43D4]/30 text-[#5B61F6] text-sm font-medium`}>
-                            MVP Development Services
+                            MVP Development Excellence
                         </span>
                     </motion.div>
                     <h1 className={`${roboto.className} text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] leading-tight`}>
-                    Transform Your Ideas Into Successful MVPs
+                        Transform Your Vision Into a Market-Ready MVP
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        We help startups and businesses validate their ideas quickly with cost-effective, feature-rich Minimum Viable Products that drive user engagement and business growth.
+                        SKS Tech Solution offers expert MVP development services that help businesses validate ideas faster, reduce development risk, and launch with confidence.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -203,10 +213,10 @@ export default function SoftwareDevelopmentPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Code className="w-5 h-5" />, text: "Idea Validation" },
-                            { icon: <Zap className="w-5 h-5" />, text: "Rapid Prototyping" },
-                            { icon: <Shield className="w-5 h-5" />, text: "User Feedback" },
-                            { icon: <Cloud className="w-5 h-5" />, text: "Scalable Architecture" }
+                            { icon: <Code className="w-5 h-5" />, text: "Fast, Cost-Effective Launch" },
+                            { icon: <Zap className="w-5 h-5" />, text: "Scalable Architecture" },
+                            { icon: <Shield className="w-5 h-5" />, text: "User-Centric Design" },
+                            { icon: <Cloud className="w-5 h-5" />, text: "Continuous Support" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -226,7 +236,7 @@ export default function SoftwareDevelopmentPage() {
                         className="mt-12"
                     >
                         <button className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2 mx-auto">
-                            Start Your Project <ArrowRight className="w-5 h-5" />
+                            Start Your MVP Journey <ArrowRight className="w-5 h-5" />
                         </button>
                     </motion.div>
                 </motion.div>
@@ -236,10 +246,10 @@ export default function SoftwareDevelopmentPage() {
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
                 <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {[
-                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "150+", label: "MVPs Launched" },
-                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "6-8", label: "Weeks Avg. Time" },
-                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "95%", label: "User Feedback" },
-                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "80+", label: "Startup Clients" }
+                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "300+", label: "MVPs Delivered" },
+                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "99%", label: "Client Satisfaction" },
+                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "15+", label: "Years of Experience" },
+                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "Startup & Enterprise Clients" }
                     ].map((stat, index) => (
                         <AnimatedItem key={index} className="space-y-4">
                             <div className="flex justify-center">{stat.icon}</div>
@@ -254,10 +264,10 @@ export default function SoftwareDevelopmentPage() {
                             <p className="text-gray-300">{stat.label}</p>
                         </AnimatedItem>
                     ))}
-                    </div>
+                </div>
             </AnimatedSection>
 
-            {/* Software Developer Sections */}
+            {/* Feature/Value Prop Sections */}
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16">
                 <div className="max-w-6xl mx-auto space-y-24">
                     {/* Section 1: Left Image, Right Text */}
@@ -266,13 +276,17 @@ export default function SoftwareDevelopmentPage() {
                             variants={fadeInUp} 
                             className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-[50%_40%_30%_60%/60%_30%_50%_40%] shadow-lg"
                         >
-                            <Image src={sd} alt="Software Development on Laptop" layout="fill" objectFit="cover" />
+                            <Image src={sd} alt="Your Idea, Our Expertise" layout="fill" objectFit="cover" />
                         </motion.div>
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>MVP Developer</h3>
-                            <p className="text-gray-300">From concept to launch, we turn your ideas into real products fast.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Your Idea, Our Expertise — Build, Test, and Grow</h3>
+                            <p className="text-gray-300">We simplify the MVP development process, building scalable, feature-light solutions that allow you to test real market demand with minimal investment.</p>
                             <ul className="space-y-3">
-                                {["Market Research", "Prototyping", "Core Features"].map((feature, idx) => (
+                                {[
+                                    "UI/UX Focused Prototypes",
+                                    "Native, Web & Hybrid MVPs",
+                                    "Rapid Development Cycles"
+                                ].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -280,7 +294,7 @@ export default function SoftwareDevelopmentPage() {
                                 ))}
                             </ul>
                             <button className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2">
-                                Explore more <ArrowRight className="w-5 h-5" />
+                                Explore More <ArrowRight className="w-5 h-5" />
                             </button>
                         </motion.div>
                     </div>
@@ -288,10 +302,14 @@ export default function SoftwareDevelopmentPage() {
                     {/* Section 2: Left Text, Right Image */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>MVP Developer</h3>
-                            <p className="text-gray-300">Ongoing support, analytics, and updates.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Continuous Support Beyond MVP Launch</h3>
+                            <p className="text-gray-300">As a leading MVP development agency, we offer post-launch support to refine your product based on real-time user feedback and market performance.</p>
                             <ul className="space-y-3">
-                                {["Analytics", "User Testing", "Iterative Updates"].map((feature, idx) => (
+                                {[
+                                    "Analytics Integration",
+                                    "Iterative Feature Enhancements",
+                                    "Product Scaling Roadmaps"
+                                ].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -299,14 +317,14 @@ export default function SoftwareDevelopmentPage() {
                                 ))}
                             </ul>
                             <button className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2">
-                                Explore more <ArrowRight className="w-5 h-5" />
+                                Explore More <ArrowRight className="w-5 h-5" />
                             </button>
                         </motion.div>
                         <motion.div 
                             variants={fadeInUp} 
                             className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-[50%_40%_30%_60%/60%_30%_50%_40%] shadow-lg"
                         >
-                            <Image src={sd2} alt="Software Development with Developer" layout="fill" objectFit="cover" />
+                            <Image src={sd2} alt="Continuous Support Beyond MVP Launch" layout="fill" objectFit="cover" />
                         </motion.div>
                     </div>
                 </div>
@@ -451,24 +469,10 @@ export default function SoftwareDevelopmentPage() {
             {/* Customized Software Development Process Section */}
             <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
                 <div className="max-w-4xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Customized Software Development Process</h2>
-                    <p className="text-white/80 text-lg md:text-xl">As one of the best custom software development companies, our well-designed development process allows organizations to tailor solutions that meet specific business needs, enhance user experience, and drive innovation.</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Our MVP Development Process</h2>
+                    <p className="text-white/80 text-lg md:text-xl">We follow a clear and simple process to turn your idea into a working MVP that's fast, scalable, and user-friendly.</p>
                 </div>
                 <div className="max-w-4xl mx-auto space-y-8">
-                    {/* Discovery Card */}
-                    <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-3xl p-8 flex flex-col md:flex-row justify-between items-center shadow-xl mb-4">
-                        <div className="text-left flex-1 mb-6 md:mb-0">
-                            <h3 className="text-2xl font-bold text-white mb-2">Discovery</h3>
-                            <p className="text-white/80">The discovery phase is the initial stage of the customized software development process. Our custom software development company tries to understand your project's goals, objectives, and requirements.</p>
-                        </div>
-                        <ul className="text-left space-y-2 min-w-[220px]">
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Requirements Gathering</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Research & Analysis</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Solution Mapping</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Technology Evaluation</li>
-                        </ul>
-                    </div>
-                    {/* Accordion for other steps */}
                     <ProcessAccordion />
                 </div>
             </section>

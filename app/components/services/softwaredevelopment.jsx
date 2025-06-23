@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Roboto } from "next/font/google";
+import {MegaphoneIcon} from "lucide-react"
 import Image from 'next/image';
 import { motion, AnimatePresence } from "framer-motion"
 import { useInView } from "framer-motion"
@@ -38,6 +39,7 @@ import {
     Network,
     LineChart
 } from "lucide-react"
+import { LucideIceCreamCone } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,42 +94,48 @@ const AnimatedItem = ({ children, className = "" }) => {
 }
 
 // Accordion for Customized Software Development Process
-function ProcessAccordion() {
+function CustomApproachAccordion() {
     const steps = [
         {
-            title: 'Design',
-            description: 'The design phase involves creating the visual and interactive aspects of the software development. Our custom software development services are critical in ensuring that the software solution is user-friendly and aesthetically pleasing.',
+            title: 'Discovery & Planning',
+            description: 'Every successful project begins with understanding. We dive deep into your operations to define goals and build a development strategy that aligns software capabilities with real-world objectives.',
             checklist: [
-                'Interaction Flows',
-                'Wireframing',
-                'Visual Design',
-                'Brand Alignment',
+                'Market & Competitor Research',
+                'Requirement Scoping Sessions',
+                'Technology & Platform Roadmapping',
             ],
         },
         {
-            title: 'Development',
-            description: 'The development phase is where the actual coding and implementation take place. Our experienced developers use best practices and the latest technologies to build robust, scalable, and secure software solutions.',
+            title: 'UI/UX Design Strategy',
+            description: "We use smart design to make your digital products easy and enjoyable to use. Every screen and feature is built for real users, making sure it's clear, accessible, and matches your brand.",
             checklist: [
-                'Agile Development',
-                'Code Reviews',
-                'Quality Assurance',
-                'Continuous Integration',
+                'Persona-Based Interaction Flows',
+                'Responsive Wireframes & Mockups',
+                'Design Systems & Brand Alignment',
             ],
         },
         {
-            title: 'Deployment',
-            description: 'The deployment phase ensures your software is launched smoothly and efficiently. We provide ongoing support and maintenance to guarantee optimal performance and user satisfaction.',
+            title: 'Agile Software Development',
+            description: 'We use an iterative development process that focuses on flexibility, velocity, and co-creation. This means delivery stays aligned with your changing business needs and user input.',
             checklist: [
-                'Cloud Deployment',
-                'Monitoring & Support',
-                'User Training',
-                'Performance Optimization',
+                'Sprint Planning & Execution',
+                'Real-Time Progress Visibility',
+                'Continuous Integration Builds',
+            ],
+        },
+        {
+            title: 'Launch & Optimization',
+            description: 'Careful final deployment is executed to avoid disruption and gain maximum impact. After launch, we track and optimize to guarantee sustained performance, reliability, and success.',
+            checklist: [
+                'Production Deployment Setup',
+                'Performance Testing & QA',
+                'Live Monitoring & Feedback Loop',
             ],
         },
     ];
-    const [openIndex, setOpenIndex] = useState(0);
+    const [openIndex, setOpenIndex] = useState(null);
     return (
-        <div className="space-y-4">
+        <div className="max-w-4xl mx-auto space-y-4">
             {steps.map((step, idx) => (
                 <div key={idx} className="">
                     <button
@@ -147,14 +155,14 @@ function ProcessAccordion() {
                                 transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                                 className="overflow-hidden"
                             >
-                                <div className="bg-[#ededf7] text-[#181828] rounded-b-2xl px-6 py-6 flex flex-col md:flex-row justify-between items-center border border-t-0 border-[#23234a]">
+                                <div className="bg-[#10101A] border border-t-0 border-[#3D43D4]/30 text-white rounded-b-2xl px-6 py-6 flex flex-col md:flex-row justify-between items-center">
                                     <div className="flex-1 mb-4 md:mb-0">
                                         <h4 className="text-xl font-bold mb-2">{step.title}</h4>
-                                        <p className="mb-4 text-base">{step.description}</p>
+                                        <p className="mb-4 text-base text-white/80">{step.description}</p>
                                     </div>
                                     <ul className="min-w-[220px] space-y-2 text-base">
                                         {step.checklist.map((item, i) => (
-                                            <li key={i} className="flex items-center gap-2 text-[#3D43D4] font-medium"><span>✔</span> <span className="text-[#181828]">{item}</span></li>
+                                            <li key={i} className="flex items-center gap-2 text-[#5B61F6] font-medium"><span>✔</span> <span className="text-white">{item}</span></li>
                                         ))}
                                     </ul>
                                 </div>
@@ -191,11 +199,10 @@ export default function SoftwareDevelopmentPage() {
                         </span>
                     </motion.div>
                     <h1 className={`${roboto.className} text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] leading-tight`}>
-                        Building Scalable Software
-                        <br />Solutions for Business Growth
+                        Code with Purpose. Build with Confidence
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        We develop custom software solutions that streamline operations, enhance productivity, and drive business innovation.
+                        We develop smart, custom software systems for optimizing operations, enhancing output, and driving digital transformation.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -204,10 +211,10 @@ export default function SoftwareDevelopmentPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Code className="w-5 h-5" />, text: "Custom Development" },
-                            { icon: <Zap className="w-5 h-5" />, text: "High Performance" },
-                            { icon: <Shield className="w-5 h-5" />, text: "Enterprise Security" },
-                            { icon: <Cloud className="w-5 h-5" />, text: "Cloud Solutions" }
+                            { icon: <Code className="w-5 h-5" />, text: "Tailored Solutions" },
+                            { icon: <Zap className="w-5 h-5" />, text: "Optimized Performance" },
+                            { icon: <Shield className="w-5 h-5" />, text: "Enterprise-Grade Security" },
+                            { icon: <Cloud className="w-5 h-5" />, text: "Cloud-Ready Deployments" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -237,10 +244,10 @@ export default function SoftwareDevelopmentPage() {
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
                 <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {[
-                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "300+", label: "Projects Delivered" },
-                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "99%", label: "Client Satisfaction" },
-                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "15+", label: "Years Experience" },
-                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "Enterprise Clients" }
+                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "300+", label: "Successful Launches" },
+                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "99%", label: "Client Retention Rate" },
+                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "15+", label: "Years of Excellence" },
+                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "Satisfied Business Partners" }
                     ].map((stat, index) => (
                         <AnimatedItem key={index} className="space-y-4">
                             <div className="flex justify-center">{stat.icon}</div>
@@ -261,19 +268,19 @@ export default function SoftwareDevelopmentPage() {
             {/* Software Developer Sections */}
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16">
                 <div className="max-w-6xl mx-auto space-y-24">
-                    {/* Section 1: Left Image, Right Text */}
+                    {/* Expert Software Teams Section */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div 
                             variants={fadeInUp} 
                             className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-[50%_40%_30%_60%/60%_30%_50%_40%] shadow-lg"
                         >
-                            <Image src={sd} alt="Software Development on Laptop" layout="fill" objectFit="cover" />
+                            <Image src={sd} alt="Expert Software Teams" layout="fill" objectFit="cover" />
                         </motion.div>
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Software Developer</h3>
-                            <p className="text-gray-300">Our software developer services help streamline your digital ecosystem for peak performance. From marketing automation to CRM and analytics tools, we ensure your tech stack works together seamlessly to support smarter decisions and scalable growth.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Expert Software Teams</h3>
+                            <p className="text-gray-300">Our software development services are meant to be a fine-tuning for your digital architecture. Whether CRM, automation, or analytics, we connect the dots to enable real-time decisions and scalable achievements.</p>
                             <ul className="space-y-3">
-                                {["CRM & Automation Setup", "Tool Integration & Sync", "Performance Analytics & Dashboards"].map((feature, idx) => (
+                                {["Intelligent CRM Systems", "Seamless Tool Connectivity", "Real-Time Dashboards"].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -286,13 +293,13 @@ export default function SoftwareDevelopmentPage() {
                         </motion.div>
                     </div>
 
-                    {/* Section 2: Left Text, Right Image */}
+                    {/* Core Software Development Capabilities Section */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Software Developer</h3>
-                            <p className="text-gray-300">Our software developer services help streamline your digital ecosystem for peak performance. From marketing automation to CRM and analytics tools, we ensure your tech stack works together seamlessly to support smarter decisions and scalable growth.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Core Software Development Capabilities</h3>
+                            <p className="text-gray-300">We deliver structured, flexible, and scalable software solutions through thoughtful engineering, ensuring faster development cycles, consistent performance, and long-term adaptability across all digital platforms.</p>
                             <ul className="space-y-3">
-                                {["CRM & Automation Setup", "Tool Integration & Sync", "Performance Analytics & Dashboards"].map((feature, idx) => (
+                                {["Modular Code Architecture", "Platform-Agnostic Development", "Custom UI Component Libraries"].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -307,7 +314,7 @@ export default function SoftwareDevelopmentPage() {
                             variants={fadeInUp} 
                             className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-[50%_40%_30%_60%/60%_30%_50%_40%] shadow-lg"
                         >
-                            <Image src={sd2} alt="Software Development with Developer" layout="fill" objectFit="cover" />
+                            <Image src={sd2} alt="Core Software Development Capabilities" layout="fill" objectFit="cover" />
                         </motion.div>
                     </div>
                 </div>
@@ -320,32 +327,32 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Our Development Methodology
+                        Our Development Blueprint
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
                                 step: "01",
-                                title: "Analysis",
-                                description: "Understanding business requirements, challenges, and objectives.",
+                                title: "Strategy",
+                                description: "Grasping your unique goals and business challenges.",
                                 icon: <BarChart className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "02",
-                                title: "Architecture",
-                                description: "Designing scalable and secure system architecture.",
+                                title: "Planning",
+                                description: "Crafting a resilient, scalable framework with security top of mind.",
                                 icon: <Layers className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "03",
-                                title: "Development",
-                                description: "Agile development with regular iterations and feedback.",
+                                title: "Creation",
+                                description: "Iterative builds with agile practices and rapid feedback loops.",
                                 icon: <Code className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "04",
-                                title: "Deployment",
-                                description: "Seamless deployment with continuous integration.",
+                                title: "Launch",
+                                description: "Smooth rollout with CI/CD pipelines and zero downtime.",
                                 icon: <Cloud className="w-8 h-8 text-[#5B61F6]" />
                             }
                         ].map((process, index) => (
@@ -387,45 +394,45 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Our Software Development Services
+                        Full-Spectrum Software Development Services
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "Custom Software Development",
-                                description: "Tailored software solutions designed to meet your specific business needs.",
+                                title: "Custom Software Solutions",
+                                description: "Personalized programs tailored to your exact workflow.",
                                 icon: <Code className="w-8 h-8" />,
-                                features: ["Business Analysis", "Custom Development", "Quality Assurance", "Maintenance"]
+                                features: ["Process Mapping", "Bespoke Builds", "QA & Testing", "Lifecycle Support"]
                             },
                             {
-                                title: "Enterprise Solutions",
-                                description: "Scalable enterprise software for large organizations.",
+                                title: "Enterprise Applications",
+                                description: "Robust software crafted for large-scale operations.",
                                 icon: <Server className="w-8 h-8" />,
-                                features: ["ERP Systems", "CRM Solutions", "HR Management", "Workflow Automation"]
+                                features: ["ERP Deployment", "CRM Implementation", "HR Tools", "Digital Workflows"]
                             },
                             {
-                                title: "Cloud Development",
-                                description: "Cloud-native applications and migration services.",
+                                title: "Cloud Enablement",
+                                description: "Cloud-first development with seamless migration and native builds.",
                                 icon: <Cloud className="w-8 h-8" />,
-                                features: ["AWS", "Azure", "Google Cloud", "Hybrid Cloud"]
+                                features: ["AWS & GCP Solutions", "Azure Integration", "Multi-Cloud Support", "Scalable Architectures"]
                             },
                             {
                                 title: "DevOps & CI/CD",
-                                description: "Streamlined development and deployment processes.",
+                                description: "Faster development with accuracy and stability.",
                                 icon: <Workflow className="w-8 h-8" />,
-                                features: ["CI/CD Pipelines", "Containerization", "Kubernetes", "Monitoring"]
+                                features: ["Automated Pipelines", "Scalable Containers", "Kubernetes Environments", "Intelligent Monitoring"]
                             },
                             {
-                                title: "API Development",
-                                description: "Robust and secure API solutions for seamless integration.",
+                                title: "API & Integrations",
+                                description: "Flexible and secure API ecosystems built for speed.",
                                 icon: <Network className="w-8 h-8" />,
-                                features: ["REST APIs", "GraphQL", "API Security", "Documentation"]
+                                features: ["RESTful Services", "GraphQL Development", "Token-Based Security", "Developer Portals"]
                             },
                             {
-                                title: "Database Solutions",
-                                description: "Efficient database design and optimization services.",
+                                title: "Data Engineering",
+                                description: "Efficient database management for performance and reliability.",
                                 icon: <Database className="w-8 h-8" />,
-                                features: ["SQL", "NoSQL", "Data Migration", "Performance Tuning"]
+                                features: ["RDBMS & NoSQL Setup", "Database Porting", "Speed Optimization", "Maintenance Services"]
                             }
                         ].map((service, index) => (
                             <AnimatedItem 
@@ -452,26 +459,10 @@ export default function SoftwareDevelopmentPage() {
             {/* Customized Software Development Process Section */}
             <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
                 <div className="max-w-4xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Customized Software Development Process</h2>
-                    <p className="text-white/80 text-lg md:text-xl">As one of the best custom software development companies, our well-designed development process allows organizations to tailor solutions that meet specific business needs, enhance user experience, and drive innovation.</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">How We Approach Custom Development?</h2>
+                    <p className="text-white/80 text-lg md:text-xl">As one of the trusted software development outsourcing companies, our methodology puts your goals front and center. We specialize in shaping systems that drive value and usability across every level.</p>
                 </div>
-                <div className="max-w-4xl mx-auto space-y-8">
-                    {/* Discovery Card */}
-                    <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-3xl p-8 flex flex-col md:flex-row justify-between items-center shadow-xl mb-4">
-                        <div className="text-left flex-1 mb-6 md:mb-0">
-                            <h3 className="text-2xl font-bold text-white mb-2">Discovery</h3>
-                            <p className="text-white/80">The discovery phase is the initial stage of the customized software development process. Our custom software development company tries to understand your project's goals, objectives, and requirements.</p>
-                        </div>
-                        <ul className="text-left space-y-2 min-w-[220px]">
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Requirements Gathering</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Research & Analysis</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Solution Mapping</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Technology Evaluation</li>
-                        </ul>
-                    </div>
-                    {/* Accordion for other steps */}
-                    <ProcessAccordion />
-                </div>
+                <CustomApproachAccordion />
             </section>
 
             {/* Technology Stack Section */}
@@ -519,53 +510,44 @@ export default function SoftwareDevelopmentPage() {
             {/* Industries Section */}
             <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Enterprise Software Solutions We Deliver to Help Businesses Stay Modern</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Sks Tech Solution  we specialize in delivering a wide range of enterprise software development services to help businesses stay future-ready. Here's what we offer:</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Enterprise Software Built for the Future</h2>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At SKS Tech Solution, a trusted name in offshore software development services, we create business software designed to support growth and agility.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Card 1 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Megaphone icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182A4.5 4.5 0 016.75 12.75m0 0A4.5 4.5 0 0115.182 8.818m-8.432 3.932a4.5 4.5 0 018.432-3.932m0 0V3.75m0 5.068a4.5 4.5 0 01-8.432 3.932m8.432-3.932l3.75 3.75m-3.75-3.75l-3.75 3.75" />
-                                </svg>
+                            <div className="mb-4 text-[#2563eb]">
+                                {/* Marketing Automation Tools icon */}
+                                <MegaphoneIcon />
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Marketing & advertising</h3>
-                            <p className="text-black/80">Plan and execute marketing campaigns with tools that offer automation, analytics, and personalization</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Marketing Automation Tools</h3>
+                            <p className="text-black/80">Build smart marketing tools that use data to boost engagement, sales, and make better decisions.</p>
                         </div>
                         {/* Card 2 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Web portal icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M7 9h2m2 0h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 13h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 17h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                </svg>
+                            <div className="mb-4 text-[#2563eb]">
+                                {/* Web-Based Business Hubs icon */}
+                                <Globe />
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Web portals</h3>
-                            <p className="text-black/80">Create secure and user-friendly web portals for customers, employees, or partners to improve communication and collaboration.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Web-Based Business Hubs</h3>
+                            <p className="text-black/80">Design portals that enhance collaboration, streamline workflows, and improve customer interaction experiences.</p>
                         </div>
                         {/* Card 3 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* App window icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <rect x="7" y="9" width="10" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                </svg>
+                            <div className="mb-4 text-[#2563eb]">
+                                {/* Tailored Enterprise Apps icon */}
+                                <Server />
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Enterprise Applications</h3>
-                            <p className="text-black/80">Streamline your business operations with customized enterprise applications designed to meet your unique needs and scale with your growth.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Tailored Enterprise Apps</h3>
+                            <p className="text-black/80">Develop custom-fit enterprise apps for operational control, process efficiency, and scalable solutions.</p>
                         </div>
                         {/* Card 4 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Asset management icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                            <div className="mb-4 text-[#2563eb]">
+                                {/* Integrated Resource Management icon */}
+                                <Layers />
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Asset management</h3>
-                            <p className="text-black/80">Integrate core business processes like finance, HR, and operations into a single system to improve efficiency and decision-making.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Integrated Resource Management</h3>
+                            <p className="text-black/80">Integrate HR, finance, and logistics through smart systems for hassle-free business running.</p>
                         </div>
                     </div>
                 </div>
@@ -581,69 +563,69 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Success Stories
+                        Client Highlights
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
                             {
-                                title: "Enterprise Resource Planning",
-                                client: "Global Manufacturing Corp",
-                                description: "Developed a comprehensive ERP system that streamlined operations and reduced costs by 30%.",
-                                results: ["30% Cost Reduction", "50% Faster Processing", "99.9% Uptime"],
+                                title: "ERP Transformation",
+                                client: "Global Engineering Firm",
+                                description: "Built a platform to integrate procurement, finance, and production.",
+                                results: ["30% Operational Savings", "50% Faster Cycles", "99.9% Uptime"],
                                 icon: <Boxes className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Java", "Spring Boot", "PostgreSQL", "Kubernetes"],
-                                duration: "12 months",
-                                team: "15 members"
+                                tech: ["Java", "Spring Boot", "Kubernetes"],
+                                duration: "12 Months",
+                                team: "Team of 15"
                             },
                             {
-                                title: "Cloud Migration",
-                                client: "Tech Solutions Inc",
-                                description: "Successfully migrated legacy systems to cloud infrastructure, improving scalability and performance.",
-                                results: ["40% Performance Boost", "60% Cost Savings", "Zero Downtime"],
+                                title: "Cloud Upgrade",
+                                client: "SaaS Leader",
+                                description: "Replaced legacy systems with a scalable microservices architecture.",
+                                results: ["40% Speed Improvement", "60% Cost Cut", "Zero Migration Downtime"],
                                 icon: <Cloud className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["AWS", "Docker", "Terraform", "Jenkins"],
-                                duration: "8 months",
-                                team: "10 members"
+                                tech: ["AWS", "Terraform", "Docker"],
+                                duration: "8 Months",
+                                team: "10 Devs"
                             },
                             {
-                                title: "E-commerce Platform",
-                                client: "Retail Giant",
-                                description: "Built a scalable e-commerce platform handling millions of transactions daily.",
-                                results: ["200% Sales Growth", "99.99% Reliability", "5x Faster Load Times"],
+                                title: "Next-Gen E-Commerce",
+                                client: "Retail Conglomerate",
+                                description: "Launched a robust system to handle high traffic and seamless checkout.",
+                                results: ["200% Revenue Spike", "99.99% System Availability", "5x Performance"],
                                 icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Node.js", "React", "MongoDB", "Redis"],
-                                duration: "10 months",
-                                team: "12 members"
+                                tech: ["Node.js", "React", "Redis"],
+                                duration: "10 Months",
+                                team: "12 Engineers"
                             },
                             {
-                                title: "Healthcare Management",
-                                client: "Medical Group",
-                                description: "Developed a patient management system improving care coordination and efficiency.",
-                                results: ["45% Efficiency Gain", "90% Patient Satisfaction", "HIPAA Compliant"],
+                                title: "Patient Software Suite",
+                                client: "HealthCare Services",
+                                description: "Developed a HIPAA-compliant tool for a better patient experience.",
+                                results: ["45% Workflow Efficiency", "90% Positive Feedback", "100% Compliance"],
                                 icon: <Heart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: [".NET", "SQL Server", "Azure", "Power BI"],
-                                duration: "9 months",
-                                team: "8 members"
+                                tech: [".NET", "Azure", "Power BI"],
+                                duration: "9 Months",
+                                team: "8 Members"
                             },
                             {
-                                title: "Financial Trading Platform",
-                                client: "Investment Bank",
-                                description: "Created a high-frequency trading platform with real-time analytics and risk management.",
-                                results: ["0.1ms Latency", "99.999% Uptime", "50% ROI"],
+                                title: "Trading Dashboard",
+                                client: "Financial Institution",
+                                description: "Delivered real-time risk tracking for high-speed trading operations.",
+                                results: ["0.1ms Latency", "99.999% System Uptime", "50% ROI in Year 1"],
                                 icon: <LineChart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["C++", "Python", "Kafka", "TimescaleDB"],
-                                duration: "14 months",
-                                team: "20 members"
+                                tech: ["C++", "Python", "Kafka"],
+                                duration: "14 Months",
+                                team: "20 Developers"
                             },
                             {
-                                title: "IoT Fleet Management",
-                                client: "Logistics Company",
-                                description: "Implemented an IoT-based fleet management system with real-time tracking and analytics.",
-                                results: ["35% Fuel Savings", "25% Route Optimization", "100% GPS Coverage"],
+                                title: "IoT Fleet Dashboard",
+                                client: "Logistics Network",
+                                description: "Designed a tracking system that delivered fuel savings and routing accuracy.",
+                                results: ["35% Fuel Efficiency", "25% Travel Time Reduced", "100% Geo-Coverage"],
                                 icon: <Network className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Python", "React Native", "MongoDB", "AWS IoT"],
-                                duration: "11 months",
-                                team: "9 members"
+                                tech: ["React Native", "MongoDB", "AWS IoT"],
+                                duration: "11 Months",
+                                team: "9 Team Members"
                             }
                         ].map((caseStudy, index) => (
                             <AnimatedItem 
@@ -710,13 +692,13 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold mb-8`}
                     >
-                        Ready to Transform Your Business?
+                        Let's Build What's Next
                     </motion.h2>
                     <motion.p 
                         variants={fadeInUp}
                         className="text-gray-300 mb-12 text-lg"
                     >
-                        Let's create something amazing together. Our team of expert developers is ready to help you build your next successful software solution.
+                        Whether you need to reimagine workflows or launch a full-scale enterprise app, SKS Tech Solution is ready to help.
                     </motion.p>
                     <motion.div
                         variants={fadeInUp}
@@ -744,10 +726,10 @@ export default function SoftwareDevelopmentPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Star className="w-6 h-6" />, text: "Expert Team" },
-                            { icon: <Shield className="w-6 h-6" />, text: "Secure Development" },
-                            { icon: <Zap className="w-6 h-6" />, text: "Fast Delivery" },
-                            { icon: <Heart className="w-6 h-6" />, text: "Client Satisfaction" }
+                            { icon: <Star className="w-6 h-6" />, text: "Pro-Level Teams" },
+                            { icon: <Shield className="w-6 h-6" />, text: "Full-Cycle Delivery" },
+                            { icon: <Zap className="w-6 h-6" />, text: "Transparent Collaboration" },
+                            { icon: <Heart className="w-6 h-6" />, text: "Guaranteed Satisfaction" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -760,6 +742,10 @@ export default function SoftwareDevelopmentPage() {
                             </motion.div>
                         ))}
                     </motion.div>
+                    <div className="mt-16 text-center text-white/60 text-sm font-semibold">
+                        SKS TECH SOLUTION<br />
+                        Digital excellence starts here — with innovation, integrity, and results.
+                    </div>
                 </div>
             </AnimatedSection>
         </div>
@@ -773,33 +759,33 @@ function FlexibleModelsSection() {
             label: 'Fixed Price Model',
             image: '/services/Layer-17.png', // Replace with your image
             title: 'Fixed Price Model',
-            description: 'Our fixed price model is ideal for projects with well-defined requirements and scope. It offers cost predictability and is best suited for short-term projects or MVPs.',
+            description: 'Best for sharply defined projects with well-planned requirements, timelines, and budgets. This model offers predictability and minimal risk.',
             checklist: [
-                'Clear Scope & Timeline',
-                'Budget Certainty',
-                'Low Risk for Clients',
+                'Pre-approved timelines',
+                'Defined deliverables',
+                'Cost certainty',
             ],
         },
         {
             label: 'Time and Material Model',
             image: '/services/Layer-17.png', // Replace with your image
             title: 'Time and Material Model',
-            description: 'This model is perfect for projects where requirements may evolve. It provides flexibility and transparency, allowing you to pay for actual work done.',
+            description: 'Best suited for evolving projects, this model allows businesses to scale development as needed and pay based on hours or tasks completed.',
             checklist: [
-                'Flexible Requirements',
-                'Transparent Billing',
-                'Ongoing Collaboration',
+                'No long-term lock-in',
+                'Budget control',
+                'Agile adaptability',
             ],
         },
         {
-            label: 'Build Operate Transfer Model',
+            label: 'Build-Operate-Transfer Model',
             image: '/services/Layer-17.png', // Replace with your image
-            title: 'Build Operate Transfer Model',
-            description: 'Our custom software development company offers a model that is tailored for companies looking to establish in-house capabilities. It is advantageous for organizations aiming to build a sustainable team while benefiting from expert guidance during the initial stages.',
+            title: 'Build-Operate-Transfer Model',
+            description: 'Perfect for businesses looking to establish in-house teams through expert setup. We build and manage your offshore unit, then transfer ownership.',
             checklist: [
-                'Faster Time to Market',
-                'Reduced Costs',
-                'Long-Term Commitment',
+                'Rapid setup',
+                'Expert oversight',
+                'Full handover',
             ],
         },
     ];
@@ -807,8 +793,8 @@ function FlexibleModelsSection() {
     return (
         <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
             <div className="max-w-6xl mx-auto text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose From Our Flexible Models for Custom Software Development</h2>
-                <p className="text-white/80 text-lg md:text-xl">Being a top custom software development services provider, we offer various hiring models.</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose a Model That Fits Your Business</h2>
+                <p className="text-white/80 text-lg md:text-xl">Being a reliable partner for outsourcing software development, we offer flexible engagement models:</p>
             </div>
             <div className="flex flex-col items-center">
                 {/* Tabs */}

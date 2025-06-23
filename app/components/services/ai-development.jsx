@@ -95,34 +95,24 @@ const AnimatedItem = ({ children, className = "" }) => {
 function ProcessAccordion() {
     const steps = [
         {
-            title: 'Design',
-            description: 'The design phase involves creating the visual and interactive aspects of the software development. Our custom software development services are critical in ensuring that the software solution is user-friendly and aesthetically pleasing.',
-            checklist: [
-                'Interaction Flows',
-                'Wireframing',
-                'Visual Design',
-                'Brand Alignment',
-            ],
+            title: '1. Discovery & Consultation',
+            description: 'We start by learning about your objectives, technical requirements, and expectations in order to develop a distinct roadmap for your artificial intelligence development project.',
+            checklist: [],
         },
         {
-            title: 'Development',
-            description: 'The development phase is where the actual coding and implementation take place. Our experienced developers use best practices and the latest technologies to build robust, scalable, and secure software solutions.',
-            checklist: [
-                'Agile Development',
-                'Code Reviews',
-                'Quality Assurance',
-                'Continuous Integration',
-            ],
+            title: '2. Solution Design',
+            description: 'Our developers design AI-powered solutions with user experience, scalability, and integration into your existing business environment in mind.',
+            checklist: [],
         },
         {
-            title: 'Deployment',
-            description: 'The deployment phase ensures your software is launched smoothly and efficiently. We provide ongoing support and maintenance to guarantee optimal performance and user satisfaction.',
-            checklist: [
-                'Cloud Deployment',
-                'Monitoring & Support',
-                'User Training',
-                'Performance Optimization',
-            ],
+            title: '3. Development & Testing',
+            description: 'Artificial intelligence expert developers build and extensively test your AI product with the newest technologies and industry standards.',
+            checklist: [],
+        },
+        {
+            title: '4. Deployment & Support',
+            description: 'We deploy your AI solution smoothly and provide continuous support, updates, and performance monitoring for long-term success.',
+            checklist: [],
         },
     ];
     const [openIndex, setOpenIndex] = useState(0);
@@ -152,11 +142,13 @@ function ProcessAccordion() {
                                         <h4 className="text-xl font-bold mb-2">{step.title}</h4>
                                         <p className="mb-4 text-base">{step.description}</p>
                                     </div>
-                                    <ul className="min-w-[220px] space-y-2 text-base">
-                                        {step.checklist.map((item, i) => (
-                                            <li key={i} className="flex items-center gap-2 text-[#3D43D4] font-medium"><span>✔</span> <span className="text-[#181828]">{item}</span></li>
-                                        ))}
-                                    </ul>
+                                    {step.checklist.length > 0 && (
+                                        <ul className="min-w-[220px] space-y-2 text-base">
+                                            {step.checklist.map((item, i) => (
+                                                <li key={i} className="flex items-center gap-2 text-[#3D43D4] font-medium"><span>✔</span> <span className="text-[#181828]">{item}</span></li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </div>
                             </motion.div>
                         )}
@@ -187,14 +179,14 @@ export default function AIDevelopmentPage() {
                         className="inline-block"
                     >
                         <span className={`${roboto.className} px-4 py-2 rounded-full bg-[#171629] border border-[#3D43D4]/30 text-[#5B61F6] text-sm font-medium`}>
-                            AI Development Services
+                            AI Development Excellence
                         </span>
                     </motion.div>
                     <h1 className={`${roboto.className} text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] leading-tight`}>
-                    We build intelligent solutions using machine learning, NLP, computer vision, and automation to help you innovate and scale.
+                        Intelligent Solutions Begin with Smarter Development
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        We help startups and businesses validate their ideas quickly with cost-effective, feature-rich Minimum Viable Products that drive user engagement and business growth.
+                        Being one of the reliable AI development companies, SKS Tech Solution is enabling businesses to automate, innovate, and grow on the strength of advanced artificial intelligence technologies.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -203,10 +195,10 @@ export default function AIDevelopmentPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Code className="w-5 h-5" />, text: "Machine Learning" },
+                            { icon: <Code className="w-5 h-5" />, text: "AI-Powered Business Solutions" },
                             { icon: <Zap className="w-5 h-5" />, text: "NLP" },
-                            { icon: <Shield className="w-5 h-5" />, text: "Computer Vision" },
-                            { icon: <Cloud className="w-5 h-5" />, text: "Automation" }
+                            { icon: <Shield className="w-5 h-5" />, text: "ML & Predictive Analytics" },
+                            { icon: <Cloud className="w-5 h-5" />, text: "Scalable AI Applications" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -236,10 +228,10 @@ export default function AIDevelopmentPage() {
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
                 <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {[
-                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "AI Projects" },
-                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "95%", label: "Accuracy" },
-                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "10+", label: "Years AI Experience" },
-                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "50+", label: "Happy Clients" }
+                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "150+", label: "AI Projects Delivered" },
+                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "98%", label: "Client Satisfaction" },
+                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "10+", label: "Years of AI Innovation" },
+                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "Global Clients" }
                     ].map((stat, index) => (
                         <AnimatedItem key={index} className="space-y-4">
                             <div className="flex justify-center">{stat.icon}</div>
@@ -254,7 +246,7 @@ export default function AIDevelopmentPage() {
                             <p className="text-gray-300">{stat.label}</p>
                         </AnimatedItem>
                     ))}
-                    </div>
+                </div>
             </AnimatedSection>
 
             {/* Software Developer Sections */}
@@ -451,24 +443,10 @@ export default function AIDevelopmentPage() {
             {/* Customized Software Development Process Section */}
             <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
                 <div className="max-w-4xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Customized Software Development Process</h2>
-                    <p className="text-white/80 text-lg md:text-xl">As one of the best custom software development companies, our well-designed development process allows organizations to tailor solutions that meet specific business needs, enhance user experience, and drive innovation.</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">How Do We Work?</h2>
+                    <p className="text-white/80 text-lg md:text-xl">We at SKS Tech Solution adopt a systematic, customer-oriented approach to provide efficient, scalable, and innovative AI development services as per your business requirements.</p>
                 </div>
                 <div className="max-w-4xl mx-auto space-y-8">
-                    {/* Discovery Card */}
-                    <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-3xl p-8 flex flex-col md:flex-row justify-between items-center shadow-xl mb-4">
-                        <div className="text-left flex-1 mb-6 md:mb-0">
-                            <h3 className="text-2xl font-bold text-white mb-2">Discovery</h3>
-                            <p className="text-white/80">The discovery phase is the initial stage of the customized software development process. Our custom software development company tries to understand your project's goals, objectives, and requirements.</p>
-                        </div>
-                        <ul className="text-left space-y-2 min-w-[220px]">
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Requirements Gathering</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Research & Analysis</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Solution Mapping</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Technology Evaluation</li>
-                        </ul>
-                    </div>
-                    {/* Accordion for other steps */}
                     <ProcessAccordion />
                 </div>
             </section>
@@ -518,53 +496,54 @@ export default function AIDevelopmentPage() {
             {/* Industries Section */}
             <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">MVP Solutions We Deliver to Help Startups Validate Ideas</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Sks Tech Solution we specialize in delivering rapid MVP development services to help startups and businesses validate their ideas quickly and cost-effectively. Here's what we offer:</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">AI Solutions We Deliver to Empower Businesses</h2>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">We provide artificial intelligence software development that brings measurable value to businesses across industries. Here's who benefits from partnering with us:</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Card 1 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Megaphone icon */}
+                            <div className="mb-4 text-[#2563eb]">
+                                {/* Lightbulb icon */}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182A4.5 4.5 0 016.75 12.75m0 0A4.5 4.5 0 0115.182 8.818m-8.432 3.932a4.5 4.5 0 018.432-3.932m0 0V3.75m0 5.068a4.5 4.5 0 01-8.432 3.932m8.432-3.932l3.75 3.75m-3.75-3.75l-3.75 3.75" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2m0 14v2m7-7h2M3 12H1m16.95-6.95l1.414 1.414M4.636 19.364l1.414-1.414M19.364 19.364l-1.414-1.414M4.636 4.636L6.05 6.05" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">SaaS Platforms</h3>
-                            <p className="text-black/80">Build and launch SaaS MVPs quickly to validate market demand and gather early user feedback for product-market fit.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Startups</h3>
+                            <p className="text-black/80">Helping startups convert their innovative AI ideas into scalable, marketable AI products with shorter development time and much less risk.</p>
                         </div>
                         {/* Card 2 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Web portal icon */}
+                            <div className="mb-4 text-[#2563eb]">
+                                {/* Building icon */}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M7 9h2m2 0h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 13h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 17h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                                    <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                                    <path d="M9 8h6M9 12h6M9 16h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">E-commerce Solutions</h3>
-                            <p className="text-black/80">Create e-commerce MVPs to test product demand, pricing strategies, and customer acquisition channels.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Enterprises</h3>
+                            <p className="text-black/80">Big businesses count on our AI expertise to develop secure, scalable, and enterprise-grade solutions that further automate & streamline their businesses.</p>
                         </div>
                         {/* Card 3 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* App window icon */}
+                            <div className="mb-4 text-[#2563eb]">
+                                {/* Chip icon */}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <rect x="7" y="9" width="10" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                                    <rect x="7" y="7" width="10" height="10" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                                    <path d="M12 3v2m0 14v2m7-7h2M3 12H1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Healthcare Apps</h3>
-                            <p className="text-black/80">Develop healthcare MVPs to validate patient needs, regulatory compliance, and market opportunities in the health tech space.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Technology Companies</h3>
+                            <p className="text-black/80">We partner with tech companies to enhance their AI capabilities, reduce development time, and deliver advanced AI-driven features.</p>
                         </div>
                         {/* Card 4 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Asset management icon */}
+                            <div className="mb-4 text-[#2563eb]">
+                                {/* Heart/health icon */}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M12 21C12 21 4 13.5 4 8.5C4 5.46243 6.46243 3 9.5 3C11.1566 3 12.5 4.34315 12.5 6C12.5 4.34315 13.8434 3 15.5 3C18.5376 3 21 5.46243 21 8.5C21 13.5 12 21 12 21Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">EdTech Platforms</h3>
-                            <p className="text-black/80">Build educational technology MVPs to test learning methodologies, user engagement, and market demand for innovative education solutions.</p>
+                            <h3 className="text-xl font-bold mb-2 text-black">Healthcare Industry</h3>
+                            <p className="text-black/80">Our AI models support healthcare providers with predictive diagnostics, automated processes, and improved patient care solutions.</p>
                         </div>
                     </div>
                 </div>

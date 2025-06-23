@@ -147,14 +147,100 @@ function ProcessAccordion() {
                                 transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                                 className="overflow-hidden"
                             >
-                                <div className="bg-[#ededf7] text-[#181828] rounded-b-2xl px-6 py-6 flex flex-col md:flex-row justify-between items-center border border-t-0 border-[#23234a]">
+                                <div className="bg-[#10101A] border border-t-0 border-[#3D43D4]/30 text-white rounded-b-2xl px-6 py-6 flex flex-col md:flex-row justify-between items-center">
                                     <div className="flex-1 mb-4 md:mb-0">
                                         <h4 className="text-xl font-bold mb-2">{step.title}</h4>
-                                        <p className="mb-4 text-base">{step.description}</p>
+                                        <p className="mb-4 text-base text-white/80">{step.description}</p>
                                     </div>
                                     <ul className="min-w-[220px] space-y-2 text-base">
                                         {step.checklist.map((item, i) => (
-                                            <li key={i} className="flex items-center gap-2 text-[#3D43D4] font-medium"><span>✔</span> <span className="text-[#181828]">{item}</span></li>
+                                            <li key={i} className="flex items-center gap-2 text-[#5B61F6] font-medium"><span>✔</span> <span className="text-white">{item}</span></li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+// Accordion for Customized App Development Process Section
+function CustomAppProcessAccordion() {
+    const steps = [
+        {
+            title: "Discovery",
+            description: "We analyze your business goals and user needs to lay a strong foundation.",
+            checklist: [
+                "Understand the target audience",
+                "Define core app features",
+                "Research competitors",
+                "Develop a comprehensive project timeline"
+            ]
+        },
+        {
+            title: "Design",
+            description: "We design intuitive and interactive interfaces centered on user experience.",
+            checklist: [
+                "Wireframes and UI mockups",
+                "UX journey planning",
+                "Visual branding",
+                "Gather client feedback and iterate"
+            ]
+        },
+        {
+            title: "Development",
+            description: "We code secure and high-performing mobile apps tailored to your needs.",
+            checklist: [
+                "Frontend and backend development",
+                "API integration",
+                "Platform compatibility",
+                "Perform regular unit testing"
+            ]
+        },
+        {
+            title: "Deployment",
+            description: "We ensure smooth app launch and post-release stability.",
+            checklist: [
+                "App store submission",
+                "Quality assurance testing",
+                "Performance monitoring",
+                "Plan for updates and support"
+            ]
+        }
+    ];
+    const [openIndex, setOpenIndex] = useState(null);
+    return (
+        <div className="max-w-4xl mx-auto space-y-4">
+            {steps.map((step, idx) => (
+                <div key={idx} className="">
+                    <button
+                        className={`w-full flex justify-between items-center px-6 py-4 bg-[#181828] text-white rounded-t-2xl focus:outline-none font-semibold text-lg border-b border-[#23234a] ${openIndex === idx ? 'rounded-b-none' : 'rounded-b-2xl'}`}
+                        onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                    >
+                        <span>{step.title}</span>
+                        <span className={`transition-transform duration-300 ${openIndex === idx ? 'rotate-180' : ''}`}>▼</span>
+                    </button>
+                    <AnimatePresence initial={false}>
+                        {openIndex === idx && (
+                            <motion.div
+                                key="content"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                                className="overflow-hidden"
+                            >
+                                <div className="bg-[#10101A] border border-t-0 border-[#3D43D4]/30 text-white rounded-b-2xl px-6 py-6 flex flex-col md:flex-row justify-between items-center">
+                                    <div className="flex-1 mb-4 md:mb-0">
+                                        <h4 className="text-xl font-bold mb-2">{step.title}</h4>
+                                        <p className="mb-4 text-base text-white/80">{step.description}</p>
+                                    </div>
+                                    <ul className="min-w-[220px] space-y-2 text-base">
+                                        {step.checklist.map((item, i) => (
+                                            <li key={i} className="flex items-center gap-2 text-[#5B61F6] font-medium"><span>✔</span> <span className="text-white">{item}</span></li>
                                         ))}
                                     </ul>
                                 </div>
@@ -191,10 +277,10 @@ export default function SoftwareDevelopmentPage() {
                         </span>
                     </motion.div>
                     <h1 className={`${roboto.className} text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] leading-tight`}>
-                    Transform Your Ideas Into Powerful Mobile Apps
+                        Mobile App Development That Connects, Engages, and Grows!
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        We develop custom software solutions that streamline operations, enhance productivity, and drive business innovation.
+                        As a trusted mobile app development company, SKS Tech Solution turns complex concepts into feature-rich applications that offer seamless user experiences.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -203,10 +289,10 @@ export default function SoftwareDevelopmentPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Code className="w-5 h-5" />, text: "Native iOS & Android" },
-                            { icon: <Zap className="w-5 h-5" />, text: "Cross-Platform" },
-                            { icon: <Shield className="w-5 h-5" />, text: "App Store Optimization" },
-                            { icon: <Cloud className="w-5 h-5" />, text: "Secure & Scalable" }
+                            "Native iOS & Android App Development",
+                            "Cross-Platform Expertise",
+                            "App Store Launch & Optimization",
+                            "Secure, Scalable, and Future-Ready Apps"
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -214,8 +300,8 @@ export default function SoftwareDevelopmentPage() {
                                 whileHover={{ scale: 1.05 }}
                                 className="flex items-center gap-2 bg-[#171629]/70 px-4 py-2 rounded-full border border-[#3D43D4]/30"
                             >
-                                <span className="text-[#5B61F6]">{item.icon}</span>
-                                <span>{item.text}</span>
+                                <span className="text-[#5B61F6]">✔</span>
+                                <span>{item}</span>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -226,7 +312,7 @@ export default function SoftwareDevelopmentPage() {
                         className="mt-12"
                     >
                         <button className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2 mx-auto">
-                            Start Your Project <ArrowRight className="w-5 h-5" />
+                            Start Your Project
                         </button>
                     </motion.div>
                 </motion.div>
@@ -236,13 +322,12 @@ export default function SoftwareDevelopmentPage() {
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
                 <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {[
-                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "300+", label: "Projects Delivered" },
-                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "99%", label: "Client Satisfaction" },
-                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "15+", label: "Years Experience" },
-                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "Enterprise Clients" }
+                        { value: "300+", label: "Mobile Apps Delivered" },
+                        { value: "99%", label: "Client Satisfaction" },
+                        { value: "10+", label: "Years of Innovation" },
+                        { value: "100+", label: "Enterprise Clients" }
                     ].map((stat, index) => (
                         <AnimatedItem key={index} className="space-y-4">
-                            <div className="flex justify-center">{stat.icon}</div>
                             <motion.h3 
                                 className="text-4xl md:text-5xl font-bold text-[#5B61F6]"
                                 initial={{ opacity: 0, scale: 0.5 }}
@@ -269,10 +354,10 @@ export default function SoftwareDevelopmentPage() {
                             <Image src={sd} alt="Software Development on Laptop" layout="fill" objectFit="cover" />
                         </motion.div>
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Mobile App Developer</h3>
-                            <p className="text-gray-300">From ideation to launch, we deliver apps that delight users and drive business growth.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>UI/UX Design That Engages</h3>
+                            <p className="text-gray-300">The core of our design process rests on a clean layout, smooth yet functional interactions, and user psychology to give an app the feel of engagement and pleasure on every single screen on every single device.</p>
                             <ul className="space-y-3">
-                                {["UI/UX Design", "Native & Cross-Platform", "App Store Launch"].map((feature, idx) => (
+                                {["UI/UX Design That Engages", "Native & Cross-Platform Efficiency", "Fast Deployment with Full App Store Support"].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -288,10 +373,10 @@ export default function SoftwareDevelopmentPage() {
                     {/* Section 2: Left Text, Right Image */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Mobile App Developer</h3>
-                            <p className="text-gray-300">Ongoing support, analytics, and updates.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Post-Launch Support </h3>
+                            <p className="text-gray-300">Post-launch and on into eternity, we have ceaseless Monitoring, new Feature upgrade Services, and Tech support for your app to keep it competitive, secure, and adhering to current platform standards.</p>
                             <ul className="space-y-3">
-                                {["Maintenance", "Analytics", "Feature Updates"].map((feature, idx) => (
+                                {["Real-Time Analytics", "Maintenance & Feature Expansion", "Performance Optimization"].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
@@ -386,52 +471,45 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Our Software Development Services
+                        Our Mobile App Development Services
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
                                 title: "iOS App Development",
-                                description: "Tailored software solutions designed to meet your specific business needs.",
-                                icon: <Code className="w-8 h-8" />,
-                                features: ["Business Analysis", "Custom Development", "Quality Assurance", "Maintenance"]
+                                description: "We help you create smooth, creative apps for iPhones and iPads that look great and work fast.",
+                                features: ["Custom UI", "Swift/SwiftUI-based solutions", "App Store Compliance", "Continuous Updates"]
                             },
                             {
-                                title: "Android App Development",
-                                description: "Scalable enterprise software for large organizations.",
-                                icon: <Server className="w-8 h-8" />,
-                                features: ["ERP Systems", "CRM Solutions", "HR Management", "Workflow Automation"]
+                                title: "Android Application Development",
+                                description: "Our tailored Android software development services are optimized for market reach and device compatibility.",
+                                features: ["Kotlin & Jetpack Expertise", "App Architecture & Testing", "Scalable Backend Integration", "Support for Multiple Screen Sizes"]
                             },
                             {
                                 title: "Cross-Platform Apps",
-                                description: "Cloud-native applications and migration services.",
-                                icon: <Cloud className="w-8 h-8" />,
-                                features: ["AWS", "Azure", "Google Cloud", "Hybrid Cloud"]
+                                description: "We are experts in technologies such as Flutter and React Native to reduce costs and time to market while increasing quality.",
+                                features: ["Unified Codebase", "Native-like Performance", "Fast MVP Rollouts", "Lower Maintenance Costs"]
                             },
                             {
-                                title: "Backend/API",
-                                description: "Streamlined development and deployment processes.",
-                                icon: <Workflow className="w-8 h-8" />,
-                                features: ["CI/CD Pipelines", "Containerization", "Kubernetes", "Monitoring"]
+                                title: "Backend & APIs",
+                                description: "We ensure secure and fast APIs for all types of mobile app development software integration.",
+                                features: ["REST, GraphQL APIs", "Firebase/Node.js", "Real-time Sync", "Cloud Database Integration"]
                             },
                             {
                                 title: "UI/UX Design",
-                                description: "Robust and secure API solutions for seamless integration.",
-                                icon: <Network className="w-8 h-8" />,
-                                features: ["REST APIs", "GraphQL", "API Security", "Documentation"]
+                                description: "Develop efficient and engaging mobile designs that ensure users have a consistent user experience on all devices.",
+                                features: ["Cross-Platform Visual Consistency", "Wireframing & Interactive Prototyping", "User-Centered Design Approach"]
                             },
                             {
                                 title: "App Maintenance",
-                                description: "Efficient database design and optimization services.",
-                                icon: <Database className="w-8 h-8" />,
-                                features: ["SQL", "NoSQL", "Data Migration", "Performance Tuning"]
+                                description: "Maximize application performance by managing its regular updates, fixes, security updates, and never-ending contribution of features that are up-kept.",
+                                features: ["OS & Device Compatibility Checks", "Security & Performance Monitoring", "Regular Bug Fixes & Updates"]
                             }
                         ].map((service, index) => (
                             <AnimatedItem 
                                 key={index}
                                 className="p-6 bg-[#171629]/70 rounded-xl border border-[#3D43D4]/30 shadow-xl space-y-4 group hover:border-[#5B61F6]/50 transition-colors duration-300"
                             >
-                                <div className="text-[#5B61F6] mb-4">{service.icon}</div>
                                 <h3 className="text-xl font-semibold text-[#5B61F6]">{service.title}</h3>
                                 <p className="text-gray-300 mb-4">{service.description}</p>
                                 <ul className="space-y-2">
@@ -451,26 +529,10 @@ export default function SoftwareDevelopmentPage() {
             {/* Customized Software Development Process Section */}
             <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
                 <div className="max-w-4xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Customized Software Development Process</h2>
-                    <p className="text-white/80 text-lg md:text-xl">As one of the best custom software development companies, our well-designed development process allows organizations to tailor solutions that meet specific business needs, enhance user experience, and drive innovation.</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Customized App Development Process</h2>
+                    <p className="text-white/80 text-lg md:text-xl">At SKS Tech Solution, every app starts with understanding your business, because great software is built with clarity and care.</p>
                 </div>
-                <div className="max-w-4xl mx-auto space-y-8">
-                    {/* Discovery Card */}
-                    <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-3xl p-8 flex flex-col md:flex-row justify-between items-center shadow-xl mb-4">
-                        <div className="text-left flex-1 mb-6 md:mb-0">
-                            <h3 className="text-2xl font-bold text-white mb-2">Discovery</h3>
-                            <p className="text-white/80">The discovery phase is the initial stage of the customized software development process. Our custom software development company tries to understand your project's goals, objectives, and requirements.</p>
-                        </div>
-                        <ul className="text-left space-y-2 min-w-[220px]">
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Requirements Gathering</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Research & Analysis</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Solution Mapping</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Technology Evaluation</li>
-                        </ul>
-                    </div>
-                    {/* Accordion for other steps */}
-                    <ProcessAccordion />
-                </div>
+                <CustomAppProcessAccordion />
             </section>
 
             {/* Technology Stack Section */}
@@ -518,54 +580,37 @@ export default function SoftwareDevelopmentPage() {
             {/* Industries Section */}
             <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Enterprise Software Solutions We Deliver to Help Businesses Stay Modern</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Sks Tech Solution  we specialize in delivering a wide range of enterprise software development services to help businesses stay future-ready. Here's what we offer:</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Building Smarter Solutions for Your Growth</h2>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At SKS Tech Solution, we bring creativity, technicality, and in-depth knowledge of human behavior together to create impactful mobile apps. Our solutions are made according to your vision and optimized for sustained growth.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {/* Card 1 */}
-                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Megaphone icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182A4.5 4.5 0 016.75 12.75m0 0A4.5 4.5 0 0115.182 8.818m-8.432 3.932a4.5 4.5 0 018.432-3.932m0 0V3.75m0 5.068a4.5 4.5 0 01-8.432 3.932m8.432-3.932l3.75 3.75m-3.75-3.75l-3.75 3.75" />
-                                </svg>
+                        {[
+                            {
+                                icon: <Users className="w-8 h-8" />, // Expert Development Team
+                                title: "Expert Development Team",
+                                description: "Our developers have expertise in crafting high-quality, intuitive applications with clean code and contemporary design."
+                            },
+                            {
+                                icon: <Workflow className="w-8 h-8" />, // End-to-End Services
+                                title: "End-to-End Services",
+                                description: "We handle every stage of the app journey—from idea validation to launch and post-launch support—under one trusted roof."
+                            },
+                            {
+                                icon: <Layers className="w-8 h-8" />, // Scalable Architecture
+                                title: "Scalable Architecture",
+                                description: "We create apps that grow with your business, using robust backend systems and future-ready infrastructure."
+                            },
+                            {
+                                icon: <Heart className="w-8 h-8" />, // Client-Centric Approach
+                                title: "Client-Centric Approach",
+                                description: "Your business goals guide every step. We ensure transparent communication, flexible delivery models, and measurable results."
+                            }
+                        ].map((item, idx) => (
+                            <div key={idx} className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
+                                <div className="mb-4 text-[#2563eb]">{item.icon}</div>
+                                <h3 className="text-xl font-bold mb-2 text-black">{item.title}</h3>
+                                <p className="text-black/80">{item.description}</p>
                             </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Marketing & advertising</h3>
-                            <p className="text-black/80">Plan and execute marketing campaigns with tools that offer automation, analytics, and personalization</p>
-                        </div>
-                        {/* Card 2 */}
-                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Web portal icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M7 9h2m2 0h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 13h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 17h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Web portals</h3>
-                            <p className="text-black/80">Create secure and user-friendly web portals for customers, employees, or partners to improve communication and collaboration.</p>
-                        </div>
-                        {/* Card 3 */}
-                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* App window icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <rect x="7" y="9" width="10" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Enterprise Applications</h3>
-                            <p className="text-black/80">Streamline your business operations with customized enterprise applications designed to meet your unique needs and scale with your growth.</p>
-                        </div>
-                        {/* Card 4 */}
-                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Asset management icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Asset management</h3>
-                            <p className="text-black/80">Integrate core business processes like finance, HR, and operations into a single system to improve efficiency and decision-making.</p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -585,116 +630,76 @@ export default function SoftwareDevelopmentPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
                             {
-                                title: "Fitness Tracker App",
-                                client: "Global Fitness Corp",
-                                description: "Developed a comprehensive fitness tracking app that improved user engagement and health outcomes.",
-                                results: ["20% Increase in User Engagement", "30% Improvement in Health Metrics", "99.9% Uptime"],
-                                icon: <Boxes className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Swift", "Firebase", "Core Data", "UIKit"],
-                                duration: "12 months",
-                                team: "15 members"
-                            },
-                            {
-                                title: "E-commerce Mobile Platform",
-                                client: "Retail Giant",
-                                description: "Built a scalable e-commerce platform handling millions of transactions daily.",
-                                results: ["200% Sales Growth", "99.99% Reliability", "5x Faster Load Times"],
-                                icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["React Native", "Node.js", "MongoDB", "Firebase"],
+                                client: "Retail Chain",
+                                title: "GoodShopping App",
+                                description: "Created a shopping application with inventory management in-built, having a good interface.",
+                                results: ["3x Customer Retention", "98.7% Crash-Free Sessions", "120% Revenue Growth"],
                                 duration: "10 months",
-                                team: "12 members"
+                                team: "14 members",
+                                tech: ["React Native", "Node.js", "MongoDB", "Firebase"]
                             },
                             {
-                                title: "Healthcare Appointment App",
-                                client: "Medical Group",
-                                description: "Developed a patient management system improving care coordination and efficiency.",
-                                results: ["45% Efficiency Gain", "90% Patient Satisfaction", "HIPAA Compliant"],
-                                icon: <Heart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Kotlin", "Jetpack", "Room DB", "Firebase"],
-                                duration: "9 months",
-                                team: "8 members"
-                            },
-                            {
-                                title: "FinTech Wallet App",
-                                client: "Investment Bank",
-                                description: "Created a high-frequency trading platform with real-time analytics and risk management.",
-                                results: ["0.1ms Latency", "99.999% Uptime", "50% ROI"],
-                                icon: <LineChart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Swift", "Firebase", "Core Data", "UIKit"],
-                                duration: "14 months",
-                                team: "20 members"
-                            },
-                            {
-                                title: "Food Delivery App",
-                                client: "Logistics Company",
-                                description: "Implemented an IoT-based fleet management system with real-time tracking and analytics.",
-                                results: ["35% Fuel Savings", "25% Route Optimization", "100% GPS Coverage"],
-                                icon: <Network className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["React Native", "Node.js", "MongoDB", "Firebase"],
+                                client: "Healthcare Startup",
+                                title: "Virtual Consultation Platform",
+                                description: "Created a HIPAA-compliant telemedicine app that allows video consults, prescriptions, and health monitoring within one integrated platform.",
+                                results: ["80% Reduction in Wait Times", "95% Patient Satisfaction", "HIPAA Compliant"],
                                 duration: "11 months",
-                                team: "9 members"
+                                team: "10 members",
+                                tech: ["Kotlin", "Jetpack", "Room DB", "Firebase"]
                             },
                             {
-                                title: "Social Networking App",
-                                client: "Social Media Platform",
-                                description: "Developed a social networking app that improved user engagement and community building.",
-                                results: ["20% Increase in User Engagement", "30% Improvement in Community Interaction", "99.9% Uptime"],
-                                icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Swift", "Firebase", "Core Data", "UIKit"],
-                                duration: "12 months",
-                                team: "15 members"
+                                client: "Logistics Company",
+                                title: "Fleet Management App",
+                                description: "Launched a GPS-enabled tracking app to optimize routes, monitor drivers, and reduce delivery delays across regions.",
+                                results: ["40% Route Optimization", "30% Fuel Savings", "24/7 Real-Time Tracking"],
+                                duration: "9 months",
+                                team: "9 members",
+                                tech: ["Flutter", "Firebase", "Google Maps API", "Node.js"]
+                            },
+                            {
+                                client: "Education Platform",
+                                title: "E-Learning Mobile App",
+                                description: "Delivered a feature-rich app with live classes, assessments, and gamified learning for K–12 students.",
+                                results: ["60% Daily Active Usage", "90% Course Completion Rate", "99.9% Server Uptime"],
+                                duration: "8 months",
+                                team: "12 members",
+                                tech: ["SwiftUI", "Firebase", "Core Data", "GraphQL"]
+                            },
+                            {
+                                client: "Restaurant Franchise",
+                                title: "Online Ordering & Loyalty App",
+                                description: "Created a customer-facing app with ordering, real-time kitchen updates, and a loyalty reward system integrated with POS.",
+                                results: ["2x Order Volume", "50% Loyalty Member Growth", "Full POS Integration"],
+                                duration: "7 months",
+                                team: "8 members",
+                                tech: ["React Native", "Firebase", "Stripe API", "Node.js"]
+                            },
+                            {
+                                client: "Travel Agency",
+                                title: "Custom Trip Planner App",
+                                description: "Created a customized itinerary creator with real-time reservation, weather, and location-based tips.",
+                                results: ["75% User Engagement Increase", "35% Boost in Booking Conversions", "Multi-Language Support"],
+                                duration: "10 months",
+                                team: "11 members",
+                                tech: ["Flutter", "Firebase", "Google Maps API", "Stripe"]
                             }
-                        ].map((caseStudy, index) => (
-                            <AnimatedItem 
-                                key={index}
-                                className="p-6 bg-[#171629]/70 rounded-xl border border-[#3D43D4]/30 shadow-xl space-y-4 group hover:border-[#5B61F6]/50 transition-all duration-300"
-                                whileHover={{ 
-                                    scale: 1.02,
-                                    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-                                }}
-                            >
-                                <motion.div 
-                                    className="flex items-start justify-between"
-                                    whileHover={{ scale: 1.05 }}
-                                >
-                                    <div className="text-[#5B61F6]">{caseStudy.icon}</div>
-                                    <span className="text-sm text-[#5B61F6]">{caseStudy.client}</span>
-                                </motion.div>
-                                <h3 className="text-xl font-semibold text-[#5B61F6]">{caseStudy.title}</h3>
-                                <p className="text-gray-300">{caseStudy.description}</p>
-                                <div className="flex flex-wrap gap-2 mt-4">
-                                    {caseStudy.results.map((result, idx) => (
-                                        <motion.span 
-                                            key={idx}
-                                            className="px-3 py-1 bg-[#3D43D4]/10 text-[#5B61F6] rounded-full text-sm"
-                                            whileHover={{ scale: 1.05, backgroundColor: "rgba(61, 67, 212, 0.2)" }}
-                                        >
-                                            {result}
-                                        </motion.span>
+                        ].map((cs, idx) => (
+                            <AnimatedItem key={idx} className="p-6 bg-[#171629]/70 rounded-xl border border-[#3D43D4]/30 shadow-xl space-y-4 group hover:border-[#5B61F6]/50 transition-all duration-300">
+                                <div className="flex items-start justify-between">
+                                    <div className="text-[#5B61F6] font-bold text-lg">{cs.client}</div>
+                                    <span className="text-sm text-[#5B61F6]">{cs.duration} | {cs.team}</span>
+                                </div>
+                                <h3 className="text-xl font-semibold text-[#5B61F6]">{cs.title}</h3>
+                                <p className="text-gray-300">{cs.description}</p>
+                                <div className="flex flex-wrap gap-2 mt-2">
+                                    {cs.results.map((result, idx) => (
+                                        <span key={idx} className="px-3 py-1 bg-[#3D43D4]/10 text-[#5B61F6] rounded-full text-sm">{result}</span>
                                     ))}
                                 </div>
-                                <div className="pt-4 mt-4 border-t border-[#3D43D4]/30">
-                                    <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-                                        <div className="flex items-center gap-2">
-                                            <Clock className="w-4 h-4 text-[#5B61F6]" />
-                                            <span>{caseStudy.duration}</span>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <Users className="w-4 h-4 text-[#5B61F6]" />
-                                            <span>{caseStudy.team}</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-wrap gap-2 mt-4">
-                                        {caseStudy.tech.map((tech, idx) => (
-                                            <motion.span 
-                                                key={idx}
-                                                className="px-2 py-1 bg-[#3D43D4]/5 text-[#5B61F6] rounded text-xs"
-                                                whileHover={{ scale: 1.05, backgroundColor: "rgba(61, 67, 212, 0.1)" }}
-                                            >
-                                                {tech}
-                                            </motion.span>
+                                <div className="flex flex-wrap gap-2 mt-2">
+                                    {cs.tech.map((tech, idx) => (
+                                        <span key={idx} className="px-2 py-1 bg-[#3D43D4]/5 text-[#5B61F6] rounded text-xs">{tech}</span>
                                         ))}
-                                    </div>
                                 </div>
                             </AnimatedItem>
                         ))}
@@ -726,7 +731,7 @@ export default function SoftwareDevelopmentPage() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Start Your Project <ArrowRight className="w-5 h-5" />
+                            Start Your Project
                         </motion.button>
                         <motion.button 
                             className="border border-[#3D43D4] hover:bg-[#3D43D4]/10 text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
@@ -769,36 +774,36 @@ export default function SoftwareDevelopmentPage() {
 function FlexibleModelsSection() {
     const models = [
         {
-            label: 'Fixed Price Model',
+            label: 'MVP Launch Model',
             image: '/services/Layer-17.png', // Replace with your image
-            title: 'Fixed Price Model',
-            description: 'Our fixed price model is ideal for projects with well-defined requirements and scope. It offers cost predictability and is best suited for short-term projects or MVPs.',
+            title: 'MVP Launch Model',
+            description: 'Quickly launch core app features to validate ideas, gather feedback, and scale based on real user needs.',
             checklist: [
-                'Clear Scope & Timeline',
-                'Budget Certainty',
-                'Low Risk for Clients',
+                'Core Features First',
+                'Launch-Ready in Weeks',
+                'Rapid Prototyping',
             ],
         },
         {
-            label: 'Time and Material Model',
+            label: 'Agile Sprint Model',
             image: '/services/Layer-17.png', // Replace with your image
-            title: 'Time and Material Model',
-            description: 'This model is perfect for projects where requirements may evolve. It provides flexibility and transparency, allowing you to pay for actual work done.',
+            title: 'Agile Sprint Model',
+            description: 'Perfect for evolving apps that require ongoing iterations. Great for scaling products or adapting to user feedback post-launch.',
             checklist: [
-                'Flexible Requirements',
-                'Transparent Billing',
-                'Ongoing Collaboration',
+                'Flexible Backlog Management',
+                'Continuous Delivery',
+                'Sprint-Based Billing',
             ],
         },
         {
-            label: 'Dedicated Team',
+            label: 'Product Partnership Model',
             image: '/services/Layer-17.png', // Replace with your image
-            title: 'Dedicated Team',
-            description: 'Our custom software development company offers a model that is tailored for companies looking to establish in-house capabilities. It is advantageous for organizations aiming to build a sustainable team while benefiting from expert guidance during the initial stages.',
+            title: 'Product Partnership Model',
+            description: 'For businesses seeking a long-term tech partner. We become your extended team, handling full-cycle mobile app development and beyond.',
             checklist: [
-                'Faster Time to Market',
-                'Reduced Costs',
-                'Long-Term Commitment',
+                'Dedicated Team & PM',
+                'End-to-End Ownership',
+                'Shared Growth Goals',
             ],
         },
     ];
@@ -806,8 +811,8 @@ function FlexibleModelsSection() {
     return (
         <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
             <div className="max-w-6xl mx-auto text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose From Our Flexible Models for Custom Software Development</h2>
-                <p className="text-white/80 text-lg md:text-xl">Being a top custom software development services provider, we offer various hiring models.</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose From Our Flexible Models for Mobile Application Development</h2>
+                <p className="text-white/80 text-lg md:text-xl">At SKS Tech Solution, we understand that every app journey is unique. That's why we offer flexible collaboration models that match your project's size, scope, and speed.</p>
             </div>
             <div className="flex flex-col items-center">
                 {/* Tabs */}
