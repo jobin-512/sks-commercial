@@ -246,7 +246,7 @@ export default function SoftwareDevelopmentPage() {
                     {[
                         { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "300+", label: "Successful Launches" },
                         { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "99%", label: "Client Retention Rate" },
-                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "15+", label: "Years of Excellence" },
+                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "10+", label: "Years of Excellence" },
                         { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "100+", label: "Satisfied Business Partners" }
                     ].map((stat, index) => (
                         <AnimatedItem key={index} className="space-y-4">

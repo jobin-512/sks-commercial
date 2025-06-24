@@ -36,7 +36,14 @@ import {
     Workflow,
     Boxes,
     Network,
-    LineChart
+    LineChart,
+    Eye,
+    PenTool,
+    Briefcase,
+    BookOpen,
+    Building,
+    ShoppingBag,
+    HeartHandshake
 } from "lucide-react"
 
 gsap.registerPlugin(ScrollTrigger);
@@ -91,50 +98,51 @@ const AnimatedItem = ({ children, className = "" }) => {
     )
 }
 
-// Accordion for Customized Software Development Process
-function ProcessAccordion() {
-    const steps = [
+// Accordion for Our Tactics
+function TacticsAccordion() {
+    const tactics = [
         {
-            title: 'Design',
-            description: 'The design phase involves creating the visual and interactive aspects of the software development. Our custom software development services are critical in ensuring that the software solution is user-friendly and aesthetically pleasing.',
-            checklist: [
-                'Interaction Flows',
-                'Wireframing',
-                'Visual Design',
-                'Brand Alignment',
-            ],
+            title: 'User-Centered Approach',
+            description: 'We place your users at the center of every design choice to provide products that fully cater to their requirements.',
+            checklist: ['Empathy-Driven Design', 'Real User Behavior Analysis', 'Task-Oriented Workflows', 'Frictionless Interactions'],
         },
         {
-            title: 'Development',
-            description: 'The development phase is where the actual coding and implementation take place. Our experienced developers use best practices and the latest technologies to build robust, scalable, and secure software solutions.',
-            checklist: [
-                'Agile Development',
-                'Code Reviews',
-                'Quality Assurance',
-                'Continuous Integration',
-            ],
+            title: 'Design Decisions Based on Data',
+            description: 'User behavior data, analytics, and research promote design decisions with a goal of enhanced usability and business results.',
+            checklist: ['Heatmaps & User Flow Analysis', 'A/B Testing for Validation', 'Performance Metrics Monitoring', 'Continuous UX Optimization'],
         },
         {
-            title: 'Deployment',
-            description: 'The deployment phase ensures your software is launched smoothly and efficiently. We provide ongoing support and maintenance to guarantee optimal performance and user satisfaction.',
-            checklist: [
-                'Cloud Deployment',
-                'Monitoring & Support',
-                'User Training',
-                'Performance Optimization',
-            ],
+            title: 'Consistent Brand Integration',
+            description: 'We ensure that every interface reflects your brand identity, building recognition, trust, and emotional connection.',
+            checklist: ['Visual Language Consistency', 'Logo & Color Palette Alignment', 'Typography & Iconography Standards', 'Style Guide Development'],
+        },
+        {
+            title: 'Agile & Iterative Process',
+            description: 'We design iteratively so that everything can be adjusted, improved upon, questioned, and re-examined due to stricter time constraints.',
+            checklist: ['Sprint-Based Design Cycles', 'Standing Reviews with Stakeholders', 'Fast Prototyping and Testing', 'Fast Implementation of Feedback'],
+        },
+        {
+            title: 'Accessibility & Inclusivity Focus',
+            description: "We don't shy away from accessibility so that all users can maximize the product, irrespective of ability or device.",
+            checklist: ['WCAG Compliance', 'Screen Reader Support', 'Color Contrast Checks', 'Inclusive Interaction Design'],
+        },
+        {
+            title: 'Collaborative Design Process',
+            description: 'Your in-house team collaborates with us throughout the project to keep everyone aligned, ensure transparency, and attain joint ownership of the specified solution.',
+            checklist: ['Transparent Communication', 'Regular Design Workshops', 'Shared Prototypes for Feedback', 'Cross-Team Collaboration'],
         },
     ];
     const [openIndex, setOpenIndex] = useState(0);
+
     return (
         <div className="space-y-4">
-            {steps.map((step, idx) => (
-                <div key={idx} className="">
+            {tactics.map((tactic, idx) => (
+                <div key={idx}>
                     <button
                         className={`w-full flex justify-between items-center px-6 py-4 bg-[#181828] text-white rounded-t-2xl focus:outline-none font-semibold text-lg border-b border-[#23234a] ${openIndex === idx ? 'rounded-b-none' : 'rounded-b-2xl'}`}
                         onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                     >
-                        <span>{step.title}</span>
+                        <span>{tactic.title}</span>
                         <span className={`transition-transform duration-300 ${openIndex === idx ? 'rotate-180' : ''}`}>▼</span>
                     </button>
                     <AnimatePresence initial={false}>
@@ -147,13 +155,12 @@ function ProcessAccordion() {
                                 transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                                 className="overflow-hidden"
                             >
-                                <div className="bg-[#ededf7] text-[#181828] rounded-b-2xl px-6 py-6 flex flex-col md:flex-row justify-between items-center border border-t-0 border-[#23234a]">
+                                <div className="bg-[#ededf7] text-[#181828] rounded-b-2xl px-6 py-6 flex flex-col md:flex-row justify-between items-start border border-t-0 border-[#23234a]">
                                     <div className="flex-1 mb-4 md:mb-0">
-                                        <h4 className="text-xl font-bold mb-2">{step.title}</h4>
-                                        <p className="mb-4 text-base">{step.description}</p>
+                                        <p className="mb-4 text-base">{tactic.description}</p>
                                     </div>
-                                    <ul className="min-w-[220px] space-y-2 text-base">
-                                        {step.checklist.map((item, i) => (
+                                    <ul className="min-w-[250px] space-y-2 text-base pl-4 md:pl-0">
+                                        {tactic.checklist.map((item, i) => (
                                             <li key={i} className="flex items-center gap-2 text-[#3D43D4] font-medium"><span>✔</span> <span className="text-[#181828]">{item}</span></li>
                                         ))}
                                     </ul>
@@ -167,7 +174,7 @@ function ProcessAccordion() {
     );
 }
 
-export default function SoftwareDevelopmentPage() {
+export default function UIDesignPage() {
     return (
         <div className="bg-[#08060F] text-white overflow-hidden">
             {/* Hero Section with Parallax */}
@@ -191,10 +198,10 @@ export default function SoftwareDevelopmentPage() {
                         </span>
                     </motion.div>
                     <h1 className={`${roboto.className} text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] leading-tight`}>
-                    Transform Your Ideas Into Beautiful User Experiences
+                    User-First Design That Makes Every Click Count
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        We create stunning, user-centered designs that enhance user engagement, improve usability, and drive business growth through intuitive and beautiful interfaces.
+                    We craft beautiful, simple, and interactive interfaces to create outstanding user experiences. As a top UI UX design agency, we make sure your product is attractive and functional.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -203,10 +210,10 @@ export default function SoftwareDevelopmentPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Code className="w-5 h-5" />, text: "User Research" },
-                            { icon: <Zap className="w-5 h-5" />, text: "Wireframing" },
-                            { icon: <Shield className="w-5 h-5" />, text: "Visual Design" },
-                            { icon: <Cloud className="w-5 h-5" />, text: "Prototyping" }
+                            { icon: <Eye className="w-5 h-5" />, text: "Pixel-Perfect Designs" },
+                            { icon: <PenTool className="w-5 h-5" />, text: "Interactive Prototypes" },
+                            { icon: <Layers className="w-5 h-5" />, text: "Responsive Across Devices" },
+                            { icon: <Zap className="w-5 h-5" />, text: "Conversion-Focused UI" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -236,10 +243,10 @@ export default function SoftwareDevelopmentPage() {
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
                 <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {[
-                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "200+", label: "Designs Created" },
-                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "98%", label: "Client Satisfaction" },
-                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "10+", label: "Years Experience" },
-                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "150+", label: "Happy Clients" }
+                        { icon: <Star className="w-8 h-8 text-[#5B61F6]" />, value: "200+", label: "UI/UX Projects Delivered" },
+                        { icon: <Heart className="w-8 h-8 text-[#5B61F6]" />, value: "95%", label: "Client Satisfaction" },
+                        { icon: <Award className="w-8 h-8 text-[#5B61F6]" />, value: "10+", label: "Years of Design Innovation" },
+                        { icon: <Users className="w-8 h-8 text-[#5B61F6]" />, value: "50+", label: "Global Brands Served" }
                     ].map((stat, index) => (
                         <AnimatedItem key={index} className="space-y-4">
                             <div className="flex justify-center">{stat.icon}</div>
@@ -257,7 +264,7 @@ export default function SoftwareDevelopmentPage() {
                 </div>
             </AnimatedSection>
 
-            {/* Software Developer Sections */}
+            {/* Why partner with us & Remote sections */}
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16">
                 <div className="max-w-6xl mx-auto space-y-24">
                     {/* Section 1: Left Image, Right Text */}
@@ -266,47 +273,41 @@ export default function SoftwareDevelopmentPage() {
                             variants={fadeInUp} 
                             className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-[50%_40%_30%_60%/60%_30%_50%_40%] shadow-lg"
                         >
-                            <Image src={sd} alt="Software Development on Laptop" layout="fill" objectFit="cover" />
+                            <Image src={sd} alt="Why Partner with UX Design Experts?" layout="fill" objectFit="cover" />
                         </motion.div>
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>UI/UX Designer</h3>
-                            <p className="text-gray-300">From concept to pixel-perfect designs, we create user experiences that delight and convert.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Why Partner with UX Design Experts?</h3>
+                            <p className="text-gray-300">Being one of the trusted UX design agencies, we specialize in intuitive design experiences that boost product value and user retention.</p>
                             <ul className="space-y-3">
-                                {["User Research", "Wireframing", "Visual Design"].map((feature, idx) => (
+                                {["Research-Driven Approach", "Interactive Prototypes", "User Testing & Feedback", "Accessibility-Focused Design"].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
                                     </li>
                                 ))}
                             </ul>
-                            <button className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2">
-                                Explore more <ArrowRight className="w-5 h-5" />
-                            </button>
                         </motion.div>
                     </div>
 
                     {/* Section 2: Left Text, Right Image */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div variants={fadeInUp} className="space-y-6">
-                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>UI/UX Designer</h3>
-                            <p className="text-gray-300">Ongoing design support, user testing, and iterative improvements.</p>
+                            <h3 className={`${roboto.className} text-3xl font-bold text-[#5B61F6]`}>Get Expert Designs Remotely</h3>
+                            <p className="text-gray-300">Our remote team offers hassle-free user interface design online, delivering beautiful, high-performing interfaces, wherever you are.</p>
                             <ul className="space-y-3">
-                                {["User Testing", "Design Systems", "Iterative Updates"].map((feature, idx) => (
+                                {["Remote Collaboration", "Flexible Engagement Models", "Real-Time Feedback Integration", "Global Clientele"].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-lg text-gray-300">
                                         <CheckCircle2 className="w-6 h-6 text-[#3D43D4]" />
                                         <span>{feature}</span>
                                     </li>
                                 ))}
                             </ul>
-                            <button className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2">
-                                Explore more <ArrowRight className="w-5 h-5" />
-                            </button>
                         </motion.div>
                         <motion.div 
                             variants={fadeInUp} 
                             className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-[50%_40%_30%_60%/60%_30%_50%_40%] shadow-lg"
                         >
-                            <Image src={sd2} alt="Software Development with Developer" layout="fill" objectFit="cover" />
+                            <Image src={sd2} alt="Get Expert Designs Remotely" layout="fill" objectFit="cover" />
                         </motion.div>
                     </div>
                 </div>
@@ -319,32 +320,32 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Our Design Methodology
+                        Our UI/UX Design Process
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
                                 step: "01",
-                                title: "Research",
-                                description: "Understanding user needs, business goals, and market research to inform design decisions.",
+                                title: "Research & Discovery",
+                                description: "Ascertaining user requirements, pain areas, and business objectives for custom user interface design solutions.",
                                 icon: <BarChart className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "02",
-                                title: "Wireframing",
-                                description: "Creating low-fidelity wireframes and user flows to establish information architecture.",
+                                title: "Wireframing & Prototyping",
+                                description: "Developing low and high-fidelity prototypes based on functionality and beauty.",
                                 icon: <Layers className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "03",
-                                title: "Design",
-                                description: "High-fidelity visual design with attention to typography, color, and visual hierarchy.",
+                                title: "Visual Design & Branding",
+                                description: "Blending design creativity with brand consistency for engaging digital experiences.",
                                 icon: <Code className="w-8 h-8 text-[#5B61F6]" />
                             },
                             {
                                 step: "04",
-                                title: "Prototype",
-                                description: "Interactive prototypes for user testing and stakeholder feedback collection.",
+                                title: "User Testing & Iterations",
+                                description: "Real user testing, perfecting designs to make them both usable and satisfying.",
                                 icon: <Cloud className="w-8 h-8 text-[#5B61F6]" />
                             }
                         ].map((process, index) => (
@@ -373,8 +374,8 @@ export default function SoftwareDevelopmentPage() {
                     <div className="absolute inset-0 bg-black/60"></div>
                 </div>
                 <div className="relative z-10 w-full max-w-3xl text-center flex flex-col items-center justify-center">
-                    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-white tracking-wide">WANNA SEE OUR LATEST WORKS?</h2>
-                    <p className="text-lg md:text-xl text-white/80 mb-4">Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>Ut enim ad minim veniam quis nostrud exercitation</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-white tracking-wide">Have a Look at Our Latest Works?</h2>
+                    <p className="text-lg md:text-xl text-white/80 mb-4">We deliver UI/UX  projects across industries, proving why we're among the most reliable UX design companies worldwide.</p>
                     <button className="mt-6 px-8 py-3 bg-white text-[#171629] rounded-full font-semibold shadow hover:bg-[#5B61F6] hover:text-white transition-colors duration-300">ALL PROJECTS</button>
                 </div>
             </section>
@@ -386,45 +387,45 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
                     >
-                        Our UI/UX Design Services
+                        What Services We Offer?
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            {
-                                title: "User Research",
-                                description: "Comprehensive user research including interviews, surveys, and usability testing to understand user needs.",
+                           {
+                                title: "User Interface Design",
+                                description: "We design neat, functional, and visually appealing user interfaces that boost user satisfaction and conversions.",
                                 icon: <Code className="w-8 h-8" />,
-                                features: ["User Interviews", "Surveys", "Usability Testing", "Persona Creation"]
+                                features: ["Intuitive Layouts", "Brand-Aligned Visuals", "Interactive Elements", "High-Fidelity UI Mockups"]
                             },
                             {
-                                title: "Wireframing",
-                                description: "Low and high-fidelity wireframes to establish information architecture and user flows.",
+                                title: "UX Research & Strategy",
+                                description: "Our design journey initially involves learning about user behavior in order to provide real-world, engaging, and business solutions.",
                                 icon: <Server className="w-8 h-8" />,
-                                features: ["Information Architecture", "User Flows", "Wireframes", "Sitemaps"]
+                                features: ["User Persona Creation", "Competitor Analysis", "User Journey Mapping", "Design Roadmap Planning"]
                             },
                             {
-                                title: "Visual Design",
-                                description: "Beautiful, pixel-perfect designs that align with brand guidelines and user expectations.",
+                                title: "Wireframing & Prototyping",
+                                description: "We visualize the product early with the wireframes and prototypes to make sure that it is clear and functional, with user validation.",
                                 icon: <Cloud className="w-8 h-8" />,
-                                features: ["UI Design", "Brand Guidelines", "Typography", "Color Theory"]
+                                features: ["Low & High-Fidelity Wireframes", "Interactive Clickable Prototypes", "Feedback Integration", "Efficient Design Iterations"]
                             },
                             {
-                                title: "Prototyping",
-                                description: "Interactive prototypes for user testing and stakeholder presentations.",
+                                title: "Visual Design & Branding",
+                                description: "Our team turns out stunning views that tie nicely with the brand and touch the hearts of the target audience.",
                                 icon: <Workflow className="w-8 h-8" />,
-                                features: ["Interactive Prototypes", "User Testing", "Stakeholder Feedback", "Iteration"]
+                                features: ["Brand Identity Integration", "Typography & Color Schemes", "Iconography & Visual Assets", "Pixel-Perfect Screen Designs"]
                             },
                             {
-                                title: "Design Systems",
-                                description: "Comprehensive design systems for consistent and scalable design across platforms.",
+                                title: "Responsive & Cross-Platform Design",
+                                description: "We deliver superior digital experiences across all devices and platforms.",
                                 icon: <Network className="w-8 h-8" />,
-                                features: ["Component Libraries", "Style Guides", "Design Tokens", "Documentation"]
+                                features: ["Mobile-First Design Approach", "Adaptive & Scalable Layouts", "Tablet & Desktop Optimization", "Cross-Browser Issues"]
                             },
                             {
-                                title: "User Testing",
-                                description: "Usability testing and user feedback collection to validate design decisions.",
+                                title: "User Testing & Usability Improvements",
+                                description: "Performing usability testing helps to check for interaction improvements, checks & enhances performance, and encourages a streamlined user journey.",
                                 icon: <Database className="w-8 h-8" />,
-                                features: ["Usability Testing", "A/B Testing", "User Feedback", "Analytics"]
+                                features: ["Real User Feedback", "Usability Testing Sessions", "UX Audit & Recommendations", "Continuous Improvement Cycles"]
                             }
                         ].map((service, index) => (
                             <AnimatedItem 
@@ -448,130 +449,78 @@ export default function SoftwareDevelopmentPage() {
                 </div>
             </AnimatedSection>
 
-            {/* Customized Software Development Process Section */}
+            {/* Our Tactics Section */}
             <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
                 <div className="max-w-4xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Customized Software Development Process</h2>
-                    <p className="text-white/80 text-lg md:text-xl">As one of the best custom software development companies, our well-designed development process allows organizations to tailor solutions that meet specific business needs, enhance user experience, and drive innovation.</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Our Tactics</h2>
+                    <p className="text-white/80 text-lg md:text-xl">At SKS Tech Solution, we hold the conviction that good design is not merely about looks — it's about crafting significant, intuitive experiences. Our tested tactics guarantee that every product we develop is intuitive, stimulating, and productive.</p>
                 </div>
                 <div className="max-w-4xl mx-auto space-y-8">
-                    {/* Discovery Card */}
-                    <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-3xl p-8 flex flex-col md:flex-row justify-between items-center shadow-xl mb-4">
-                        <div className="text-left flex-1 mb-6 md:mb-0">
-                            <h3 className="text-2xl font-bold text-white mb-2">Discovery</h3>
-                            <p className="text-white/80">The discovery phase is the initial stage of the customized software development process. Our custom software development company tries to understand your project's goals, objectives, and requirements.</p>
-                        </div>
-                        <ul className="text-left space-y-2 min-w-[220px]">
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Requirements Gathering</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Research & Analysis</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Solution Mapping</li>
-                            <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Technology Evaluation</li>
-                        </ul>
-                    </div>
-                    {/* Accordion for other steps */}
-                    <ProcessAccordion />
+                    <TacticsAccordion />
                 </div>
             </section>
 
-            {/* Technology Stack Section */}
-            <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16">
-                <div className="max-w-6xl mx-auto">
-                    <motion.h2 
-                        variants={fadeInUp}
-                        className={`${roboto.className} text-3xl md:text-4xl font-bold text-center mb-16`}
-                    >
-                        Our Technology Stack
-                    </motion.h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {/* Who Gets Benefit From Us Section */}
+            <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Who Gets Benefit From Us?</h2>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">Our user-first design offerings enable companies in industries to provide outstanding digital experiences. Whether you're an enterprise or a startup, our offerings will allow you to engage users and drive your business objectives.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { name: "Design Tools", icon: "🎨", tech: ["Figma", "Sketch", "Adobe XD", "InVision"] },
-                            { name: "Prototyping", icon: "⚙️", tech: ["Framer", "Principle", "Protopie", "Axure"] },
-                            { name: "Research", icon: "🔍", tech: ["UserTesting", "Hotjar", "Maze", "Optimal Workshop"] },
-                            { name: "Analytics", icon: "📊", tech: ["Google Analytics", "Mixpanel", "Hotjar", "FullStory"] },
-                            { name: "Collaboration", icon: "🤝", tech: ["Figma", "Miro", "Notion", "Slack"] },
-                            { name: "Testing", icon: "🧪", tech: ["Usability Testing", "A/B Testing", "User Interviews", "Surveys"] },
-                            { name: "Design Systems", icon: "🎯", tech: ["Storybook", "Figma", "Zeroheight", "Design Tokens"] },
-                            { name: "Accessibility", icon: "♿", tech: ["WCAG Guidelines", "Screen Readers", "Color Contrast", "Keyboard Navigation"] }
-                        ].map((stack, index) => (
-                            <AnimatedItem 
-                                key={index}
-                                className="p-6 bg-[#171629]/70 rounded-xl border border-[#3D43D4]/30 shadow-xl group hover:border-[#5B61F6]/50 transition-all duration-300"
-                            >
-                                <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                                    {stack.icon}
+                            { icon: <Briefcase className="w-12 h-12 text-[#2563eb]" />, title: "Visionary Startups", description: "We make complex concepts intuitive, interactive, and easy to follow, enabling startups to differentiate themselves in saturated digital landscapes." },
+                            { icon: <Building className="w-12 h-12 text-[#2563eb]" />, title: "Growing Enterprises", description: "Our design strategies make it easier for big teams to deliver cohesive, seamless experiences." },
+                            { icon: <ShoppingBag className="w-12 h-12 text-[#2563eb]" />, title: "Online Retailers", description: "We design attractive store layouts that are easy to shop, fun to shop, and invite customers to keep coming back." },
+                            { icon: <Cpu className="w-12 h-12 text-[#2563eb]" />, title: "Tech Product Innovators", description: "Our UI/UX specialists assist tech teams in taking sophisticated features and making them easy, intuitive, and immediately comprehensible to users." },
+                            { icon: <BookOpen className="w-12 h-12 text-[#2563eb]" />, title: "Educational Platforms", description: "We build learning spaces that are interactive, intuitive, and accessible for students, instructors, and administrators." },
+                            { icon: <HeartHandshake className="w-12 h-12 text-[#2563eb]" />, title: "Healthcare Solutions", description: "Our accessible, compliant solutions enable healthcare professionals to present information, services, and care in a clear, uncluttered manner." },
+                            { icon: <PenTool className="w-12 h-12 text-[#2563eb]" />, title: "Creative Agencies", description: "We assist design firms with consistent UI/UX services, enabling their projects to proceed effortlessly and yield excellent outcomes." },
+                        ].map((item, index) => (
+                            <div key={index} className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
+                                <div className="mb-4">{item.icon}</div>
+                                <h3 className="text-xl font-bold mb-2 text-black">{item.title}</h3>
+                                <p className="text-black/80">{item.description}</p>
                             </div>
-                                <h3 className="text-lg font-semibold text-[#5B61F6] mb-4">{stack.name}</h3>
-                                <ul className="space-y-2">
-                                    {stack.tech.map((item, idx) => (
-                                        <li key={idx} className="text-sm text-gray-400 flex items-center gap-2">
-                                            <Cpu className="w-4 h-4 text-[#5B61F6]" />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </AnimatedItem>
                         ))}
                     </div>
                 </div>
-            </AnimatedSection>
+            </section>
 
-            {/* Industries Section */}
-            <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">UI/UX Design Solutions We Deliver to Help Businesses Create Better User Experiences</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Sks Tech Solution we specialize in delivering comprehensive UI/UX design services to help businesses create user-centered digital experiences. Here's what we offer:</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {/* Card 1 */}
-                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Megaphone icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182A4.5 4.5 0 016.75 12.75m0 0A4.5 4.5 0 0115.182 8.818m-8.432 3.932a4.5 4.5 0 018.432-3.932m0 0V3.75m0 5.068a4.5 4.5 0 01-8.432 3.932m8.432-3.932l3.75 3.75m-3.75-3.75l-3.75 3.75" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Web Design</h3>
-                            <p className="text-black/80">Create stunning, responsive web designs that provide seamless user experiences across all devices and platforms.</p>
+             {/* How Can We Help Section */}
+             <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
+                <div className="max-w-6xl mx-auto text-center">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">How Can We Help?</h2>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">We at SKS Tech Solution convert your digital concepts into visually appealing, user-centric products. Our UI/UX knowledge assists organizations in engaging users, developing confidence, and leaving lasting impressions.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                        <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-2xl p-8">
+                            <h3 className="text-xl font-bold text-[#5B61F6] mb-4">Simplifying Digital Experiences</h3>
+                            <p className='text-white/80 mb-4'>We design intuitive interfaces that remove complexity and allow simple interaction.</p>
+                            <ul className="space-y-2">
+                                <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Easy-to-use navigation structures</li>
+                                <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Clear visual hierarchy</li>
+                                <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Minimalistic, clutter-free layouts</li>
+                            </ul>
                         </div>
-                        {/* Card 2 */}
-                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Web portal icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M7 9h2m2 0h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 13h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                    <path d="M7 17h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">Mobile App Design</h3>
-                            <p className="text-black/80">Design intuitive mobile app interfaces that enhance user engagement and drive app store success.</p>
+                        <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-2xl p-8">
+                            <h3 className="text-xl font-bold text-[#5B61F6] mb-4">Boosting User Engagement</h3>
+                            <p className='text-white/80 mb-4'>Our designs keep users engaged, satisfied, and loyal to your product.</p>
+                            <ul className="space-y-2">
+                                <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Interactive, engaging UI elements</li>
+                                <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Smooth user journeys</li>
+                                <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Mobile and cross-platform consistency</li>
+                            </ul>
                         </div>
-                        {/* Card 3 */}
-                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* App window icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <rect x="7" y="9" width="10" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">E-commerce Design</h3>
-                            <p className="text-black/80">Optimize e-commerce user experiences to increase conversions, reduce cart abandonment, and boost sales.</p>
-                        </div>
-                        {/* Card 4 */}
-                        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
-                            <div className="mb-4 text-[#2563eb]">{/* Asset management icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
-                                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                    <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2 text-black">SaaS Platform Design</h3>
-                            <p className="text-black/80">Design scalable SaaS interfaces that improve user onboarding, feature adoption, and customer retention.</p>
+                        <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-2xl p-8">
+                            <h3 className="text-xl font-bold text-[#5B61F6] mb-4">Supporting Business Growth</h3>
+                            <p className='text-white/80 mb-4'>We ensure your product design contributes directly to your business success.</p>
+                            <ul className="space-y-2">
+                                <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Brand-aligned, visually appealing interfaces</li>
+                                <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Developer-friendly prototypes for faster builds</li>
+                                <li className="flex items-center gap-2 text-white"><span className="text-[#5B61F6]">✔</span> Conversion-focused user experience</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
-
-            {/* Flexible Models for Custom Software Development Section */}
-            <FlexibleModelsSection />
 
             {/* Case Studies Section */}
             <AnimatedSection className="py-20 px-4 md:px-8 lg:px-16">
@@ -584,63 +533,63 @@ export default function SoftwareDevelopmentPage() {
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
-                            {
-                                title: "E-commerce Redesign",
-                                client: "Fashion Retailer",
-                                description: "Redesigned an e-commerce platform that increased conversion rates and improved user experience significantly.",
-                                results: ["45% Increase in Conversions", "60% Faster Checkout", "User Satisfaction"],
-                                icon: <Boxes className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Figma", "UserTesting", "Hotjar", "Analytics"],
-                                duration: "8 weeks",
+                           {
+                                title: "Patient Portal Redesign",
+                                client: "Healthcare Startup",
+                                description: "We redesigned a medical portal, simplifying appointment booking and improving accessibility for all patient demographics.",
+                                results: ["70% Fewer Booking Errors", "40% Faster User Task Completion", "Increased Accessibility Compliance"],
+                                icon: <Heart className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Figma", "Hotjar", "Accessibility Tools", "Google Analytics"],
+                                duration: "9 weeks",
                                 team: "4 members"
                             },
                             {
-                                title: "SaaS Dashboard Design",
-                                client: "Tech Company",
-                                description: "Created a comprehensive SaaS dashboard that improved user onboarding and feature adoption.",
-                                results: ["80% User Adoption", "50% Faster Onboarding", "Reduced Support Tickets"],
-                                icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Figma", "Principle", "Maze", "Analytics"],
-                                duration: "10 weeks",
-                                team: "5 members"
-                            },
-                            {
-                                title: "Mobile App Design",
-                                client: "HealthTech Startup",
-                                description: "Designed a healthcare mobile app that improved patient engagement and appointment booking.",
-                                results: ["90% User Satisfaction", "70% Faster Booking", "HIPAA Compliant"],
-                                icon: <Heart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Figma", "Framer", "UserTesting", "Accessibility"],
+                                title: "Interactive Learning Experience",
+                                client: "E-Learning Platform",
+                                description: "Enhanced an online education platform with intuitive design, boosting course completion rates and student satisfaction.",
+                                results: ["50% Higher Course Completions", "3x More Daily Active Users", "Better Content Accessibility"],
+                                icon: <BookOpen className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Figma", "Maze", "UserTesting", "Analytics Tools"],
                                 duration: "12 weeks",
                                 team: "6 members"
                             },
                             {
-                                title: "Banking App Redesign",
-                                client: "Financial Institution",
-                                description: "Redesigned a banking app to improve security perception and user trust while maintaining functionality.",
-                                results: ["95% Security Rating", "40% Faster Transactions", "User Trust"],
-                                icon: <LineChart className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Sketch", "Principle", "UserTesting", "Security Testing"],
-                                duration: "14 weeks",
-                                team: "7 members"
-                            },
-                            {
-                                title: "Educational Platform Design",
-                                client: "EdTech Company",
-                                description: "Designed an educational platform that improved learning outcomes and student engagement.",
-                                results: ["85% Completion Rate", "60% Better Engagement", "Learning Outcomes"],
-                                icon: <Network className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Figma", "Framer", "UserTesting", "Analytics"],
-                                duration: "16 weeks",
-                                team: "8 members"
-                            },
-                            {
-                                title: "Restaurant App Design",
-                                client: "Food Chain",
-                                description: "Created a restaurant app design that streamlined ordering and improved customer satisfaction.",
-                                results: ["75% Order Increase", "90% Customer Satisfaction", "Faster Service"],
+                                title: "Vehicle Showcase Website",
+                                client: "Automotive Brand",
+                                description: "Developed a sleek, responsive website for showcasing vehicles, improving product discovery , and online lead generation.",
+                                results: ["35% Increase in Test Drive Bookings", "25% Higher Page Engagement", "Mobile-Optimized Experience"],
                                 icon: <Globe className="w-8 h-8 text-[#5B61F6]" />,
-                                tech: ["Adobe XD", "Protopie", "UserTesting", "Analytics"],
+                                tech: ["Adobe XD", "Hotjar", "Google Analytics"],
+                                duration: "7 weeks",
+                                team: "5 members"
+                            },
+                            {
+                                title: "Order Flow Optimization",
+                                client: "Food Delivery Platform",
+                                description: "Revamped the food ordering experience, reducing friction and driving more successful orders across mobile and desktop.",
+                                results: ["55% Faster Checkout Process", "20% Drop in Cart Abandonment", "Improved App Store Ratings"],
+                                icon: <ShoppingBag className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Figma", "UserTesting", "Amplitude"],
+                                duration: "6 weeks",
+                                team: "4 members"
+                            },
+                            {
+                                title: "Dashboard Redesign",
+                                client: "B2B SaaS Product",
+                                description: "Modify the dashboard for easy understanding by all the business stakeholders.",
+                                results: ["60% Faster Data Interpretation", "45% Boost in User Retention", "Reduced Support Tickets"],
+                                icon: <LineChart className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Figma", "Hotjar", "Google Analytics"],
+                                duration: "10 weeks",
+                                team: "5 members"
+                            },
+                            {
+                                title: "Streaming Platform UI Overhaul",
+                                client: "Entertainment App",
+                                description: "Redesigned a movie and music streaming platform to boost engagement and simplify content discovery.",
+                                results: ["40% Increase in Daily Streaming", "30% Boost in User Session Time", "Improved Mobile Experience"],
+                                icon: <Network className="w-8 h-8 text-[#5B61F6]" />,
+                                tech: ["Figma", "UserTesting", "Hotjar"],
                                 duration: "9 weeks",
                                 team: "5 members"
                             }
@@ -709,13 +658,13 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className={`${roboto.className} text-3xl md:text-4xl font-bold mb-8`}
                     >
-                        Ready to Create Beautiful User Experiences?
+                        Let's Design Something That Works for Your Users
                     </motion.h2>
                     <motion.p 
                         variants={fadeInUp}
                         className="text-gray-300 mb-12 text-lg"
                     >
-                        Let's transform your digital products with our expert UI/UX design services.
+                        Let's create interfaces that wow your users and drive business success. As a reputed UI UX design company, SKS Tech Solution brings your vision to life.
                     </motion.p>
                     <motion.div
                         variants={fadeInUp}
@@ -726,7 +675,7 @@ export default function SoftwareDevelopmentPage() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Start Your Design Project <ArrowRight className="w-5 h-5" />
+                            Start Your Project <ArrowRight className="w-5 h-5" />
                         </motion.button>
                         <motion.button 
                             className="border border-[#3D43D4] hover:bg-[#3D43D4]/10 text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
@@ -743,10 +692,10 @@ export default function SoftwareDevelopmentPage() {
                         animate="visible"
                     >
                         {[
-                            { icon: <Star className="w-6 h-6" />, text: "Expert Team" },
-                            { icon: <Shield className="w-6 h-6" />, text: "Secure Development" },
-                            { icon: <Zap className="w-6 h-6" />, text: "Fast Delivery" },
-                            { icon: <Heart className="w-6 h-6" />, text: "Client Satisfaction" }
+                            { icon: <Star className="w-6 h-6" />, text: "Creative & Functional Designs" },
+                            { icon: <Shield className="w-6 h-6" />, text: "Experienced Design Team" },
+                            { icon: <Zap className="w-6 h-6" />, text: "User-Focused Process" },
+                            { icon: <Heart className="w-6 h-6" />, text: "Scalable Solutions" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -762,92 +711,5 @@ export default function SoftwareDevelopmentPage() {
                 </div>
             </AnimatedSection>
         </div>
-    );
-}
-
-// Flexible Models Section Component
-function FlexibleModelsSection() {
-    const models = [
-        {
-            label: 'Fixed Price Model',
-            image: '/services/Layer-17.png', // Replace with your image
-            title: 'Fixed Price Model',
-            description: 'Our fixed price model is ideal for design projects with well-defined requirements and scope. It offers cost predictability and is best suited for projects with clear design briefs and limited budget.',
-            checklist: [
-                'Clear Design Brief',
-                'Budget Certainty',
-                'Timeline Guarantee',
-            ],
-        },
-        {
-            label: 'Time and Material Model',
-            image: '/services/Layer-17.png', // Replace with your image
-            title: 'Time and Material Model',
-            description: 'This model is perfect for design projects where requirements may evolve based on user feedback and testing. It provides flexibility and transparency for iterative design processes.',
-            checklist: [
-                'Flexible Requirements',
-                'Iterative Design',
-                'User Feedback Integration',
-            ],
-        },
-        {
-            label: 'Dedicated Team',
-            image: '/services/Layer-17.png', // Replace with your image
-            title: 'Dedicated Team',
-            description: 'Our UI/UX design company offers a dedicated team model that is tailored for businesses looking to build long-term design partnerships. It provides consistent design quality and expertise for growing businesses.',
-            checklist: [
-                'Consistent Quality',
-                'Reduced Costs',
-                'Long-Term Partnership',
-            ],
-        },
-    ];
-    const [active, setActive] = useState(0);
-    return (
-        <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
-            <div className="max-w-6xl mx-auto text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose From Our Flexible Models for UI/UX Design</h2>
-                <p className="text-white/80 text-lg md:text-xl">Being a top UI/UX design services provider, we offer various hiring models to suit your design needs.</p>
-            </div>
-            <div className="flex flex-col items-center">
-                {/* Tabs */}
-                <div className="flex flex-wrap gap-4 mb-8">
-                    {models.map((model, idx) => (
-                        <button
-                            key={model.label}
-                            onClick={() => setActive(idx)}
-                            className={`px-8 py-3 rounded-lg font-semibold text-lg border transition-all duration-200 focus:outline-none ${active === idx ? 'bg-white text-black border-white' : 'bg-transparent text-white border-white/60 hover:bg-white/10'}`}
-                            style={{ position: 'relative' }}
-                        >
-                            {model.label}
-                            {active === idx && (
-                                <span className="absolute left-1/2 -bottom-3 transform -translate-x-1/2">
-                                    <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 12L0 0H24L12 12Z" fill="white"/>
-                                    </svg>
-                                </span>
-                            )}
-                        </button>
-                    ))}
-                </div>
-                {/* Card */}
-                <div className="w-full max-w-4xl bg-[#10101A] border border-white rounded-3xl flex flex-col md:flex-row items-center p-8 gap-8 relative">
-                    <div className="w-full md:w-1/2 flex-shrink-0 flex items-center justify-center">
-                        <img src={models[active].image} alt={models[active].label} className="rounded-2xl object-cover w-full h-64 md:h-72" />
-                    </div>
-                    <div className="w-full md:w-1/2 text-left flex flex-col justify-center">
-                        <h3 className="text-2xl font-bold text-white mb-4">{models[active].title}</h3>
-                        <p className="text-white/80 mb-6">{models[active].description}</p>
-                        <ul className="space-y-3">
-                            {models[active].checklist.map((item, idx) => (
-                                <li key={idx} className="flex items-center gap-2 text-lg text-white font-semibold">
-                                    <span className="text-[#2563eb]">✔</span> {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
     );
 } 
