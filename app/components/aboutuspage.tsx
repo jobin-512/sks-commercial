@@ -148,22 +148,22 @@ export default function AboutUsPage() {
                         <div className="w-full md:w-2/3 flex gap-6 overflow-x-auto pb-4 scrollbar-hide hover:scrollbar-default" style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                             {[
                                 {
-                                    img: "/a1.jpg",
+                                    img: "/about/a1.jpg",
                                     title: "Grow Without Limits",
                                     desc: "Get access to training, certifications, and mentorship to fine-tune your skills and lead the pack."
                                 },
                                 {
-                                    img: "/a2.jpg",
+                                    img: "/about/a2.jpg",
                                     title: "We Value Your Worth",
                                     desc: "We appreciate your hard work, and we ensure you get rewarded accordingly."
                                 },
                                 {
-                                    img: "/a3.jpg",
+                                    img: "/about/a3.jpg",
                                     title: "Fun, Not Just Function",
                                     desc: "Teamwork doesn't have to be dull. Expect collaboration, creativity, and the occasional team celebration."
                                 },
                                 {
-                                    img: "/a4.jpg",
+                                    img: "/about/a4.jpg",
                                     title: "Health Comes First",
                                     desc: "We believe a happy, healthy team builds the best solutions — mind and body wellness is part of the plan."
                                 }

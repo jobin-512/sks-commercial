@@ -138,13 +138,13 @@ export default function Services(){
                         <div ref={el => addToRefs(el, topBlocksRef)} className="relative bg-[#26242C40] hover:bg-[#15154080] hover:duration-200 duration-200 p-4 lg:pr-8 space-y-3 rounded-2xl border border-gray-700 lg:ml-[-3rem] w-full lg:w-[95%] z-30">
                             <h3 className="text-lg lg:text-xl">Software Development</h3>
                             <p className="text-sm lg:text-base text-gray-300">We develop robust, scalable custom software that meets your business requirements. We integrate strategy, design, and innovation to provide lasting value digital solutions that drive long-term performance and growth.</p>
-                            <Link href="/" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
+                            <Link href="/services/software-development" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
                             <Image src={software} alt="Software Development" className="w-full h-auto"></Image>
                         </div>
                         <div ref={el => addToRefs(el, bottomBlocksRef)} className="relative bg-[#26242C40] hover:bg-[#15154080] hover:duration-200 duration-200 p-4 lg:pr-8 space-y-3 rounded-2xl border border-gray-700 lg:ml-[-3rem] w-full lg:w-[95%]">
                             <h3 className="text-lg lg:text-xl">AI development</h3>
                             <p className="text-sm lg:text-base text-gray-300">We create strong, scalable software solutions that meet your company&#39;s requirements. Our emphasis is on intelligent design and seamless performance to allow you to expand with no constraints.</p>
-                            <Link href="/" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
+                            <Link href="/services/ai-development" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
                             <Image src={Ai} alt="AI Development" className="w-full h-auto"></Image>
                         </div>
                     </div>
@@ -153,13 +153,13 @@ export default function Services(){
                         <div ref={el => addToRefs(el, topBlocksRef)} className="relative bg-[#3D43D4] hover:bg-[#3D43D4] hover:duration-200 duration-200 p-4 lg:pr-8 space-y-3 rounded-2xl border border-gray-700 z-30">
                             <h3 className="text-lg lg:text-xl">Mobile App Development</h3>
                             <p className="text-sm lg:text-base text-gray-300">Our team crafts seamless, high-performance mobile applications for iOS and Android that engage users and support business growth. </p>
-                            <Link href="/" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
+                            <Link href="/services/mobile-app-development" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
                             <Image src={seo} alt="Mobile app dev" className="w-full h-auto"></Image>
                         </div>
                         <div ref={el => addToRefs(el, bottomBlocksRef)} className="relative bg-[#26242C40] hover:bg-[#15154080] hover:duration-200 duration-200 p-4 lg:pr-8 space-y-3 rounded-2xl border border-gray-700">
                             <h3 className="text-lg lg:text-xl">MVP Development</h3>
                             <p className="text-sm lg:text-base text-gray-300">We develop impeccable, responsive iOS and Android mobile apps. Our user-centric approach guarantees end-user performance, seamless UI/UX, and great functionality that end-users adore. </p>
-                            <Link href="/" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
+                            <Link href="/services/mvp-development" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
                             <Image src={mvp} alt="MVP Development" className="w-full h-auto"></Image>
                         </div>
                     </div>
@@ -168,13 +168,13 @@ export default function Services(){
                         <div ref={el => addToRefs(el, topBlocksRef)} className="relative bg-[#26242C40] hover:bg-[#15154080] hover:duration-200 duration-200 p-4 lg:pr-8 space-y-3 rounded-2xl border border-gray-700 lg:ml-[3rem] w-full lg:w-[95%] z-30">
                             <h3 className="text-lg lg:text-xl">Cloud Engineering</h3>
                             <p className="text-sm lg:text-base text-gray-300">Power your business with secure, scalable, and affordable cloud solutions. We assist you to move, manage, and transform with confidence and ongoing support. </p>
-                            <Link href="/" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
+                            <Link href="/services/cloud-engineering" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
                             <Image src={web} alt="website Development" className="w-full h-auto"></Image>
                         </div>
                         <div ref={el => addToRefs(el, bottomBlocksRef)} className="relative bg-[#26242C40] hover:bg-[#15154080] hover:duration-200 duration-200 p-4 lg:pr-8 space-y-3 rounded-2xl border border-gray-700 lg:ml-[3rem] w-full lg:w-[95%]">
                             <h3 className="text-lg lg:text-xl">UI/UX Designing</h3>
                             <p className="text-sm lg:text-base text-gray-300">Our UI/UX experts design engaging, user-centric interfaces that offer smooth navigation and elevate overall digital experiences.</p>
-                            <Link href="/" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
+                            <Link href="/services/ui-design" className="flex w-fit hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] rounded-full py-2 px-4 bg-[#403F4680]">Learn More <ChevronsRight/></Link>
                             <Image src={ui} alt="UI/UX" className="w-full h-auto"></Image>
                         </div>
                     </div>
