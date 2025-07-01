@@ -919,7 +919,7 @@ export default function IndustriesPage() {
                                                     <h5 className="font-semibold mb-2">{industry.caseStudy.title}</h5>
                                                     <p className="text-sm text-gray-400 mb-2">Client: {industry.caseStudy.client}</p>
                                                     <ul className="list-disc list-inside text-gray-400 space-y-1">
-                                                        {industry.caseStudy.results.map((result, i) => (
+                                                        {industry.caseStudy.results.map((result: string, i: number) => (
                                                             <li key={i}>{result}</li>
                                                         ))}
                                                     </ul>
@@ -953,7 +953,7 @@ export default function IndustriesPage() {
                         <p className="text-gray-400 mb-4">Client: {selectedCaseStudy.client}</p>
                         <p className="text-gray-300 mb-6">{selectedCaseStudy.details}</p>
                         <div className="flex flex-wrap gap-2 mb-6">
-                            {selectedCaseStudy.results.map((result, i) => (
+                            {selectedCaseStudy.results.map((result: string, i: number) => (
                                 <span key={i} className="px-3 py-1 bg-[#3D43D4]/10 text-[#3D43D4] rounded-full text-sm">
                                     {result}
                                 </span>

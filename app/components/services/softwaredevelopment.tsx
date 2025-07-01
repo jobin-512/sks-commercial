@@ -63,7 +63,7 @@ const staggerContainer = {
     }
 }
 
-const AnimatedSection = ({ children, className = "" }) => {
+const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -80,13 +80,14 @@ const AnimatedSection = ({ children, className = "" }) => {
     )
 }
 
-const AnimatedItem = ({ children, className = "" }) => {
+const AnimatedItem = ({ children, className = "", ...rest }: { children: React.ReactNode, className?: string } & React.ComponentProps<typeof motion.div>) => {
     return (
         <motion.div
             variants={fadeInUp}
             className={className}
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
+            {...rest}
         >
             {children}
         </motion.div>
@@ -133,7 +134,7 @@ function CustomApproachAccordion() {
             ],
         },
     ];
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
     return (
         <div className="max-w-4xl mx-auto space-y-4">
             {steps.map((step, idx) => (
@@ -705,7 +706,6 @@ export default function SoftwareDevelopmentPage() {
                         className="flex flex-wrap justify-center gap-4 w-full"
                     >
                         <motion.button 
-                        href="/contactus"
                             className="bg-[#3D43D4] hover:bg-[#5B61F6] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300 flex items-center gap-2"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}

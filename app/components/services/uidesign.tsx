@@ -68,7 +68,7 @@ const staggerContainer = {
     }
 }
 
-const AnimatedSection = ({ children, className = "" }) => {
+const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -85,13 +85,14 @@ const AnimatedSection = ({ children, className = "" }) => {
     )
 }
 
-const AnimatedItem = ({ children, className = "" }) => {
+const AnimatedItem = ({ children, className = "", ...rest }: { children: React.ReactNode, className?: string } & React.ComponentProps<typeof motion.div>) => {
     return (
         <motion.div
             variants={fadeInUp}
             className={className}
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
+            {...rest}
         >
             {children}
         </motion.div>
@@ -132,21 +133,21 @@ function TacticsAccordion() {
             checklist: ['Transparent Communication', 'Regular Design Workshops', 'Shared Prototypes for Feedback', 'Cross-Team Collaboration'],
         },
     ];
-    const [openIndex, setOpenIndex] = useState(0);
+    const [openTacticsIndex, setOpenTacticsIndex] = useState<number | null>(0);
 
     return (
         <div className="space-y-4">
             {tactics.map((tactic, idx) => (
                 <div key={idx}>
                     <button
-                        className={`w-full flex justify-between items-center px-6 py-4 bg-[#181828] text-white rounded-t-2xl focus:outline-none font-semibold text-lg border-b border-[#23234a] ${openIndex === idx ? 'rounded-b-none' : 'rounded-b-2xl'}`}
-                        onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                        className={`w-full flex justify-between items-center px-6 py-4 bg-[#181828] text-white rounded-t-2xl focus:outline-none font-semibold text-lg border-b border-[#23234a] ${openTacticsIndex === idx ? 'rounded-b-none' : 'rounded-b-2xl'}`}
+                        onClick={() => setOpenTacticsIndex(openTacticsIndex === idx ? null : idx)}
                     >
                         <span>{tactic.title}</span>
-                        <span className={`transition-transform duration-300 ${openIndex === idx ? 'rotate-180' : ''}`}>▼</span>
+                        <span className={`transition-transform duration-300 ${openTacticsIndex === idx ? 'rotate-180' : ''}`}>▼</span>
                     </button>
                     <AnimatePresence initial={false}>
-                        {openIndex === idx && (
+                        {openTacticsIndex === idx && (
                             <motion.div
                                 key="content"
                                 initial={{ height: 0, opacity: 0 }}

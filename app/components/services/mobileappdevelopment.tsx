@@ -61,7 +61,7 @@ const staggerContainer = {
     }
 }
 
-const AnimatedSection = ({ children, className = "" }) => {
+const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -78,13 +78,14 @@ const AnimatedSection = ({ children, className = "" }) => {
     )
 }
 
-const AnimatedItem = ({ children, className = "" }) => {
+const AnimatedItem = ({ children, className = "", ...rest }: { children: React.ReactNode, className?: string } & React.ComponentProps<typeof motion.div>) => {
     return (
         <motion.div
             variants={fadeInUp}
             className={className}
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
+            {...rest}
         >
             {children}
         </motion.div>
@@ -125,7 +126,7 @@ function ProcessAccordion() {
             ],
         },
     ];
-    const [openIndex, setOpenIndex] = useState(0);
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
     return (
         <div className="space-y-4">
             {steps.map((step, idx) => (
@@ -211,7 +212,7 @@ function CustomAppProcessAccordion() {
             ]
         }
     ];
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
     return (
         <div className="max-w-4xl mx-auto space-y-4">
             {steps.map((step, idx) => (
