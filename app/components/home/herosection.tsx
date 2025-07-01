@@ -103,11 +103,11 @@ export default function HeroSection(){
                         <p className='text-xs md:text-sm text-gray-400 max-w-[600px] text-center'>We deliver expert mobile app and software development services, customized to drive your
                         success.</p>
                         <div className='flex flex-wrap justify-center gap-4 mt-4'>
-                            <Link ref={leftLinkRef} href="/" className='cursor-pointer rounded-full bg-[#3D43D4] p-3 px-6 hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] font-semibold flex items-center gap-2 group'>
+                            <Link ref={leftLinkRef} href="/contacctus" className='cursor-pointer rounded-full bg-[#3D43D4] p-3 px-6 hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] font-semibold flex items-center gap-2 group'>
                             Let’s connect today! 
                                 <span className='group-hover:rotate-12 transition-transform duration-200'>🤘</span>
                             </Link>
-                            <Link ref={rightLinkRef} href="/" className='cursor-pointer rounded-full p-3 px-6 flex gap-2 bg-[#38386E] border border-gray-500 hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] font-semibold hover:fill-[#3D43D4] fill-white group'>
+                            <Link ref={rightLinkRef} href="/aboutus" className='cursor-pointer rounded-full p-3 px-6 flex gap-2 bg-[#38386E] border border-gray-500 hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] font-semibold hover:fill-[#3D43D4] fill-white group'>
                                 Learn More About Us
                                 <svg aria-hidden="true" className="h-[1.3rem] group-hover:translate-x-1 transition-transform duration-200" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M143 256.3L7 120.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0L313 86.3c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1zm34 192l136-136c9.4-9.4 9.4-24.6 0-33.9l-22.6-22.6c-9.4-9.4-24.6-9.4-33.9 0L160 352.1l-96.4-96.4c-9.4-9.4-24.6-9.4-33.9 0L7 278.3c-9.4 9.4-9.4 24.6 0 33.9l136 136c9.4 9.5 24.6 9.5 34 .1z"></path></svg>
                             </Link>

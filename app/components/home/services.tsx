@@ -128,7 +128,7 @@ export default function Services(){
                     </span>
                     <h2 className="text-xl lg:text-2xl text-center max-w-[35rem]">One-stop solution for Mobile App development &amp; Software Development</h2>
                     <p className={`${roboto.className} text-xs text-gray-400`}>Tailored solution For your business growth</p>
-                    <Link href="/" className={`cursor-pointer rounded-full bg-[#3D43D4]  p-3 px-6 hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] font-semibold ${roboto.className}`}>
+                    <Link href="/industries" className={`cursor-pointer rounded-full bg-[#3D43D4]  p-3 px-6 hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] font-semibold ${roboto.className}`}>
                         Explore More
                     </Link>
                 </div>

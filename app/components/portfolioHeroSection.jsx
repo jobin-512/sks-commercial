@@ -46,7 +46,7 @@ export default function PortfolioHeroSection() {
           {/* Description and Read More */}
           <div className="flex-1 flex flex-col justify-between">
             <p className="text-gray-300 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.
+              Explore our diverse portfolio showcasing innovative solutions across industries like automotive, gaming, healthcare, finance, retail, and more. At SKS Tech Solution, we turn ideas into impactful digital products—delivering seamless user experiences, robust performance, and measurable business results. See how we help clients achieve digital excellence, from concept to launch and beyond.
             </p>
             <button className="px-6 py-2 rounded-full bg-[#3D43D4] text-white font-semibold flex items-center gap-2 w-max hover:bg-[#171629] transition-all">
               Read More <span className="ml-2">→</span>

@@ -135,7 +135,7 @@ export default function Portfolio(){
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center gap-8 w-full">
+                {/* <div className="flex flex-col items-center gap-8 w-full">
                     <h3 className="text-lg md:text-xl text-center">Trusted by brands who value results</h3>
                     <div className="border border-gray-600 rounded-3xl p-4 md:p-8 grid gap-4 md:gap-8 bg-[#2C2A32] w-full">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
@@ -151,7 +151,7 @@ export default function Portfolio(){
                             <Image alt="logo" src={logo7} className="w-full h-auto"></Image>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
         </section>
     )
