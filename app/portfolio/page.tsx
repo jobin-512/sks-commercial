@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Roboto } from "next/font/google";
-import { ComputerIcon, HeartIcon, Banknote, CogIcon, ShoppingBagIcon, GraduationCap, TruckIcon,MapPinHouse } from "lucide-react";
+import {Car,Gamepad2, HeartIcon, Banknote, CogIcon, ShoppingBagIcon, GraduationCap, TruckIcon,MapPinHouse } from "lucide-react";
 import Image from "next/image";
 import frame from "@/public/home/Frame-151-2-1 (1).png";
 import gradient from "@/public/home/Gradient-1.png";
@@ -13,20 +13,38 @@ const roboto = Roboto({
 
 const industries = [
   {
-    name: "Technology",
-    icon: ComputerIcon,
-    category: "technology",
+    name: "Auto Mobile",
+    icon: Car,
+    category: "Auto Mobile",
     description: "Empowering tech companies with cutting-edge solutions and digital transformation.",
     portfolio: [
       {
-        title: "Custom Web Solution for a Robotics Company",
-        image: "/home/Image-11-1.png",
-        link: "#"
+        title: "exppress car wash",
+        image: "/portfolio/port8.png",
+        link: "https://www.exppresscarwash.com/"
       },
       {
-        title: "Next-Gen Web Presence for a Global Tech Firm",
-        image: "/home/image-28.png",
-        link: "#"
+        title: "carx",
+        image: "/portfolio/port9.png",
+        link: "https://www.carx.com/"
+      }
+    ]
+  },
+  {
+    name: "Gaming",
+    icon: Gamepad2,
+    category: "Gaming",
+    description: "Empowering tech companies with cutting-edge solutions and digital transformation.",
+    portfolio: [
+      {
+        title: "vulcanforged",
+        image: "/portfolio/port11.png",
+        link: "https://vulcanforged.com/"
+      },
+      {
+        title: "anti aginggames",
+        image: "/portfolio/port12.png",
+        link: "https://anti-aginggames.com/"
       }
     ]
   },
@@ -59,7 +77,11 @@ const industries = [
         title: "astm",
         image: "/portfolio/port6.png",
         link: "https://www.astm.org/"
-
+      },
+      {
+        title: "confluencehealth",
+        image: "/portfolio/port10.png",
+        link: "https://www.confluencehealth.org/"
       }
     ]
   },
@@ -73,19 +95,6 @@ const industries = [
         title: "StockPe: Stock & Crypto Games",
         image: "/portfolio/port3.png",
         link: "https://play.google.com/store/apps/details?id=com.stockpemarket&hl=en_IN&pli=1#"
-      }
-    ]
-  },
-  {
-    name: "Manufacturing",
-    icon: CogIcon,
-    category: "manufacturing",
-    description: "",
-    portfolio: [
-      {
-        title: "Smart Factory Implementation",
-        image: "/home/BlueIcons-19-01-2.png",
-        link: "#"
       }
     ]
   },
@@ -104,35 +113,14 @@ const industries = [
         title:"theteashelf",
         image:"/portfolio/port2.png",
         link:"https://www.theteashelf.com/"
+      },
+      {
+        title:"thehaelli",
+        image:"/portfolio/port7.png",
+        link:"https://thehaelli.com/"
       }
     ]
   },
-  {
-    name: "Education",
-    icon: GraduationCap,
-    category: "education",
-    description: "",
-    portfolio: [
-      {
-        title: "Digital Learning Platform",
-        image: "/home/BlueIcons-19-01.png",
-        link: "#"
-      }
-    ]
-  },
-  {
-    name: "Logistics",
-    icon: TruckIcon,
-    category: "logistics",
-    description: "",
-    portfolio: [
-      {
-        title: "Smart Logistics Platform",
-        image: "/home/BlueIcons-19-02.png",
-        link: "#"
-      }
-    ]
-  }
 ];
 
 export default function PortfolioPage() {

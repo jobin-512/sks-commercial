@@ -62,7 +62,7 @@ export default function Header() {
             <header ref={headerRef} className="z-[100] fixed lg:block top-0 w-full transition-all duration-300 bg-transparent">
                 <section className='lg:w-[80vw] xl:w-[60vw] justify-self-center md:h-[4rem] hidden lg:grid grid-flow-col items-center'>
                     <Link  href="/" className='justify-self-start '>
-                        <Image alt="logo" src={logo} className='w-auto grayscale-100 invert h-20' />
+                        <Image alt="logo" src={logo} className='w-auto grayscale-100 invert h-[3.5rem]' />
                     </Link>
 
                     <div className='justify-self-center flex gap-4'>
@@ -123,9 +123,9 @@ export default function Header() {
 
                 {/* mobile View */}
                 <section className='lg:hidden px-4 h-[4rem] grid grid-flow-col items-center'>
-                    <div className='justify-self-start'>
-                        <p className="text-white">Will be logo</p>
-                    </div>
+                    <Link href="/" className='justify-self-start'>
+                        <Image alt='logo' src={logo} className='h-[3.5rem] w-auto grayscale-100 invert'></Image>
+                    </Link>
 
                     <div className='justify-self-end'>
                         <button 
