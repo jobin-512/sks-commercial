@@ -116,7 +116,6 @@ export default function AboutUsPage() {
                 {/* Expertise Section */}
                 <section className="relative flex justify-center w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#0B0A17] overflow-hidden py-24">
                     <div className="absolute inset-0">
-                        <img src='/about/expertise-bg.jpg' alt='' className='w-full h-full object-cover object-center opacity-30' />
                         <div className="absolute inset-0 bg-gradient-to-r from-[#2e3192]/60 via-transparent to-[#3DFFE2]/30 pointer-events-none"></div>
                     </div>
                     <div className="relative z-10 w-[90vw] lg:w-[80vw] xl:w-[60vw] max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
