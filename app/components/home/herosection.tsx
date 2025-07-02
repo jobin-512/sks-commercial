@@ -5,6 +5,9 @@ import HeroImg from "@/public/home/Image-Hero.png"
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import circle from "@/public/home/circle.png"
+import ring from "@/public/home/rings.png"
+
 
 const roboto = Roboto({
     subsets: ['latin'],
@@ -77,6 +80,18 @@ export default function HeroSection(){
             ease: "power3.out"
         }, "-=1");
 
+        // Infinite rotation for #circle
+        const circleEl = document.getElementById('circle');
+        if (circleEl) {
+            gsap.to(circleEl, {
+                rotate: 360,
+                duration: 10,
+                repeat: -1,
+                ease: 'linear',
+                transformOrigin: '50% 50%'
+            });
+        }
+
     }, []);
 
     return(
@@ -104,7 +119,7 @@ export default function HeroSection(){
                         success.</p>
                         <div className='flex flex-wrap justify-center gap-4 mt-4'>
                             <Link ref={leftLinkRef} href="/contacctus" className='cursor-pointer rounded-full bg-[#3D43D4] p-3 px-6 hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] font-semibold flex items-center gap-2 group'>
-                            Let’s connect today! 
+                            Let's connect today! 
                                 <span className='group-hover:rotate-12 transition-transform duration-200'>🤘</span>
                             </Link>
                             <Link ref={rightLinkRef} href="/aboutus" className='cursor-pointer rounded-full p-3 px-6 flex gap-2 bg-[#38386E] border border-gray-500 hover:bg-white duration-200 hover:duration-200 hover:text-[#3D43D4] font-semibold hover:fill-[#3D43D4] fill-white group'>
@@ -143,11 +158,13 @@ export default function HeroSection(){
                 </div>
                 <div className='flex lg:p-8 xl:p-12 2xl:p-20 p-4 md:p-8 w-full justify-center relative'>
                     <div className='absolute inset-0'></div>
-                    <div className='relative z-10 w-full max-w-[95%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] 2xl:max-w-[50%]'>
+                    <div ref={heroImageRef}  className='relative z-10 w-full max-w-[95%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] 2xl:max-w-[50%]'>
+                        <Image alt='circle' src={ring} className='absolute z-50' />
                         <Image 
-                            ref={heroImageRef} 
+                            
                             alt='Hero-Image' 
-                            src={HeroImg} 
+                            src={circle} 
+                            id='circle'
                             className='w-full h-auto object-contain'
                             priority
                         />
@@ -157,3 +174,4 @@ export default function HeroSection(){
         </section>
     )
 }
+
