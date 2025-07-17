@@ -118,7 +118,7 @@ export default function AboutUs(){
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
                     <div className="flex justify-center">
-                        <Image ref={phoneRef} src={phone} alt="Phone" className="w-[80%] lg:w-full h-auto"></Image>
+                        <Image ref={phoneRef} src={phone} alt="Phone" className="w-[80%] lg:w-auto lg:h-[60%] xl:h-[60%] 2xl:h-[80%]"></Image>
                     </div>
                     <div className="grid grid-rows-[auto_auto] lg:grid-rows-[3fr_5fr] gap-8 lg:gap-0">
                         <div ref={visionMissionRef} className="grid grid-cols-1 lg:grid-cols-2 font-thin">

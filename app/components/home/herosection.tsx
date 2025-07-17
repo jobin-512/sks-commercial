@@ -96,7 +96,7 @@ export default function HeroSection(){
 
     return(
         <section className={`relative flex justify-center w-full h-[60rem] lg:h-[70rem]  bg-[url(/home/Background-Hero-1.png)] bg-center lg:bg-no-repeat lg:bg-cover ${roboto.className}`}>
-            <section className='lg:w-[80vw] xl:w-[60vw] grid grid-rows-2'>
+            <section className='lg:w-[80vw] xl:w-[60vw] grid grid-rows-[1fr_auto]'>
                 <div className='h-full flex'>
                     <div className='hidden lg:flex p-8 items-center'> 
                         <div ref={efficiencyRef} className='flex size-fit flex-col py-5 px-7 border-[#16D2D4] border rounded-2xl text-center bg-[#373652] hover:bg-[#3D43D4] transition-all duration-300'>
