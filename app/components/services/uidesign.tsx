@@ -454,7 +454,7 @@ export default function UIDesignPage() {
             <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
                 <div className="max-w-4xl mx-auto text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Our Tactics</h2>
-                    <p className="text-white/80 text-lg md:text-xl">At SKS Tech Solution, we hold the conviction that good design is not merely about looks — it's about crafting significant, intuitive experiences. Our tested tactics guarantee that every product we develop is intuitive, stimulating, and productive.</p>
+                    <p className="text-white/80 text-lg md:text-xl">At Seo Master , we hold the conviction that good design is not merely about looks — it's about crafting significant, intuitive experiences. Our tested tactics guarantee that every product we develop is intuitive, stimulating, and productive.</p>
                 </div>
                 <div className="max-w-4xl mx-auto space-y-8">
                     <TacticsAccordion />
@@ -490,7 +490,7 @@ export default function UIDesignPage() {
              <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#171629]/50">
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">How Can We Help?</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">We at SKS Tech Solution convert your digital concepts into visually appealing, user-centric products. Our UI/UX knowledge assists organizations in engaging users, developing confidence, and leaving lasting impressions.</p>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">We at Seo Master convert your digital concepts into visually appealing, user-centric products. Our UI/UX knowledge assists organizations in engaging users, developing confidence, and leaving lasting impressions.</p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                         <div className="bg-[#10101A] border border-[#3D43D4]/30 rounded-2xl p-8">
                             <h3 className="text-xl font-bold text-[#5B61F6] mb-4">Simplifying Digital Experiences</h3>
@@ -665,7 +665,7 @@ export default function UIDesignPage() {
                         variants={fadeInUp}
                         className="text-gray-300 mb-12 text-lg"
                     >
-                        Let's create interfaces that wow your users and drive business success. As a reputed UI UX design company, SKS Tech Solution brings your vision to life.
+                        Let's create interfaces that wow your users and drive business success. As a reputed UI UX design company, Seo Master brings your vision to life.
                     </motion.p>
                     <motion.div
                         variants={fadeInUp}

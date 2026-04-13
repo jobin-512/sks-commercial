@@ -37,7 +37,7 @@ const PrivacyPolicy = () => (
     </section>
     <section>
       <h2 className="text-xl font-semibold mb-2">Contacting Us</h2>
-      <p>If you want to learn more or want clarity on your doubts related to our policy, feel free to connect with us anytime through email at info@skstechsolution.com or call us at +1 (302) 321-2310, +1 (302) 329-3535.</p>
+      {/* <p>If you want to learn more or want clarity on your doubts related to our policy, feel free to connect with us anytime through email at info@seomaster.com or call us at +1 (302) 321-2310, +1 (302) 329-3535.</p> */}
     </section>
   </main>
 );

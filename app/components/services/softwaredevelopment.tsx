@@ -512,7 +512,7 @@ export default function SoftwareDevelopmentPage() {
             <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Enterprise Software Built for the Future</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At SKS Tech Solution, a trusted name in offshore software development services, we create business software designed to support growth and agility.</p>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Seo Master , a trusted name in offshore software development services, we create business software designed to support growth and agility.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Card 1 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
@@ -699,7 +699,7 @@ export default function SoftwareDevelopmentPage() {
                         variants={fadeInUp}
                         className="text-gray-300 mb-12 text-lg"
                     >
-                        Whether you need to reimagine workflows or launch a full-scale enterprise app, SKS Tech Solution is ready to help.
+                        Whether you need to reimagine workflows or launch a full-scale enterprise app, Seo Master is ready to help.
                     </motion.p>
                     <motion.div
                         variants={fadeInUp}
@@ -744,7 +744,7 @@ export default function SoftwareDevelopmentPage() {
                         ))}
                     </motion.div>
                     <div className="mt-16 text-center text-white/60 text-sm font-semibold">
-                        SKS TECH SOLUTION<br />
+                        Seo Master <br />
                         Digital excellence starts here — with innovation, integrity, and results.
                     </div>
                 </div>

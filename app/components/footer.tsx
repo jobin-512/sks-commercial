@@ -15,13 +15,13 @@ export default function Footer(){
             <div className="lg:w-[80vw] xl:w-[60vw] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
                 {/* Company Info */}
                 <div className="flex flex-col gap-4">
-                    <h3 className="text-2xl font-bold text-white">SKS TECH SOLUTION</h3>
+                    <h3 className="text-2xl font-bold text-white">Seo Master </h3>
                     <p className="text-sm">We empower businesses through innovative digital strategies and personalized solutions</p>
                     <div className="flex gap-4 mt-4">
-                        <a href="https://www.facebook.com/skstechsolution?ref=pages_you_manage" target="_blank" className="w-10 h-10 bg-[#3D43D4] rounded-full flex items-center justify-center text-white text-lg hover:bg-white hover:text-[#3D43D4] transition-colors duration-200"><FaFacebookF /></a>
+                        <a href="https://www.facebook.com/seomaster?ref=pages_you_manage" target="_blank" className="w-10 h-10 bg-[#3D43D4] rounded-full flex items-center justify-center text-white text-lg hover:bg-white hover:text-[#3D43D4] transition-colors duration-200"><FaFacebookF /></a>
                         <a href="https://www.linkedin.com/company/sks-techsolution" target="_blank" className="w-10 h-10 bg-[#3D43D4] rounded-full flex items-center justify-center text-white text-lg hover:bg-white hover:text-[#3D43D4] transition-colors duration-200"><FaLinkedinIn /></a>
-                        <a href="https://www.instagram.com/skstechsolution/" target="_blank" className="w-10 h-10 bg-[#3D43D4] rounded-full flex items-center justify-center text-white text-lg hover:bg-white hover:text-[#3D43D4] transition-colors duration-200"><FaInstagram /></a>
-                        <a href="https://x.com/skstechsolution" target="_blank" className="w-10 h-10 bg-[#3D43D4] rounded-full flex items-center justify-center text-white text-lg hover:bg-white hover:text-[#3D43D4] transition-colors duration-200"><FaXTwitter /></a>
+                        <a href="https://www.instagram.com/seomaster/" target="_blank" className="w-10 h-10 bg-[#3D43D4] rounded-full flex items-center justify-center text-white text-lg hover:bg-white hover:text-[#3D43D4] transition-colors duration-200"><FaInstagram /></a>
+                        <a href="https://x.com/seomaster" target="_blank" className="w-10 h-10 bg-[#3D43D4] rounded-full flex items-center justify-center text-white text-lg hover:bg-white hover:text-[#3D43D4] transition-colors duration-200"><FaXTwitter /></a>
                     </div>
                 </div>
 
@@ -54,18 +54,18 @@ export default function Footer(){
                     </div>
                     <div>
                         <h5 className="font-semibold text-white mb-2">Email Us:</h5>
-                        <a href="mailto:info@skstechsolution.com" className="text-sm hover:text-white transition-colors duration-200">info@skstechsolution.com</a>
+                        <a href="mailto:info@seomaster.com" className="text-sm hover:text-white transition-colors duration-200">info@seomaster.com</a>
                     </div>
                     <div>
-                        <h5 className="font-semibold text-white mb-2">Phone Us:</h5>
+                        {/* <h5 className="font-semibold text-white mb-2">Phone Us:</h5>
                         <a href="tel:+13023212310" className="text-sm hover:text-white transition-colors duration-200 block">+1 (302) 321-2310</a>
-                        <a href="tel:+13023293535" className="text-sm hover:text-white transition-colors duration-200 block">+1 (302) 329-3535</a>
+                        <a href="tel:+13023293535" className="text-sm hover:text-white transition-colors duration-200 block">+1 (302) 329-3535</a> */}
                     </div>
                 </div>
             </div>
 
             <div className="text-center text-xs mt-16 border-t border-gray-700 pt-8">
-                <p>© 2025 Sks Tech Solution , All Rights Reserved</p>
+                <p>© 2025 Seo Master , All Rights Reserved</p>
             </div>
         </footer>
     )

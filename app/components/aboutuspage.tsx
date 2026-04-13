@@ -58,7 +58,7 @@ export default function AboutUsPage() {
                     <div className="absolute inset-0 z-0 bg-cover bg-center opacity-5" style={{background: "url('/BANNER.jpg')"}}></div>
                     <div className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4">
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-wide">ABOUT US</h1>
-                        <p className="text-lg md:text-md text-white/80 mb-8 max-w-3xl mx-auto">At SKS Tech Solution, we believe technology should make life easier, not harder. We help businesses grow with custom digital solutions that deliver real results. Whether you're a startup with big ideas or an established brand looking to scale, we've got you covered — from Software Development Services and Mobile App Development Services to MVP Development Services, AI Development Services, Cloud Engineering Services, and UI Design Services.
+                        <p className="text-lg md:text-md text-white/80 mb-8 max-w-3xl mx-auto">At Seo Master , we believe technology should make life easier, not harder. We help businesses grow with custom digital solutions that deliver real results. Whether you're a startup with big ideas or an established brand looking to scale, we've got you covered — from Software Development Services and Mobile App Development Services to MVP Development Services, AI Development Services, Cloud Engineering Services, and UI Design Services.
                         Since 2010, we've been building smart, practical, and future-ready digital experiences for businesses around the world. Our goal is simple — help you succeed in the fast-moving digital world.</p>
                         <button className="bg-white text-[#171629] hover:bg-[#5B61F6] hover:text-white px-8 py-3 rounded-full font-semibold shadow transition-colors duration-300 text-lg">READ MORE</button>
                     </div>
@@ -121,7 +121,7 @@ export default function AboutUsPage() {
                     <div className="relative z-10 w-[90vw] lg:w-[80vw] xl:w-[60vw] max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="w-full md:w-1/2 flex flex-col items-start justify-center mb-12 md:mb-0">
                             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">Meet Our Team</h2>
-                            <p className="text-gray-300 text-base md:text-lg mb-8 max-w-xl">The People Behind Your Success. At SKS Tech Solution, our talented team brings experience, creativity, and dedication together to help your ideas grow and your business thrive in today's competitive digital world.</p>
+                            <p className="text-gray-300 text-base md:text-lg mb-8 max-w-xl">The People Behind Your Success. At Seo Master , our talented team brings experience, creativity, and dedication together to help your ideas grow and your business thrive in today's competitive digital world.</p>
                         </div>
                         <div className="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
                             {expertiseData.map((item, index) => (
@@ -296,7 +296,7 @@ export default function AboutUsPage() {
                     className="mt-20 text-center"
                 >
                     <h2 className={`${roboto.className} text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3D43D4] to-[#5B61F6] mb-4`}>Ready to Take the Next Step?</h2>
-                    <p className="text-lg text-gray-300 mb-8">Let's bring your ideas to life. Contact SKS Tech Solution today and discover how we can transform your business.</p>
+                    <p className="text-lg text-gray-300 mb-8">Let's bring your ideas to life. Contact Seo Master today and discover how we can transform your business.</p>
                     <motion.button
                         whileHover={{ scale: 1.07 }}
                         whileTap={{ scale: 0.97 }}

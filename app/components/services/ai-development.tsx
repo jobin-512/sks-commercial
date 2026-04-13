@@ -187,7 +187,7 @@ export default function AIDevelopmentPage() {
                         Intelligent Solutions Begin with Smarter Development
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        Being one of the reliable AI development companies, SKS Tech Solution is enabling businesses to automate, innovate, and grow on the strength of advanced artificial intelligence technologies.
+                        Being one of the reliable AI development companies, Seo Master is enabling businesses to automate, innovate, and grow on the strength of advanced artificial intelligence technologies.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -445,7 +445,7 @@ export default function AIDevelopmentPage() {
             <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
                 <div className="max-w-4xl mx-auto text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">How Do We Work?</h2>
-                    <p className="text-white/80 text-lg md:text-xl">We at SKS Tech Solution adopt a systematic, customer-oriented approach to provide efficient, scalable, and innovative AI development services as per your business requirements.</p>
+                    <p className="text-white/80 text-lg md:text-xl">We at Seo Master adopt a systematic, customer-oriented approach to provide efficient, scalable, and innovative AI development services as per your business requirements.</p>
                 </div>
                 <div className="max-w-4xl mx-auto space-y-8">
                     <ProcessAccordion />

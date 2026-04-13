@@ -209,7 +209,7 @@ export default function CloudEngineeringPage() {
                         Cloud Engineering Services to Power Your Digital Future
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        At SKS Tech Solution, we enable businesses to unlock the real power of the cloud. As your reliable technology partner, we architect, build, and operate scalable cloud environments that fuel growth, security, and operational efficiency.
+                        At Seo Master , we enable businesses to unlock the real power of the cloud. As your reliable technology partner, we architect, build, and operate scalable cloud environments that fuel growth, security, and operational efficiency.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -559,7 +559,7 @@ export default function CloudEngineeringPage() {
             <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Cloud Engineering Solutions We Deliver for Modern Businesses</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">SKS Tech Solution empowers organizations across industries with robust, scalable, and secure cloud engineering solutions. Here's how we help you transform and future-proof your business:</p>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">Seo Master empowers organizations across industries with robust, scalable, and secure cloud engineering solutions. Here's how we help you transform and future-proof your business:</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Card 1 */}
                         <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-start text-left">
@@ -751,7 +751,7 @@ export default function CloudEngineeringPage() {
                         variants={fadeInUp}
                         className="text-gray-300 mb-12 text-lg"
                     >
-                        Partner with SKS Tech Solution to build secure and innovative cloud solutions backed by certified expertise.
+                        Partner with Seo Master to build secure and innovative cloud solutions backed by certified expertise.
                     </motion.p>
                     <motion.div
                         variants={fadeInUp}

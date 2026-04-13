@@ -144,7 +144,7 @@ export default function Faq(){
     const faqData: FAQData = {
         'General Questions': [
             {
-                question: "Why should I work with SKS Tech Solution?",
+                question: "Why should I work with Seo Master ?",
                 answer: "Because we provide more than services, we craft solutions that develop your business and build your trust."
             },
             {

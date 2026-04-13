@@ -281,7 +281,7 @@ export default function SoftwareDevelopmentPage() {
                         Mobile App Development That Connects, Engages, and Grows!
                     </h1>
                     <p className={`${roboto.className} text-lg md:text-xl text-gray-300 max-w-3xl mx-auto`}>
-                        As a trusted mobile app development company, SKS Tech Solution turns complex concepts into feature-rich applications that offer seamless user experiences.
+                        As a trusted mobile app development company, Seo Master turns complex concepts into feature-rich applications that offer seamless user experiences.
                     </p>
                     <motion.div 
                         className="flex flex-wrap justify-center gap-4 mt-8"
@@ -531,7 +531,7 @@ export default function SoftwareDevelopmentPage() {
             <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 20% 40%, #2e3192 0%, #08060F 80%)' }}>
                 <div className="max-w-4xl mx-auto text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">We Follow a Customized App Development Process</h2>
-                    <p className="text-white/80 text-lg md:text-xl">At SKS Tech Solution, every app starts with understanding your business, because great software is built with clarity and care.</p>
+                    <p className="text-white/80 text-lg md:text-xl">At Seo Master , every app starts with understanding your business, because great software is built with clarity and care.</p>
                 </div>
                 <CustomAppProcessAccordion />
             </section>
@@ -582,7 +582,7 @@ export default function SoftwareDevelopmentPage() {
             <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Building Smarter Solutions for Your Growth</h2>
-                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At SKS Tech Solution, we bring creativity, technicality, and in-depth knowledge of human behavior together to create impactful mobile apps. Our solutions are made according to your vision and optimized for sustained growth.</p>
+                    <p className="text-center text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto">At Seo Master , we bring creativity, technicality, and in-depth knowledge of human behavior together to create impactful mobile apps. Our solutions are made according to your vision and optimized for sustained growth.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
@@ -813,7 +813,7 @@ function FlexibleModelsSection() {
         <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#080813]">
             <div className="max-w-6xl mx-auto text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Choose From Our Flexible Models for Mobile Application Development</h2>
-                <p className="text-white/80 text-lg md:text-xl">At SKS Tech Solution, we understand that every app journey is unique. That's why we offer flexible collaboration models that match your project's size, scope, and speed.</p>
+                <p className="text-white/80 text-lg md:text-xl">At Seo Master , we understand that every app journey is unique. That's why we offer flexible collaboration models that match your project's size, scope, and speed.</p>
             </div>
             <div className="flex flex-col items-center">
                 {/* Tabs */}

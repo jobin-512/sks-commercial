@@ -112,7 +112,7 @@ export default function HeroSection(){
                     <div ref={centerSectionRef} className='w-full flex flex-col justify-center items-center gap-4 px-4 md:px-8'>
                         <span className='flex items-center bg-[#171629] w-fit px-2 border h-[2rem] border-gray-700 rounded-full hover:bg-[#3D43D4] transition-all duration-300'><p className='text-5xl text-[#3D43D4]'>•</p>Digital Solutions</span>
                         <div className='text-center'>
-                            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-[#16D2D4] bg-clip-text text-transparent'>SKS TECH SOLUTION</h1>
+                            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-[#16D2D4] bg-clip-text text-transparent'>Seo Master </h1>
                             <h2 className='text-2xl md:text-3xl lg:text-4xl mt-2'>Your Digital Innovation Partner</h2>
                         </div>
                         <p className='text-xs md:text-sm text-gray-400 max-w-[600px] text-center'>We deliver expert mobile app and software development services, customized to drive your

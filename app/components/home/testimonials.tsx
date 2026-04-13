@@ -39,28 +39,28 @@ export default function Tesitmonials(){
                 <div className={`${roboto.className} grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 w-full`}>
                     <div className="flex flex-col items-center gap-4 border border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">“SKS Tech Solution’s Web Development team created a fast, responsive, and beautifully designed site for our e-commerce business. We saw a 35% boost in traffic almost immediately. Their commitment to quality and design is unmatched!”</p>
+                        <p className="text-sm md:text-base">“Seo Master ’s Web Development team created a fast, responsive, and beautifully designed site for our e-commerce business. We saw a 35% boost in traffic almost immediately. Their commitment to quality and design is unmatched!”</p>
                         <p className="font-semibold">— Emily Carter</p>
                         <p className="text-sm text-gray-400">Digital Marketing Manager</p>
                     </div>
 
                     <div className="flex flex-col items-center gap-4 border border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile2} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">“We requested a custom Mobile App, and SKS Tech Solution didn’t disappoint. The app runs smoothly and includes every requested feature. Clients are thrilled with the interface.”</p>
+                        <p className="text-sm md:text-base">“We requested a custom Mobile App, and Seo Master didn’t disappoint. The app runs smoothly and includes every requested feature. Clients are thrilled with the interface.”</p>
                         <p className="font-semibold">— Linda Wu</p>
                         <p className="text-sm text-gray-400">CTO</p>
                     </div>
 
                     <div className="flex flex-col items-center gap-4 border border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile3} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">“The UI/UX Design by SKS Tech Solution completely redefined our user journey. Our app is now intuitive, elegant, and much more enjoyable to use. Client satisfaction has gone through the roof!”</p>
+                        <p className="text-sm md:text-base">“The UI/UX Design by Seo Master completely redefined our user journey. Our app is now intuitive, elegant, and much more enjoyable to use. Client satisfaction has gone through the roof!”</p>
                         <p className="font-semibold">— Anna Müller</p>
                         <p className="text-sm text-gray-400">Brand Strategist</p>
                     </div>
 
                     <div className="flex flex-col gap-4 border items-center border-gray-600 rounded-3xl p-6 md:p-8 text-center bg-[#26242C80] box">
                         <Image alt="profile" src={profile4} className="w-16 h-16 md:w-20 md:h-20 rounded-full"></Image>
-                        <p className="text-sm md:text-base">“Thanks to SKS Tech Solution’s Social Media Optimization (SMO) strategy, our online visibility and brand engagement skyrocketed. They know how to turn impressions into results with focused and consistent execution.”</p>
+                        <p className="text-sm md:text-base">“Thanks to Seo Master ’s Social Media Optimization (SMO) strategy, our online visibility and brand engagement skyrocketed. They know how to turn impressions into results with focused and consistent execution.”</p>
                         <p className="font-semibold">— Carlos Ramirez</p>
                         <p className="text-sm text-gray-400"> VP of Growth</p>
                     </div>
