@@ -80,6 +80,7 @@ export default function Header() {
                             <div className="absolute left-1/2 transform -translate-x-1/2 w-48 bg-[#08060F] border border-gray-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto flex flex-col p-2 gap-2 top-[calc(100%-2px)] pt-4 z-50">
                                 <Link href="/services/software-development" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">Software Development</Link>
                                 <Link href="/services/seo" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">SEO</Link>
+                                <Link href="/services/website-development" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">Website Development</Link>
                                 <Link href="/services/mobile-app-development" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">Mobile App Development</Link>
                                 <Link href="/services/ui-design" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">UI design</Link>
                                 <Link href="/services/mvp-development" className="block px-4 py-2 text-sm text-white hover:bg-[#3D43D4] hover:text-white rounded-md transition-colors">MVP Development</Link>
@@ -208,6 +209,13 @@ export default function Header() {
                             onClick={toggleSidebar}
                         >
                             - SEO
+                        </Link>
+                        <Link 
+                            href="/services/website-development" 
+                            className="text-md text-gray-300 hover:text-[#3D43D4] transition-colors ml-4"
+                            onClick={toggleSidebar}
+                        >
+                            - Website Developement
                         </Link>
                         <Link 
                             href="/services/mobile-app-development" 
